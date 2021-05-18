@@ -20,7 +20,7 @@ export interface CategoryListProps {
 }
 
 const CategoryListWrapper = styled.div`
-  display: flex;
+  display: flex
   flex-wrap: wrap;
   width: 768px;
   margin: 100px auto 0;
