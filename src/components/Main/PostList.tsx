@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from "react";
+import React, { FunctionComponent, useMemo } from "react";
 import styled from "@emotion/styled";
 import PostItem from "components/Main/PostItem";
 import { FluidObject } from "gatsby-image";
@@ -21,6 +21,7 @@ export type PostType = {
 };
 
 interface PostListProps {
+  selectedCategory: string;
   posts: PostType[];
 }
 
@@ -38,11 +39,28 @@ const PostListWrapper = styled.div`
     padding: 50px 20px;
   }
 `;
+const PostList: FunctionComponent<PostListProps> = function ({
+  selectedCategory,
+  posts,
+}) {
+  const postListData = useMemo(
+    () =>
+      posts.filter(
+        ({
+          node: {
+            frontmatter: { categories },
+          },
+        }: PostType) =>
+          selectedCategory !== "All"
+            ? categories.includes(selectedCategory)
+            : true
+      ),
+    [selectedCategory]
+  );
 
-const PostList: FunctionComponent<PostListProps> = function ({ posts }) {
   return (
     <PostListWrapper>
-      {posts.map(({ node: { id, frontmatter } }: PostType) => (
+      {postListData.map(({ node: { id, frontmatter } }: PostType) => (
         <PostItem
           {...frontmatter}
           link="<https://www.google.co.kr/>"
