@@ -2,6 +2,14 @@ var plugins = [{
       name: 'gatsby-plugin-react-helmet',
       plugin: require('/Users/beomsoo/Documents/GitHub/blog/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
       options: {"plugins":[]},
+    },{
+      name: 'gatsby-plugin-canonical-urls',
+      plugin: require('/Users/beomsoo/Documents/GitHub/blog/node_modules/gatsby-plugin-canonical-urls/gatsby-ssr'),
+      options: {"plugins":[],"siteUrl":"<https://my-website.com/>","stripQueryString":true},
+    },{
+      name: 'gatsby-plugin-sitemap',
+      plugin: require('/Users/beomsoo/Documents/GitHub/blog/node_modules/gatsby-plugin-sitemap/gatsby-ssr'),
+      options: {"plugins":[],"output":"/sitemap","createLinkInHead":true,"entryLimit":45000,"query":"{ site { siteMetadata { siteUrl } } allSitePage { nodes { path } } }","excludes":[]},
     }]
 // During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [
