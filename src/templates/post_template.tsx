@@ -3,8 +3,8 @@ import { graphql } from "gatsby";
 import Template from "components/Common/Template";
 import PostHead, { PostHeadProps } from "components/Post/PostHead";
 import PostContent from "components/Post/PostContent";
-import CommentWidget from "components/Post/Utterances";
-import Utterances from "components/Post/Utterances";
+import CommentWidget from "components/Post/CommentWidget";
+import Navigation from "components/Common/Navigation";
 
 interface PostTemplateProps {
   data: {
@@ -13,7 +13,7 @@ interface PostTemplateProps {
         {
           node: {
             html: string;
-            frontmatter: PostHeadProps & { summary: string };
+            frontmatter: PostHeadProps & { summary: string; title: string };
           };
         }
       ];
@@ -31,10 +31,17 @@ const PostTemplate: FunctionComponent<PostTemplateProps> = function ({
   } = edges[0];
 
   return (
-    <Template>
+    <Template
+      title={`[${frontmatter.categories}] ` + frontmatter.title + "- B-log"}
+      description={frontmatter.summary}
+      url=""
+      image=""
+    >
+      <Navigation />
+
       <PostHead {...frontmatter} />
       <PostContent html={html} />
-      <Utterances repo="k1a11220/blog" theme="github-light" />
+      <CommentWidget repo="k1a11220/blog" theme="github-light" />
     </Template>
   );
 };

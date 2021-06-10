@@ -1,17 +1,47 @@
 import React, { FunctionComponent } from "react";
 import styled from "@emotion/styled";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 export interface PostHeadInfoProps {
   title: string;
   date: string;
   categories: string[];
 }
+
+const SCategories = styled.div`
+  color: #086bce;
+  font-weight: 600;
+  font-size: 1.125rem;
+  margin-bottom: 22px;
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+`;
+
+const SDate = styled(SCategories)`
+  color: #a1a1a1;
+  font-weight: 700;
+  margin-top: 22px;
+  margin-bottom: 0px;
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+`;
+
+const Hr = styled.hr`
+  margin-top: 60px;
+  color: #4e5968;
+  @media (max-width: 768px) {
+    margin-top: 40px;
+  }
+`;
+
 const PostHeadInfoWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  width: 768px;
+  width: 700px;
   height: 100%;
   margin: 0 auto;
   padding: 60px 0;
@@ -23,55 +53,20 @@ const PostHeadInfoWrapper = styled.div`
   }
 `;
 
-const PrevPageIcon = styled.div`
-  display: grid;
-  place-items: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: #ffffff;
-  color: #000000;
-  font-size: 22px;
-  cursor: pointer;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-
-  @media (max-width: 768px) {
-    width: 30px;
-    height: 30px;
-    font-size: 18px;
-  }
-`;
-
 const Title = styled.div`
   display: -webkit-box;
   overflow: hidden;
   overflow-wrap: break-word;
-  margin-top: auto;
   text-overflow: ellipsis;
   white-space: normal;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-  font-size: 45px;
+  font-size: 48px;
   font-weight: 800;
+  color: #1d1d1d;
 
   @media (max-width: 768px) {
     font-size: 30px;
-  }
-`;
-
-const PostData = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 10px;
-  font-size: 18px;
-  font-weight: 700;
-
-  @media (max-width: 768px) {
-    flex-direction: column;
-    align-items: flex-start;
-    font-size: 15px;
-    font-weight: 400;
   }
 `;
 
@@ -80,18 +75,12 @@ const PostHeadInfo: FunctionComponent<PostHeadInfoProps> = function ({
   date,
   categories,
 }) {
-  const goBackPage = () => window.history.back();
-
   return (
     <PostHeadInfoWrapper>
-      <PrevPageIcon onClick={goBackPage}>
-        <FontAwesomeIcon icon={faArrowLeft} />
-      </PrevPageIcon>
+      <SCategories>{categories.join(" / ")}</SCategories>
       <Title>{title}</Title>
-      <PostData>
-        <div>{categories.join(" / ")}</div>
-        <div>{date}</div>
-      </PostData>
+      <SDate>업데이트 : {date}</SDate>
+      <Hr />
     </PostHeadInfoWrapper>
   );
 };

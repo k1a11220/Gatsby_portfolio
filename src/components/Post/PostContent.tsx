@@ -9,33 +9,28 @@ const MarkdownRenderer = styled.div`
   // Renderer Style
   display: flex;
   flex-direction: column;
-  width: 768px;
+  width: 700px;
   margin: 0 auto;
-  padding: 100px 0;
   word-break: break-all;
 
   // Markdown Style
-  line-height: 1.8;
-  font-size: 16px;
-  font-weight: 400;
+  line-height: 1.8125;
+  letter-spacing: -0.02rem;
+  /* word-break: keep-all; */
+  font-weight: 300;
+  * {
+    font-size: 1.125rem;
 
-  // Apply Padding Attribute to All Elements
-  p {
-    padding: 3px 0;
+    @media (max-width: 768px) {
+      font-size: 1rem;
+    }
   }
-
   // Adjust Heading Element Style
   h1,
   h2,
   h3 {
-    font-weight: 800;
-    margin-bottom: 30px;
-  }
-
-  * + h1,
-  * + h2,
-  * + h3 {
-    margin-top: 80px;
+    color: #1d1d1d;
+    font-weight: 600;
   }
 
   hr + h1,
@@ -44,16 +39,28 @@ const MarkdownRenderer = styled.div`
     margin-top: 0;
   }
 
+  p {
+    margin-bottom: 1.125rem; //18px
+  }
+
   h1 {
-    font-size: 30px;
+    font-size: 3rem; //48px
   }
 
   h2 {
-    font-size: 25px;
+    font-size: 1.625rem; //26px
+    padding: 1rem 0 1rem 0;
+    margin-top: 70px;
   }
 
   h3 {
-    font-size: 20px;
+    font-size: 1.375rem; //22px
+    padding: 1rem 0 1rem 0;
+  }
+
+  strong {
+    color: #1d1d1d;
+    font-weight: 600;
   }
 
   // Adjust Quotation Element Style
@@ -65,10 +72,14 @@ const MarkdownRenderer = styled.div`
   }
 
   // Adjust List Element Style
+  li {
+    margin-bottom: 4px;
+  }
+
   ol,
   ul {
     margin-left: 20px;
-    padding: 30px 0;
+    margin-bottom: 1.125rem;
   }
 
   // Adjust Horizontal Rule style
@@ -103,7 +114,7 @@ const MarkdownRenderer = styled.div`
   // Markdown Responsive Design
   @media (max-width: 768px) {
     width: 100%;
-    padding: 80px 20px;
+    padding: 0 20px;
     line-height: 1.6;
     font-size: 14px;
 

@@ -6,6 +6,7 @@ import PostList, { PostType } from "components/Main/PostList";
 import { ProfileImageProps } from "components/Main/ProfileImage";
 import { graphql } from "gatsby";
 import queryString, { ParsedQuery } from "query-string";
+import Navigation from "components/Common/Navigation";
 
 interface IndexPageProps {
   location: {
@@ -62,9 +63,9 @@ const IndexPage: FunctionComponent<IndexPageProps> = function ({
       ),
     []
   );
-
   return (
-    <Template>
+    <Template title="title" description="desc" url="url" image="img">
+      <Navigation />
       <Introduction profileImage={fluid} />
       <CategoryList
         selectedCategory={selectedCategory}
