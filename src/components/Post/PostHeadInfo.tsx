@@ -11,7 +11,7 @@ const SCategories = styled.div`
   color: #086bce;
   font-weight: 600;
   font-size: 1.125rem;
-  margin-bottom: 22px;
+  margin-bottom: 1.125rem;
   @media (max-width: 768px) {
     font-size: 1rem;
     margin-bottom: 1rem;
@@ -21,7 +21,7 @@ const SCategories = styled.div`
 const SDate = styled(SCategories)`
   color: #a1a1a1;
   font-weight: 700;
-  margin-top: 22px;
+  margin-top: 1.125rem;
   margin-bottom: 0px;
   @media (max-width: 768px) {
     font-size: 1rem;
@@ -49,7 +49,7 @@ const PostHeadInfoWrapper = styled.div`
 
   @media (max-width: 768px) {
     width: 100%;
-    padding: 40px 20px;
+    padding: 40px 0;
   }
 `;
 

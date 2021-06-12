@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import Arrow from "./Arrow";
-import theme from "components/Common/theme";
-import { Link } from "@reach/router";
+import theme from "components/Common/Theme";
 
 const Black = "#4A4A4A";
 const Blue = "#4080FF";
@@ -10,13 +9,17 @@ const Blue = "#4080FF";
 const Container = styled.div`
   width: 700px;
   align-self: center;
-  margin-top: 22px;
+  margin-top: 62px;
+  margin-bottom: 40px;
 
   & h3 {
     font-size: 1.5rem;
     line-height: 2.25rem;
     font-weight: 600;
     color: #1d1d1d;
+  }
+  @media (max-width: 768px) {
+    width: 90vw;
   }
 `;
 

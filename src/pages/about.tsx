@@ -1,7 +1,53 @@
 import React, { FunctionComponent } from "react";
 import { graphql } from "gatsby";
-import { Global, css } from "@emotion/react";
 import styled from "@emotion/styled";
+import Template from "components/Common/Template";
+import theme from "components/Common/Theme";
+
+const Profile = styled.img`
+  width: ${theme.width.laptop};
+  border-radius: 10px;
+  margin-top: ${theme.margin.laptop};
+  margin-bottom: ${theme.margin.laptop};
+  @media screen and (max-width: 1400px) {
+    width: ${theme.width.tablet};
+  }
+  @media screen and (max-width: 768px) {
+    width: ${theme.width.mobile};
+    margin-top: ${theme.margin.mobile};
+    margin-bottom: ${theme.margin.mobile};
+  }
+`;
+
+const Container = styled.article`
+  width: ${theme.width.tablet};
+  /* background-color: #f1f2f4; */
+  align-self: center;
+
+  @media screen and (max-width: 768px) {
+    width: ${theme.width.mobile};
+  }
+
+  & header {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    & h3 {
+      margin-bottom: ${theme.margin.mobile};
+    }
+  }
+
+  & section {
+    margin-top: 60px;
+    margin-bottom: 20px;
+    & p {
+      margin-top: 4px;
+      margin-bottom: 24px;
+    }
+    & h3 {
+      margin-bottom: ${theme.margin.mobile};
+    }
+  }
+`;
 
 interface InfoPageProps {
   data: {
@@ -15,33 +61,6 @@ interface InfoPageProps {
   };
 }
 
-const globalStyle = css`
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-size: 20px;
-  }
-`;
-
-const TextStyle = css`
-  font-size: 18px;
-  font-weight: 700;
-  color: gray;
-`;
-
-const Text1 = styled.div<{ disable: boolean }>`
-  font-size: 20px;
-  font-weight: 700;
-  text-decoration: ${({ disable }) => (disable ? "line-through" : "none")};
-`;
-
-const Text2 = styled("div")<{ disable: boolean }>(({ disable }) => ({
-  fontSize: "15px",
-  color: "blue",
-  textDecoration: disable ? "line-through" : "none",
-}));
-
 const InfoPage: FunctionComponent<InfoPageProps> = function ({
   data: {
     site: {
@@ -50,12 +69,27 @@ const InfoPage: FunctionComponent<InfoPageProps> = function ({
   },
 }) {
   return (
-    <div>
-      <Global styles={globalStyle} />
-      <div css={TextStyle}>{title}</div>
-      <Text1 disable={true}>{description}</Text1>
-      <Text2 disable={true}>{author}</Text2>
-    </div>
+    <Template
+      title="Beomsoo-log"
+      description="desc"
+      url="url"
+      image="img"
+      bgColor="#F1F2F4"
+    >
+      <main style={{ alignSelf: "center" }}>
+        <Profile src="https://i.imgur.com/4xmnZLI.png" />
+        <Container>
+          <header>
+            <h3 className="font-gradient">"Young and be ambitious!"</h3>
+            <p>I love to make impact with awesome products.</p>
+            <p>
+              I’m currently working as a design engineer at TNG and Product
+              Designer at BE THE LIGHT
+            </p>
+          </header>
+        </Container>
+      </main>
+    </Template>
   );
 };
 

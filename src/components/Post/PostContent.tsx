@@ -18,6 +18,7 @@ const MarkdownRenderer = styled.div`
   letter-spacing: -0.02rem;
   /* word-break: keep-all; */
   font-weight: 300;
+
   * {
     font-size: 1.125rem;
 
@@ -26,18 +27,6 @@ const MarkdownRenderer = styled.div`
     }
   }
   // Adjust Heading Element Style
-  h1,
-  h2,
-  h3 {
-    color: #1d1d1d;
-    font-weight: 600;
-  }
-
-  hr + h1,
-  hr + h2,
-  hr + h3 {
-    margin-top: 0;
-  }
 
   p {
     margin-bottom: 1.125rem; //18px
@@ -50,7 +39,7 @@ const MarkdownRenderer = styled.div`
   h2 {
     font-size: 1.625rem; //26px
     padding: 1rem 0 1rem 0;
-    margin-top: 70px;
+    margin-top: 40px;
   }
 
   h3 {
@@ -61,6 +50,36 @@ const MarkdownRenderer = styled.div`
   strong {
     color: #1d1d1d;
     font-weight: 600;
+  }
+
+  h1,
+  h2,
+  h3 {
+    color: #1d1d1d;
+    font-weight: 600;
+  }
+
+  hr + h1,
+  hr + h2,
+  hr + h3 {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  /* * + h1,
+  * + h2,
+  * + h3 {
+    padding-top: 0;
+  } */
+
+  & > h2:first-child {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  & > h3:first-child {
+    margin-top: 0;
+    padding-top: 0;
   }
 
   // Adjust Quotation Element Style
@@ -76,16 +95,20 @@ const MarkdownRenderer = styled.div`
     margin-bottom: 4px;
   }
 
+  li p,
+  strong {
+    margin: 0;
+  }
+
   ol,
   ul {
     margin-left: 20px;
-    margin-bottom: 1.125rem;
+    margin-bottom: 14px;
   }
 
   // Adjust Horizontal Rule style
   hr {
-    border: 1px solid #000000;
-    margin: 100px 0;
+    margin: 22px 0 40px;
   }
 
   // Adjust Link Element Style
@@ -113,8 +136,7 @@ const MarkdownRenderer = styled.div`
 
   // Markdown Responsive Design
   @media (max-width: 768px) {
-    width: 100%;
-    padding: 0 20px;
+    width: 90vw;
     line-height: 1.6;
     font-size: 14px;
 
@@ -124,10 +146,13 @@ const MarkdownRenderer = styled.div`
 
     h2 {
       font-size: 20px;
+      margin-top: 20px;
+      padding: 0.75rem 0 0.75rem 0;
     }
 
     h3 {
-      font-size: 17px;
+      font-size: 18px;
+      padding: 0.75rem 0 0.75rem 0;
     }
 
     img {
@@ -139,6 +164,7 @@ const MarkdownRenderer = styled.div`
     }
   }
 `;
+
 const PostContent: FunctionComponent<PostContentProps> = function ({ html }) {
   return <MarkdownRenderer dangerouslySetInnerHTML={{ __html: html }} />;
 };

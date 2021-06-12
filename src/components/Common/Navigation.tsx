@@ -63,7 +63,6 @@ const Navigation = () => {
   };
 
   const Container = styled.section`
-    width: 100vw;
     height: ${hamburger === false ? "4rem" : "20rem"}; //64px
     display: flex;
     justify-content: center;
