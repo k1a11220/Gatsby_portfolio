@@ -1,12 +1,19 @@
-import React, { FunctionComponent, useMemo } from "react";
+import React, { FunctionComponent } from "react";
 import Template from "components/Common/Template";
-import CategoryList, { CategoryListProps } from "components/Main/CategoryList";
 import Introduction from "components/Main/Introduction";
 import PostList, { PostType } from "components/Main/PostList";
 import { ProfileImageProps } from "components/Main/ProfileImage";
 import { graphql } from "gatsby";
 import queryString, { ParsedQuery } from "query-string";
-import Navigation from "components/Common/Navigation";
+import styled from "@emotion/styled";
+
+const Title = styled.p`
+  width: 1200px;
+  margin: 100px auto 0;
+  font-size: 24px;
+  color: #1d1d1d;
+  font-weight: 700;
+`;
 
 interface IndexPageProps {
   location: {
@@ -38,39 +45,16 @@ const IndexPage: FunctionComponent<IndexPageProps> = function ({
     typeof parsed.category !== "string" || !parsed.category
       ? "All"
       : parsed.category;
-
-  const categoryList = useMemo(
-    () =>
-      edges.reduce(
-        (
-          list: CategoryListProps["categoryList"],
-          {
-            node: {
-              frontmatter: { categories },
-            },
-          }: PostType
-        ) => {
-          categories.forEach((category) => {
-            if (list[category] === undefined) list[category] = 1;
-            else list[category]++;
-          });
-
-          list["All"]++;
-
-          return list;
-        },
-        { All: 0 }
-      ),
-    []
-  );
   return (
-    <Template title="title" description="desc" url="url" image="img">
-      <Navigation />
+    <Template
+      title="Beomsoo-log"
+      description="desc"
+      url="url"
+      image="img"
+      bgColor="#F1F2F4"
+    >
       <Introduction profileImage={fluid} />
-      <CategoryList
-        selectedCategory={selectedCategory}
-        categoryList={categoryList}
-      />
+      <Title>최근 게시글</Title>
       <PostList selectedCategory={selectedCategory} posts={edges} />
     </Template>
   );

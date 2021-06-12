@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "gatsby";
 import "./Hamburger.css";
 import styled from "@emotion/styled";
 
@@ -10,6 +11,7 @@ const Wrapper = styled.nav`
   justify-content: space-between;
   align-items: center;
   transition: all 0.5s ease-in-out;
+  color: #1d1d1d;
 
   @media screen and (max-width: 1400px) {
     width: 90vw;
@@ -34,6 +36,7 @@ const SelectArea = styled.div`
     font-size: 1rem; //16px
     margin-left: 2.5rem; //40px
     font-weight: 400;
+    color: #1d1d1d;
   }
 
   @media screen and (max-width: 768px) {
@@ -72,7 +75,7 @@ const Navigation = () => {
     top: 0px;
     z-index: 2;
     transition: all 0.5s ease-in-out;
-    /* box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1); */
+
     border-bottom: solid 2px #f3f3f3;
   `;
 
@@ -120,7 +123,37 @@ const Navigation = () => {
 
   return (
     <Container>
-      <Wrapper></Wrapper>
+      <Wrapper>
+        <>
+          <Link to="/" style={{ fontSize: "1.25rem", fontWeight: "600" }}>
+            Beomsoo-log
+          </Link>
+          <SelectArea>
+            <Link to="/categories">Categories</Link>
+            <Link to="/about">About</Link>
+            <a href="https://works.beomsoo.me">Works</a>
+            <a href="mailto: beskar.son@gmail.com">Contact</a>
+          </SelectArea>
+        </>
+        <HamburgerContainer>
+          <Label htmlFor="check">
+            <input type="checkbox" id="check" onClick={menuStatus} />
+            <span className={hamburger ? "bar1_checked" : ""}></span>
+            <span className={hamburger ? "bar2_checked" : ""}></span>
+            <span className={hamburger ? "bar3_checked" : ""}></span>
+          </Label>
+        </HamburgerContainer>
+        <HamburgerMenu>
+          <Link to="/" onClick={menuStatus}>
+            Work
+          </Link>
+          <Link to="/About" onClick={menuStatus}>
+            About
+          </Link>
+          <a href="https://www.beomsoo.me">Blog</a>
+          <a href="mailto: beskar.son@gmail.com">Contact</a>
+        </HamburgerMenu>
+      </Wrapper>
     </Container>
   );
 };

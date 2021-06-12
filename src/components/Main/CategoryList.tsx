@@ -22,7 +22,7 @@ export interface CategoryListProps {
 const CategoryListWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
-  width: 768px;
+  width: 1200px;
   margin: 100px auto 0;
 
   @media (max-width: 768px) {
@@ -39,7 +39,7 @@ const CategoryItem = styled(({ active, ...props }: GatsbyLinkProps) => (
   margin-right: 20px;
   padding: 5px 0;
   font-size: 18px;
-  font-weight: ${({ active }) => (active ? "800" : "400")};
+  font-weight: ${({ active }) => (active ? "700" : "400")};
   cursor: pointer;
 
   &:last-of-type {
@@ -59,7 +59,7 @@ const CategoryList: FunctionComponent<CategoryListProps> = function ({
     <CategoryListWrapper>
       {Object.entries(categoryList).map(([name, count]) => (
         <CategoryItem
-          to={`/?category=${name}`}
+          to={`/categories/?category=${name}`}
           active={name === selectedCategory}
           key={name}
         >

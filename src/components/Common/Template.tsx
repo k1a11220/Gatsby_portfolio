@@ -3,12 +3,14 @@ import styled from "@emotion/styled";
 import GlobalStyle from "components/Common/GlobalStyle";
 import Footer from "components/Common/Footer";
 import { Helmet } from "react-helmet";
+import Navigation from "./Navigation";
 
 interface TemplateProps {
   title: string;
   description: string;
   url: string;
   image: string;
+  bgColor: string;
   children: ReactNode;
 }
 
@@ -16,7 +18,7 @@ const Container = styled.main`
   display: flex;
   flex-direction: column;
   height: 100%;
-  background-color: #f1f2f4;
+  background-color: ${(props) => props.color};
 `;
 
 const Template: FunctionComponent<TemplateProps> = function ({
@@ -25,9 +27,11 @@ const Template: FunctionComponent<TemplateProps> = function ({
   url,
   image,
   children,
+  bgColor,
 }) {
   return (
-    <Container>
+    <Container color={bgColor}>
+      <Navigation />
       <Helmet>
         <title>{title}</title>
 

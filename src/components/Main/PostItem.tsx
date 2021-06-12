@@ -63,7 +63,7 @@ const Title = styled.div`
 
 const Date = styled.div`
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 600;
   opacity: 0.7;
   color: #6e6e73;
 `;
@@ -77,7 +77,7 @@ const Category = styled.div`
 const CategoryItem = styled.div`
   border-radius: 3px;
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 600;
   color: #086bce;
 `;
 
