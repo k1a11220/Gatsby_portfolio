@@ -74,11 +74,11 @@ const InfoPage: FunctionComponent<InfoPageProps> = function ({
       description="desc"
       url="url"
       image="img"
-      bgColor="#F1F2F4"
+      bgColor="#FFFFFF"
     >
       <main style={{ alignSelf: "center" }}>
-        <Profile src="https://i.imgur.com/4xmnZLI.png" />
         <Container>
+          <Profile src="https://i.imgur.com/4xmnZLI.png" />
           <header>
             <h3 className="font-gradient">"Young and be ambitious!"</h3>
             <p>I love to make impact with awesome products.</p>

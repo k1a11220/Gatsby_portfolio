@@ -43,7 +43,7 @@ const PostTemplate: FunctionComponent<PostTemplateProps> = function ({
       bgColor="#FFFFF"
     >
       <PostHead {...frontmatter} />
-      <PostContent html={html} />
+      <PostContent {...frontmatter} html={html} />
       <Share nextProject={frontmatter.path} prevProject="ageasda" />
       <CommentWidget repo="k1a11220/blog" theme="github-light" />
     </Template>

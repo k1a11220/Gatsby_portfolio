@@ -1,8 +1,14 @@
 import React, { FunctionComponent } from "react";
 import styled from "@emotion/styled";
+import Img, { FluidObject } from "gatsby-image";
 
-interface PostContentProps {
+export interface PostContentProps {
   html: string;
+  thumbnail: {
+    childImageSharp: {
+      fluid: FluidObject;
+    };
+  };
 }
 
 const MarkdownRenderer = styled.div`
@@ -165,8 +171,33 @@ const MarkdownRenderer = styled.div`
   }
 `;
 
-const PostContent: FunctionComponent<PostContentProps> = function ({ html }) {
-  return <MarkdownRenderer dangerouslySetInnerHTML={{ __html: html }} />;
+const ThumbnailImage = styled(Img)`
+  width: 700px;
+  height: 394px;
+  border-radius: 10px;
+  background-color: #fafafa;
+  align-self: center;
+  margin-bottom: 60px;
+  object-fit: cover;
+  @media (max-width: 768px) {
+    width: 90vw;
+    height: 210px;
+    margin-bottom: 28px;
+  }
+`;
+
+const PostContent: FunctionComponent<PostContentProps> = function ({
+  html,
+  thumbnail: {
+    childImageSharp: { fluid },
+  },
+}) {
+  return (
+    <>
+      <ThumbnailImage fluid={fluid} alt="thumbnail" />
+      <MarkdownRenderer dangerouslySetInnerHTML={{ __html: html }} />
+    </>
+  );
 };
 
 export default PostContent;

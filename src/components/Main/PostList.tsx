@@ -39,10 +39,14 @@ const PostListWrapper = styled.div`
   margin: 0 auto;
   padding: 40px 0 100px;
 
+  @media (max-width: 1200px) {
+    grid-template-columns: 1fr 1fr;
+    width: 90vw;
+  }
+
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
-    width: 100%;
-    padding: 50px 20px;
+    padding: 20px 0;
   }
 `;
 
