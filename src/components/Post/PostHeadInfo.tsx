@@ -4,13 +4,12 @@ import styled from "@emotion/styled";
 export interface PostHeadInfoProps {
   title: string;
   date: string;
-  summary: string;
   categories: string[];
 }
 
 const SCategories = styled.div`
   color: #086bce;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 1.125rem;
   margin-bottom: 1.125rem;
   @media (max-width: 768px) {
@@ -21,7 +20,7 @@ const SCategories = styled.div`
 
 const SDate = styled(SCategories)`
   color: #a1a1a1;
-  font-weight: 500;
+  font-weight: 700;
   margin-top: 1.125rem;
   margin-bottom: 0px;
   @media (max-width: 768px) {
@@ -63,7 +62,7 @@ const Title = styled.div`
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   font-size: 48px;
-  font-weight: 800;
+  font-weight: 700;
   color: #1d1d1d;
 
   @media (max-width: 768px) {
@@ -71,25 +70,17 @@ const Title = styled.div`
   }
 `;
 
-const Summary = styled.p`
-  color: #1d1d1d;
-  margin-top: 18px;
-  font-weight: 600;
-`;
-
 const PostHeadInfo: FunctionComponent<PostHeadInfoProps> = function ({
   title,
   date,
   categories,
-  summary,
 }) {
   return (
     <PostHeadInfoWrapper>
       <SCategories>{categories.join(" / ")}</SCategories>
       <Title>{title}</Title>
       <SDate>업데이트 : {date}</SDate>
-      {/* <Summary>{summary}</Summary> */}
-      {/* <Hr /> */}
+      <Hr />
     </PostHeadInfoWrapper>
   );
 };

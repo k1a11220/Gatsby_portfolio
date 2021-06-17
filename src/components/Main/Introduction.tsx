@@ -11,10 +11,6 @@ const Background = styled.div`
   color: #ffffff;
   margin-top: 40px;
   border-radius: 10px;
-
-  @media (max-width: 1200px) {
-    width: 90vw;
-  }
 `;
 
 const Wrapper = styled.div`

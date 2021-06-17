@@ -31,10 +31,6 @@ const PostItemWrapper = styled(Link)`
 
     transform: scale(1.02);
   }
-
-  @media (max-width: 768px) {
-    height: 320px;
-  }
 `;
 
 const ThumbnailImage = styled(Img)`
@@ -51,12 +47,7 @@ const PostItemContent = styled.div`
   justify-content: space-between;
   padding: 24px;
   height: 380px;
-
-  @media (max-width: 768px) {
-    padding: 20px;
-  }
 `;
-
 const Title = styled.div`
   display: -webkit-box;
   overflow: hidden;

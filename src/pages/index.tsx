@@ -13,10 +13,6 @@ const Title = styled.p`
   font-size: 24px;
   color: #1d1d1d;
   font-weight: 700;
-
-  @media (max-width: 1200px) {
-    width: 90vw;
-  }
 `;
 
 interface IndexPageProps {

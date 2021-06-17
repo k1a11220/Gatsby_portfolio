@@ -143,13 +143,13 @@ const Navigation = () => {
           </Label>
         </HamburgerContainer>
         <HamburgerMenu>
-          <Link to="/categories" onClick={menuStatus}>
-            Categories
+          <Link to="/" onClick={menuStatus}>
+            Work
           </Link>
-          <Link to="/about" onClick={menuStatus}>
+          <Link to="/About" onClick={menuStatus}>
             About
           </Link>
-          <a href="https://works.beomsoo.me">Blog</a>
+          <a href="https://www.beomsoo.me">Blog</a>
           <a href="mailto: beskar.son@gmail.com">Contact</a>
         </HamburgerMenu>
       </Wrapper>
