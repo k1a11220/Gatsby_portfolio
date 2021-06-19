@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from "react";
-import styled from "@emotion/styled";
+import styled from "styled-components";
 
 export interface PostHeadInfoProps {
   title: string;
@@ -46,6 +46,9 @@ const PostHeadInfoWrapper = styled.div`
   margin: 0 auto;
   padding: 60px 0;
   color: #ffffff;
+  position: relative;
+  top: 64px;
+  margin-bottom: 64px;
 
   @media (max-width: 768px) {
     width: 100%;
@@ -63,7 +66,7 @@ const Title = styled.div`
   -webkit-box-orient: vertical;
   font-size: 48px;
   font-weight: 700;
-  color: #1d1d1d;
+  color: ${(props) => props.theme.fontColor};
 
   @media (max-width: 768px) {
     font-size: 30px;

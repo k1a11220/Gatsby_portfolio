@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from "react";
-import styled from "@emotion/styled";
+import styled from "styled-components";
 
 interface PostContentProps {
   html: string;
@@ -29,7 +29,7 @@ const MarkdownRenderer = styled.div`
   // Adjust Heading Element Style
 
   p {
-    margin-bottom: 22px; //18px
+    margin-bottom: 32px; //18px
   }
 
   h1 {
@@ -38,24 +38,23 @@ const MarkdownRenderer = styled.div`
 
   h2 {
     font-size: 1.625rem; //26px
-    padding: 1rem 0 1rem 0;
-    margin-top: 40px;
+    margin: 36px 0 32px 0;
   }
 
   h3 {
     font-size: 1.375rem; //22px
-    padding: 1rem 0 1rem 0;
+    margin: 20px 0px 20px 0px;
   }
 
   strong {
-    color: #1d1d1d;
+    color: ${(props) => props.theme.fontColor};
     font-weight: 600;
   }
 
   h1,
   h2,
   h3 {
-    color: #1d1d1d;
+    color: ${(props) => props.theme.fontColor};
     font-weight: 600;
   }
 
@@ -86,14 +85,11 @@ const MarkdownRenderer = styled.div`
   blockquote {
     margin: 30px 0;
     padding: 5px 15px;
-    border-left: 2px solid #000000;
+    border-left: 2px solid ${(props) => props.theme.fontColor};
     font-weight: 800;
   }
 
   // Adjust List Element Style
-  li {
-    margin-bottom: 4px;
-  }
 
   li p,
   strong {
@@ -103,7 +99,7 @@ const MarkdownRenderer = styled.div`
   ol,
   ul {
     margin-left: 20px;
-    margin-bottom: 18px;
+    margin-bottom: 32px;
   }
 
   // Adjust Horizontal Rule style

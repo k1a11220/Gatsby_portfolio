@@ -1,72 +1,79 @@
-import React, { FunctionComponent } from "react";
-import styled from "@emotion/styled";
+import React from "react";
+import styled from "styled-components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faBehance,
+  faInstagram,
+  faLinkedinIn,
+  faGithub,
+} from "@fortawesome/free-brands-svg-icons";
 
 const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  align-self: center;
   width: 100vw;
-  margin-top: 40px;
-  background-color: #f3f3f3;
+  height: 148px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: ${(props) => props.theme.subBgColor};
 `;
 
-const Wrapper = styled.ul`
-  width: 1200px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin-top: 2.5rem;
-  align-items: flex-start;
-  justify-content: space-around;
-
-  @media screen and (max-width: 1400px) {
-    width: 90vw;
-  }
-  @media screen and (max-width: 768px) {
-    grid-template-columns: 1fr;
-  }
-`;
-
-const Info = styled.div`
-  padding-right: 80px;
-
-  &:nth-child(2) {
-    display: flex;
-    flex-direction: column;
-  }
-  @media screen and (max-width: 768px) {
-    margin-bottom: 30px;
-  }
-
-  & h3 {
-    margin-bottom: 1rem;
+const Wrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  @media (max-width: 1400px) {
+    width: 92%;
   }
 `;
 
-const Footer: FunctionComponent = function () {
+const Cta = styled.div`
+  display: flex;
+  align-items: center;
+  background-color: ${(props) => props.theme.btnBgColor};
+  padding: 8px 24px 8px 24px;
+  border-radius: 40px;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: ${(props) => props.theme.btnTextColor}; ;
+`;
+
+const IconWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  & svg {
+    margin-left: 16px;
+  }
+`;
+
+const Icon = styled(FontAwesomeIcon)``;
+
+const IconContainer = styled.a`
+  &:hover {
+    & > svg {
+      color: green;
+    }
+  }
+`;
+
+const Footer = () => {
   return (
     <Container>
       <Wrapper>
-        <Info>
-          <h3>Let’s make history together.</h3>
-          <a href="mailto:beskar.son@gmail.com">beskar.son@gmail.com</a>
-        </Info>
-        <Info>
-          <h3>Welcome to visit.</h3>
-          <a href="https://www.instagram.com/beomsoo_son/">Instagram</a>
-          <a href="https://www.behance.net/sonbeomsoo">Behance</a>
-          <a href="https://www.linkedin.com/in/beomsoo-son-65a201178/">
-            LinkedIn
-          </a>
-          <a href="https://github.com/k1a11220">Github</a>
-        </Info>
-        <p
-          style={{
-            fontSize: "12px",
-            marginBottom: "40px",
-          }}
-        >
-          Copyright © 2021 Beomsoo Son. All rights reserved.
-        </p>
+        <Cta>beskar.son@gmail.com</Cta>
+        <IconWrapper>
+          <IconContainer
+            href="https://www.beomsoo.me"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Icon className="font-icon" icon={faBehance} size="lg" />
+          </IconContainer>
+          <Icon icon={faInstagram} size="lg" />
+          <Icon icon={faGithub} size="lg" />
+          <Icon icon={faLinkedinIn} size="lg" />
+        </IconWrapper>
       </Wrapper>
     </Container>
   );

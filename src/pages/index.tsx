@@ -1,18 +1,22 @@
 import React, { FunctionComponent } from "react";
+import styled from "styled-components";
+import { graphql } from "gatsby";
+import queryString, { ParsedQuery } from "query-string";
+
 import Template from "components/Common/Template";
 import Introduction from "components/Main/Introduction";
 import PostList, { PostType } from "components/Main/PostList";
 import { ProfileImageProps } from "components/Main/ProfileImage";
-import { graphql } from "gatsby";
-import queryString, { ParsedQuery } from "query-string";
-import styled from "@emotion/styled";
 
 const Title = styled.p`
   width: 1200px;
   margin: 100px auto 0;
   font-size: 24px;
-  color: #1d1d1d;
   font-weight: 700;
+`;
+
+const Container = styled.main`
+  background-color: ${(props) => props.theme.subBgColor};
 `;
 
 interface IndexPageProps {
@@ -46,16 +50,12 @@ const IndexPage: FunctionComponent<IndexPageProps> = function ({
       ? "All"
       : parsed.category;
   return (
-    <Template
-      title="Beomsoo-log"
-      description="desc"
-      url="url"
-      image="img"
-      bgColor="#F1F2F4"
-    >
-      <Introduction profileImage={fluid} />
-      <Title>최근 게시글</Title>
-      <PostList selectedCategory={selectedCategory} posts={edges} />
+    <Template title="Beomsoo-log" description="desc" url="url" image="img">
+      <Container>
+        <Introduction profileImage={fluid} />
+        <Title>최근 게시글</Title>
+        <PostList selectedCategory={selectedCategory} posts={edges} />
+      </Container>
     </Template>
   );
 };

@@ -7,6 +7,10 @@ var plugins = [{
       plugin: require('/Users/beomsoo/Documents/GitHub/blog/node_modules/gatsby-plugin-canonical-urls/gatsby-ssr'),
       options: {"plugins":[],"siteUrl":"<https://my-website.com/>","stripQueryString":true},
     },{
+      name: 'gatsby-plugin-use-dark-mode',
+      plugin: require('/Users/beomsoo/Documents/GitHub/blog/node_modules/gatsby-plugin-use-dark-mode/gatsby-ssr'),
+      options: {"plugins":[],"classNameDark":"dark-mode","classNameLight":"light-mode","storageKey":"darkMode","minify":true},
+    },{
       name: 'gatsby-plugin-sitemap',
       plugin: require('/Users/beomsoo/Documents/GitHub/blog/node_modules/gatsby-plugin-sitemap/gatsby-ssr'),
       options: {"plugins":[],"output":"/sitemap","createLinkInHead":true,"entryLimit":45000,"query":"{ site { siteMetadata { siteUrl } } allSitePage { nodes { path } } }","excludes":[]},

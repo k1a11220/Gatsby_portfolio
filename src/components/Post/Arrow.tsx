@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "@emotion/styled";
+import styled from "styled-components";
 
 const Arrow = ({ direction }) => {
   const SVG = styled.svg`

@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from "react";
-import styled from "@emotion/styled";
+import styled from "styled-components";
 import PostHeadInfo, { PostHeadInfoProps } from "components/Post/PostHeadInfo";
 import Img, { FluidObject } from "gatsby-image";
 
