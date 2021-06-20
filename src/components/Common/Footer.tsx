@@ -8,7 +8,7 @@ import {
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
 
-const Container = styled.div`
+const Container = styled.footer`
   width: 100vw;
   height: 148px;
   display: flex;
@@ -42,6 +42,12 @@ const Cta = styled.div`
   font-size: 0.875rem;
   font-weight: 400;
   color: ${(props) => props.theme.btnTextColor};
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.02);
+  }
+
   @media (max-width: 768px) {
     margin-bottom: 24px;
   }
@@ -69,7 +75,13 @@ const Footer = () => {
   return (
     <Container>
       <Wrapper>
-        <Cta>beskar.son@gmail.com</Cta>
+        <a
+          href="mailto:beskar.son@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Cta>beskar.son@gmail.com</Cta>
+        </a>
         <IconWrapper>
           <IconContainer
             href="https://www.beomsoo.me"

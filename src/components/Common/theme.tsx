@@ -21,7 +21,7 @@ export const paragraphMargin = {
 export const lightTheme = {
   fontColor: "#1D1D1F",
   bgColor: "#ffffff",
-  subBgColor: "#F1F2F4",
+  subBgColor: "#FAFAFA",
   btnTextColor: "#ffffff",
   btnBgColor: "#086BCE",
   borderColor: "solid 1px #EBEBEB",

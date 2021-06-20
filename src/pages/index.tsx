@@ -13,6 +13,10 @@ const Title = styled.p`
   margin: 100px auto 0;
   font-size: 24px;
   font-weight: 700;
+  @media (max-width: 1400px) {
+    width: 92%;
+    margin: 50px auto 0;
+  }
 `;
 
 const Container = styled.div`
@@ -53,9 +57,8 @@ const IndexPage: FunctionComponent<IndexPageProps> = function ({
     <Template title="Beomsoo-log" description="desc" url="url" image="img">
       <Container>
         <Introduction profileImage={fluid} />
-        {/* <Title>최근 게시글</Title> */}
+        <Title>최근 게시글</Title>
         <PostList selectedCategory={selectedCategory} posts={edges} />
-        <div style={{ height: "100px", backgroundColor: "white" }}></div>
       </Container>
     </Template>
   );

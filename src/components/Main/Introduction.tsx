@@ -13,15 +13,20 @@ const Background = styled.div`
 `;
 
 const Wrapper = styled.div`
-  width: 92%;
+  position: relative;
+  top: 64px;
+  width: 1200px;
+  height: 440px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  height: 440px;
   margin: 0 auto;
+  padding-bottom: 32px;
+  padding-top: 72px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1400px) {
+    width: 92%;
     height: 300px;
   }
 `;
@@ -52,7 +57,7 @@ const Introduction: FunctionComponent<IntroductionProps> = function ({
       {/* <ProfileImage profileImage={profileImage} /> */}
       <div>
         {/* <SubTitle>안녕하세요</SubTitle> */}
-        {/* <Title>좋은 제품을 만들기 위한 고민을 적고 있습니다.</Title> */}
+        <Title>좋은 제품을 만들기 위한 고민을 적고 있습니다.</Title>
       </div>
     </Wrapper>
     // </Background>

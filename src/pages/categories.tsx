@@ -5,6 +5,7 @@ import PostList, { PostType } from "components/Main/PostList";
 import { ProfileImageProps } from "components/Main/ProfileImage";
 import { graphql } from "gatsby";
 import queryString, { ParsedQuery } from "query-string";
+import styled from "styled-components";
 
 interface CategoriesPageProps {
   location: {
@@ -21,6 +22,10 @@ interface CategoriesPageProps {
     };
   };
 }
+
+const Container = styled.div`
+  background-color: ${(props) => props.theme.indexColor};
+`;
 
 const CategoriesPage: FunctionComponent<CategoriesPageProps> = function ({
   location: { search },
@@ -68,11 +73,13 @@ const CategoriesPage: FunctionComponent<CategoriesPageProps> = function ({
       url="url"
       image="img"
     >
-      <CategoryList
-        selectedCategory={selectedCategory}
-        categoryList={categoryList}
-      />
-      <PostList selectedCategory={selectedCategory} posts={edges} />
+      <Container>
+        <CategoryList
+          selectedCategory={selectedCategory}
+          categoryList={categoryList}
+        />
+        <PostList selectedCategory={selectedCategory} posts={edges} />
+      </Container>
     </Template>
   );
 };

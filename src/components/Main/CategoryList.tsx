@@ -20,15 +20,17 @@ export interface CategoryListProps {
 }
 
 const CategoryListWrapper = styled.div`
+  position: relative;
+  top: 64px;
+  padding-bottom: 64px;
   display: flex;
   flex-wrap: wrap;
   width: 1200px;
   margin: 100px auto 0;
 
-  @media (max-width: 768px) {
-    width: 100%;
+  @media (max-width: 1400px) {
+    width: 92%;
     margin-top: 50px;
-    padding: 0 20px;
   }
 `;
 
