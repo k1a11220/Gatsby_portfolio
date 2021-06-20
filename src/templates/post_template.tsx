@@ -5,6 +5,9 @@ import PostHead, { PostHeadProps } from "components/Post/PostHead";
 import PostContent from "components/Post/PostContent";
 import CommentWidget from "components/Post/CommentWidget";
 import Share from "components/Post/Share";
+import { useReactiveVar } from "@apollo/client";
+import { darkModeVar } from "hooks/useTheme";
+import styled from "styled-components";
 
 interface PostTemplateProps {
   data: {
@@ -25,6 +28,10 @@ interface PostTemplateProps {
   };
 }
 
+const Comment = styled(CommentWidget)`
+  theme: "github-dark";
+`;
+
 const PostTemplate: FunctionComponent<PostTemplateProps> = function ({
   data: {
     allMarkdownRemark: { edges },
@@ -33,6 +40,8 @@ const PostTemplate: FunctionComponent<PostTemplateProps> = function ({
   const {
     node: { html, frontmatter },
   } = edges[0];
+  const theme = useReactiveVar(darkModeVar);
+  let CommentTheme = theme ? "github-dark" : "github-light";
 
   return (
     <Template
@@ -40,12 +49,11 @@ const PostTemplate: FunctionComponent<PostTemplateProps> = function ({
       description={frontmatter.summary}
       url=""
       image=""
-      bgColor="#FFFFF"
     >
       <PostHead {...frontmatter} />
       <PostContent html={html} />
       <Share nextProject={frontmatter.path} prevProject="ageasda" />
-      <CommentWidget repo="k1a11220/blog" theme="github-light" />
+      <Comment repo="k1a11220/blog" theme={CommentTheme} />
     </Template>
   );
 };

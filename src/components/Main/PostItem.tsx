@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from "react";
-import styled from "@emotion/styled";
 import { Link } from "gatsby";
+import styled from "styled-components";
 import Img, { FluidObject } from "gatsby-image";
 
 interface PostItemProps {
@@ -19,16 +19,14 @@ const PostItemWrapper = styled(Link)`
   display: flex;
   flex-direction: column;
   border-radius: 10px;
-  background-color: #ffffff;
   transition: 0.3s box-shadow;
   cursor: pointer;
   transition: all 0.2s ease-in;
   height: 380px;
-
+  background-color: ${(props) => props.theme.bgColor};
   &:hover {
     box-shadow: 0px 20px 25px -5px rgba(0, 0, 0, 0.1),
       0px 10px 10px -5px rgba(0, 0, 0, 0.04);
-
     transform: scale(1.02);
   }
 `;
@@ -59,7 +57,7 @@ const Title = styled.div`
   -webkit-box-orient: vertical;
   font-size: 20px;
   font-weight: 700;
-  color: #1d1d1d;
+  color: ${(props) => props.theme.fontColor};
 `;
 
 const Date = styled.div`

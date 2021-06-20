@@ -64,10 +64,9 @@ const CategoriesPage: FunctionComponent<CategoriesPageProps> = function ({
   return (
     <Template
       title="Beomsoo-log"
-      description="desc"
+      description="더 나은 제품을 위한 고민을 적고 있습니다."
       url="url"
       image="img"
-      bgColor="#F1F2F4"
     >
       <CategoryList
         selectedCategory={selectedCategory}

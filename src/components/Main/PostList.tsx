@@ -1,5 +1,5 @@
-import React, { FunctionComponent, useMemo } from "react";
-import styled from "@emotion/styled";
+import React, { FunctionComponent } from "react";
+import styled from "styled-components";
 import PostItem from "components/Main/PostItem";
 import { FluidObject } from "gatsby-image";
 import useInfiniteScroll, {
@@ -39,10 +39,14 @@ const PostListWrapper = styled.div`
   margin: 0 auto;
   padding: 40px 0 100px;
 
+  @media (max-width: 1400px) {
+    grid-template-columns: 1fr 1fr;
+    width: 92%;
+    padding: 50px 20px;
+  }
+
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
-    width: 100%;
-    padding: 50px 20px;
   }
 `;
 

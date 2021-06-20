@@ -15,7 +15,7 @@ const Title = styled.p`
   font-weight: 700;
 `;
 
-const Container = styled.main`
+const Container = styled.div`
   background-color: ${(props) => props.theme.subBgColor};
 `;
 
@@ -53,8 +53,9 @@ const IndexPage: FunctionComponent<IndexPageProps> = function ({
     <Template title="Beomsoo-log" description="desc" url="url" image="img">
       <Container>
         <Introduction profileImage={fluid} />
-        <Title>최근 게시글</Title>
+        {/* <Title>최근 게시글</Title> */}
         <PostList selectedCategory={selectedCategory} posts={edges} />
+        <div style={{ height: "400px", backgroundColor: "white" }}></div>
       </Container>
     </Template>
   );
