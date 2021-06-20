@@ -21,22 +21,24 @@ const PostHeadWrapper = styled.div`
   position: relative;
   width: 100%;
   @media screen and (max-width: 768px) {
-    width: 90vw;
+    width: 92%;
     align-self: center;
   }
 `;
 
-const BackgroundImage = styled((props: GatsbyImgProps) => (
-  <Img {...props} style={{ position: "absolute" }} />
-))`
-  z-index: -1;
-  width: 100%;
+const BackgroundImage = styled((props: GatsbyImgProps) => <Img {...props} />)`
+  width: 700px;
   height: 400px;
   object-fit: cover;
-  filter: brightness(0.25);
+  margin: 0 auto;
+  margin-bottom: 60px;
+  object-position: center center;
+  border-radius: 10px;
 
   @media (max-width: 768px) {
-    height: 300px;
+    width: 100%;
+    height: 240px;
+    margin-bottom: 40px;
   }
 `;
 
@@ -50,8 +52,8 @@ const PostHead: FunctionComponent<PostHeadProps> = function ({
 }) {
   return (
     <PostHeadWrapper>
-      {/* <BackgroundImage fluid={fluid} alt="thumbnail" /> */}
       <PostHeadInfo title={title} date={date} categories={categories} />
+      <BackgroundImage fluid={fluid} alt="thumbnail" />
     </PostHeadWrapper>
   );
 };
