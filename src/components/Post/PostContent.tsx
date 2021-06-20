@@ -136,19 +136,21 @@ const MarkdownRenderer = styled.div`
     line-height: 1.6;
     font-size: 14px;
 
+    p {
+      margin-bottom: 20px;
+    }
+
     h1 {
       font-size: 23px;
     }
 
     h2 {
       font-size: 20px;
-      margin-top: 20px;
-      padding: 0.75rem 0 0.75rem 0;
+      margin: 28px 0 12px 0px;
     }
 
     h3 {
       font-size: 18px;
-      padding: 0.75rem 0 0.75rem 0;
     }
 
     img {
