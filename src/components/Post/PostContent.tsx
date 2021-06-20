@@ -121,32 +121,26 @@ const MarkdownRenderer = styled.div`
   code,
   pre {
     max-width: 92vw;
-    font-family: D2Coding, "D2 coding", monospace;
     font-weight: 300;
+  }
+
+  code * {
+    /* font-family: D2 coding; */
+    /* font-family: SF Mono Light; */
+    /* font-family: "Roboto Mono", monospace; */
+    /* font-family: "Ubuntu", sans-serif; */
+    font-family: "Oxygen Mono", monospace;
   }
 
   code {
     padding: 1px 3px;
-    font-size: 0.75rem;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
-    background: #334;
   }
 
   pre {
-    display: block;
-    padding: 14px;
-    margin: 0 0 18px;
-    line-height: 16px;
-    font-size: 0.75rem;
-    border: 1px solid #334;
-    white-space: pre;
-    white-space: pre-wrap;
-    word-wrap: break-word;
     background-color: #282a36;
-    border-radius: 6px;
-    color: #fff;
   }
   pre code {
     font-size: 0.75rem;

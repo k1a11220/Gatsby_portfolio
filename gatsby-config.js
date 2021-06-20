@@ -55,9 +55,16 @@ module.exports = {
             },
           },
           {
-            resolve: "gatsby-remark-prismjs",
+            resolve: `gatsby-transformer-remark`,
             options: {
-              classPrefix: "language-",
+              plugins: [
+                {
+                  resolve: `gatsby-remark-vscode`,
+                  options: {
+                    theme: "Monokai Dimmed", // Or install your favorite theme from GitHub
+                  },
+                },
+              ],
             },
           },
           {
