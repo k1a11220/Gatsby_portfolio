@@ -29,7 +29,7 @@ const MarkdownRenderer = styled.div`
   // Adjust Heading Element Style
 
   p {
-    margin-bottom: 32px; //18px
+    margin-bottom: 2rem; //32px
   }
 
   h1 {
@@ -81,9 +81,13 @@ const MarkdownRenderer = styled.div`
     padding-top: 0;
   }
 
+  img {
+    border-radius: 10px;
+  }
+
   // Adjust Quotation Element Style
   blockquote {
-    margin: 30px 0;
+    margin: 1.875rem 0;
     padding: 5px 15px;
     border-left: 2px solid ${(props) => props.theme.fontColor};
     font-weight: 800;
@@ -98,13 +102,13 @@ const MarkdownRenderer = styled.div`
 
   ol,
   ul {
-    margin-left: 20px;
-    margin-bottom: 32px;
+    margin-left: 1.25rem;
+    margin-bottom: 2rem;
   }
 
   // Adjust Horizontal Rule style
   hr {
-    margin: 22px 0 40px;
+    margin: 1.375rem 0 2.5rem;
   }
 
   // Adjust Link Element Style
@@ -114,43 +118,72 @@ const MarkdownRenderer = styled.div`
   }
 
   // Adjust Code Style
-  pre[class*="language-"] {
-    margin: 30px 0;
-    padding: 15px;
-    font-size: 15px;
-
-    ::-webkit-scrollbar-thumb {
-      background: rgba(255, 255, 255, 0.5);
-      border-radius: 3px;
-    }
+  code,
+  pre {
+    max-width: 92vw;
+    font-family: D2Coding, "D2 coding", monospace;
+    font-weight: 300;
   }
 
-  code[class*="language-"],
-  pre[class*="language-"] {
-    tab-size: 2;
+  code {
+    padding: 1px 3px;
+    font-size: 0.75rem;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    background: #334;
+  }
+
+  pre {
+    display: block;
+    padding: 14px;
+    margin: 0 0 18px;
+    line-height: 16px;
+    font-size: 0.75rem;
+    border: 1px solid #334;
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    background-color: #282a36;
+    border-radius: 6px;
+    color: #fff;
+  }
+  pre code {
+    font-size: 0.75rem;
+    padding: 0;
+    background: transparent;
+  }
+
+  code > .parameter {
+    color: #fff;
+  }
+  sup {
+    font-size: 0.75rem;
+    vertical-align: super;
+    line-height: 0;
   }
 
   // Markdown Responsive Design
   @media (max-width: 768px) {
     width: 92%;
     line-height: 1.6;
-    font-size: 14px;
+    font-size: 0.875rem;
 
     p {
-      margin-bottom: 20px;
+      margin-bottom: 1.25rem;
     }
 
     h1 {
-      font-size: 23px;
+      font-size: 1.5rem;
     }
 
     h2 {
-      font-size: 20px;
+      font-size: 1.25rem;
       margin: 28px 0 12px 0px;
     }
 
     h3 {
-      font-size: 18px;
+      font-size: 1.125rem;
     }
 
     img {

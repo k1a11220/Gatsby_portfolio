@@ -172,7 +172,7 @@ const Navigation = () => {
       <Container>
         <Wrapper>
           <Logo>
-            <Link to="/"> Beomsoo Son </Link>
+            <Link to="/"> Beomsoo-log</Link>
           </Logo>
           <ItemContainer className={clicked ? "" : "expanded"}>
             <ItemWrapper></ItemWrapper>

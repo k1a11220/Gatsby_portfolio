@@ -71,10 +71,9 @@ const InfoPage: FunctionComponent<InfoPageProps> = function ({
   return (
     <Template
       title="Beomsoo-log"
-      description="desc"
-      url="url"
+      description="좋은 제품을 만들기 위한 고민을 적고 있습니다."
+      url="https://blog.beomsoo.me/about"
       image="img"
-      bgColor="#F1F2F4"
     >
       <main style={{ alignSelf: "center" }}>
         <Profile src="https://i.imgur.com/4xmnZLI.png" />

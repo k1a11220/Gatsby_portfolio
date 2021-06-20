@@ -11,9 +11,11 @@ import { ProfileImageProps } from "components/Main/ProfileImage";
 const Title = styled.p`
   width: 1200px;
   margin: 100px auto 0;
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 700;
+  padding-top: 40px;
   @media (max-width: 1400px) {
+    font-size: 20px;
     width: 92%;
     margin: 50px auto 0;
   }
@@ -54,9 +56,14 @@ const IndexPage: FunctionComponent<IndexPageProps> = function ({
       ? "All"
       : parsed.category;
   return (
-    <Template title="Beomsoo-log" description="desc" url="url" image="img">
+    <Template
+      title="Beomsoo-log"
+      description="좋은 제품을 만들기 위한 고민을 적고 있습니다."
+      url="https://blog.beomsoo.me"
+      image="img"
+    >
       <Container>
-        <Introduction profileImage={fluid} />
+        {/* <Introduction profileImage={fluid} /> */}
         <Title>최근 게시글</Title>
         <PostList selectedCategory={selectedCategory} posts={edges} />
       </Container>

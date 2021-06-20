@@ -64,12 +64,12 @@ const Title = styled.div`
   white-space: normal;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-  font-size: 48px;
+  font-size: 3rem;
   font-weight: 700;
   color: ${(props) => props.theme.fontColor};
 
   @media (max-width: 768px) {
-    font-size: 30px;
+    font-size: 1.875rem;
   }
 `;
 
