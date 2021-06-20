@@ -25,6 +25,8 @@ export const lightTheme = {
   btnTextColor: "#ffffff",
   btnBgColor: "#086BCE",
   borderColor: "solid 1px #EBEBEB",
+  indexColor: "#F1F2F4",
+  postCoverColor: "#FFFFFF",
 };
 export const darkTheme = {
   fontColor: "#ffffff",
@@ -33,6 +35,8 @@ export const darkTheme = {
   btnTextColor: "#62B1FF",
   btnBgColor: "#203E5C",
   borderColor: "solid 1px #2B2B2B",
+  indexColor: "#1D1D1F",
+  postCoverColor: "#2B2B2B",
 };
 
 const theme = {

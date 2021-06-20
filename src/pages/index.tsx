@@ -16,7 +16,7 @@ const Title = styled.p`
 `;
 
 const Container = styled.div`
-  background-color: ${(props) => props.theme.subBgColor};
+  background-color: ${(props) => props.theme.indexColor};
 `;
 
 interface IndexPageProps {
@@ -55,7 +55,7 @@ const IndexPage: FunctionComponent<IndexPageProps> = function ({
         <Introduction profileImage={fluid} />
         {/* <Title>최근 게시글</Title> */}
         <PostList selectedCategory={selectedCategory} posts={edges} />
-        <div style={{ height: "400px", backgroundColor: "white" }}></div>
+        <div style={{ height: "100px", backgroundColor: "white" }}></div>
       </Container>
     </Template>
   );

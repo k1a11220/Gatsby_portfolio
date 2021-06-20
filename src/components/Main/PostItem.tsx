@@ -23,7 +23,7 @@ const PostItemWrapper = styled(Link)`
   cursor: pointer;
   transition: all 0.2s ease-in;
   height: 380px;
-  background-color: ${(props) => props.theme.bgColor};
+  background-color: ${(props) => props.theme.postCoverColor};
   &:hover {
     box-shadow: 0px 20px 25px -5px rgba(0, 0, 0, 0.1),
       0px 10px 10px -5px rgba(0, 0, 0, 0.04);

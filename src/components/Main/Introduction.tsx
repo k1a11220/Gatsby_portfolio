@@ -22,9 +22,7 @@ const Wrapper = styled.div`
   margin: 0 auto;
 
   @media (max-width: 768px) {
-    width: 100%;
     height: 300px;
-    padding: 0 20px;
   }
 `;
 
@@ -54,7 +52,7 @@ const Introduction: FunctionComponent<IntroductionProps> = function ({
       {/* <ProfileImage profileImage={profileImage} /> */}
       <div>
         {/* <SubTitle>안녕하세요</SubTitle> */}
-        <Title>좋은 제품을 만들기 위한 고민을 적고 있습니다.</Title>
+        {/* <Title>좋은 제품을 만들기 위한 고민을 적고 있습니다.</Title> */}
       </div>
     </Wrapper>
     // </Background>

@@ -26,6 +26,11 @@ const Wrapper = styled.div`
   @media (max-width: 1400px) {
     width: 92%;
   }
+  @media (max-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 const Cta = styled.div`
@@ -36,7 +41,10 @@ const Cta = styled.div`
   border-radius: 40px;
   font-size: 0.875rem;
   font-weight: 400;
-  color: ${(props) => props.theme.btnTextColor}; ;
+  color: ${(props) => props.theme.btnTextColor};
+  @media (max-width: 768px) {
+    margin-bottom: 24px;
+  }
 `;
 
 const IconWrapper = styled.div`

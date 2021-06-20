@@ -45,10 +45,10 @@ const Wrapper = styled.div`
 
 const Logo = styled.div`
   font-size: 20px;
-  font-weight: 500;
   display: flex;
   align-items: center;
   & a {
+    font-weight: 500;
     color: ${(props) => props.theme.fontColor};
   }
 `;
