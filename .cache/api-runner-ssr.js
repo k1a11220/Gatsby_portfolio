@@ -5,7 +5,7 @@ var plugins = [{
     },{
       name: 'gatsby-plugin-canonical-urls',
       plugin: require('/Users/beomsoo/Documents/GitHub/blog/node_modules/gatsby-plugin-canonical-urls/gatsby-ssr'),
-      options: {"plugins":[],"siteUrl":"https://blog.beomsoo.me/","stripQueryString":true},
+      options: {"plugins":[],"siteUrl":"https://blog.beomsoo.me","stripQueryString":true},
     },{
       name: 'gatsby-plugin-use-dark-mode',
       plugin: require('/Users/beomsoo/Documents/GitHub/blog/node_modules/gatsby-plugin-use-dark-mode/gatsby-ssr'),
