@@ -1,17 +1,21 @@
 import { makeVar } from "@apollo/client";
+import {
+  setValueToLocalStorage,
+  getValueFromLocalStorage,
+} from "../utils/storage/localStorage";
 
 const DARK_MODE = "DARK_MODE";
 
 export const darkModeVar = makeVar(
-  Boolean(localStorage.getItem(DARK_MODE) === "enabled")
+  Boolean(getValueFromLocalStorage(DARK_MODE) === "enabled")
 );
 
 export const enableDarkMode = () => {
-  localStorage.setItem(DARK_MODE, "enabled");
+  setValueToLocalStorage(DARK_MODE, "enabled");
   darkModeVar(true);
 };
 
 export const disableDarkMode = () => {
-  localStorage.setItem(DARK_MODE, "");
+  setValueToLocalStorage(DARK_MODE, "");
   darkModeVar(false);
 };

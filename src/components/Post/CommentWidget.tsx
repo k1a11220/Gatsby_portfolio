@@ -14,7 +14,6 @@ const Utterances: React.FC<IUtterancesProps> = React.memo(({ repo, theme }) => {
   const containerRef = createRef<HTMLDivElement>();
   const themeMode = darkModeVar() === false ? LIGHT_THEME : DARK_THEME;
 
-  console.log(darkModeVar());
   useLayoutEffect(() => {
     const utterances = document.createElement("script");
 

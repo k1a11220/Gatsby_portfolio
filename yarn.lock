@@ -3851,7 +3851,7 @@ base64-arraybuffer@0.1.4:
   resolved "https://registry.npmjs.org/base64-arraybuffer/-/base64-arraybuffer-0.1.4.tgz"
   integrity sha1-mBjHngWbE1X5fgQooBfIOOkLqBI=
 
-base64-js@^1.3.1:
+base64-js@^1.3.1, base64-js@^1.5.1:
   version "1.5.1"
   resolved "https://registry.npmjs.org/base64-js/-/base64-js-1.5.1.tgz"
   integrity sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==
@@ -7598,6 +7598,19 @@ gatsby-remark-smartypants@^4.2.0:
     retext-smartypants "^4.0.0"
     unist-util-visit "^2.0.3"
 
+gatsby-remark-vscode@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-vscode/-/gatsby-remark-vscode-3.2.1.tgz#0abafe3f28b165ed305150581e087a37e7855f86"
+  integrity sha512-txzIOhfkBg49YLAw49L8PnkTu9ZK8gu61p/WbXelL0R9Abw96pmP+R4Bu1RJx3NSwikhC0nqwgORZl/qeaWwXQ==
+  dependencies:
+    decompress "^4.2.0"
+    json5 "^2.1.1"
+    loglevel "^1.6.4"
+    plist "^3.0.1"
+    unist-util-visit "^1.4.1"
+    vscode-oniguruma "^1.4.0"
+    vscode-textmate "^5.2.0"
+
 gatsby-source-filesystem@^3.4.0:
   version "3.4.0"
   resolved "https://registry.npmjs.org/gatsby-source-filesystem/-/gatsby-source-filesystem-3.4.0.tgz"
@@ -7945,10 +7958,10 @@ get-value@^2.0.3, get-value@^2.0.6:
   resolved "https://registry.npmjs.org/get-value/-/get-value-2.0.6.tgz"
   integrity sha1-3BXKHGcjh8p2vTesCjlbogQqLCg=
 
-gh-pages@^3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/gh-pages/-/gh-pages-3.2.0.tgz#ac5f9f03dae7622740ff39613ee2cfeacabc680b"
-  integrity sha512-VQTwyRtxoaId0YmDXdC/G854dojpwTuOdpZUL3PGG6WQZvSoGVD8ggedKARZltixIREMezoDywE+g3g2paLxPw==
+gh-pages@^3.2.2:
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/gh-pages/-/gh-pages-3.2.2.tgz#3177ef792f8cfcd6872c252c3482910d88b46bbb"
+  integrity sha512-szdkmGpVqMBUZkjgsEXQm5wkLvx/XNvWf3HzL+2ETpLtpaXvSvIzpNgLiiojDzxmbFDf3M5CFK7p/3eYi8U83A==
   dependencies:
     async "^2.6.1"
     commander "^2.18.0"
@@ -8395,6 +8408,11 @@ gzip-size@5.1.1:
   dependencies:
     duplexer "^0.1.1"
     pify "^4.0.1"
+
+hamt_plus@1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/hamt_plus/-/hamt_plus-1.0.2.tgz#e21c252968c7e33b20f6a1b094cd85787a265601"
+  integrity sha1-4hwlKWjH4zsg9qGwlM2FeHomVgE=
 
 handle-thing@^2.0.0:
   version "2.0.1"
@@ -9839,7 +9857,7 @@ json5@^1.0.1:
   dependencies:
     minimist "^1.2.0"
 
-json5@^2.1.2:
+json5@^2.1.1, json5@^2.1.2:
   version "2.2.0"
   resolved "https://registry.npmjs.org/json5/-/json5-2.2.0.tgz"
   integrity sha512-f+8cldu7X/y7RAJurMEJmdoKXGB/X550w2Nr3tTbezL6RwEE/iMcm+tZnXeoZtKuOq6ft8+CqzEkrIgx1fPoQA==
@@ -10257,9 +10275,14 @@ lodash.xorby@^4.7.0:
   resolved "https://registry.yarnpkg.com/lodash.xorby/-/lodash.xorby-4.7.0.tgz#9c19a6f9f063a6eb53dd03c1b6871799801463d7"
   integrity sha1-nBmm+fBjputT3QPBtocXmYAUY9c=
 
-lodash@4.17.21, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.20, lodash@^4.17.21, lodash@^4.17.4, lodash@~4.17.10:
+lodash@4.17.21, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.20, lodash@^4.17.4, lodash@~4.17.10:
   version "4.17.21"
   resolved "https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz"
+  integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
+
+lodash@^4.17.21:
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
 log-symbols@^1.0.2:
@@ -10286,7 +10309,7 @@ logalot@^2.0.0, logalot@^2.1.0:
     figures "^1.3.5"
     squeak "^1.0.0"
 
-loglevel@^1.6.8:
+loglevel@^1.6.4, loglevel@^1.6.8:
   version "1.7.1"
   resolved "https://registry.npmjs.org/loglevel/-/loglevel-1.7.1.tgz"
   integrity sha512-Hesni4s5UkWkwCGJMQGAh71PaLUmKFM60dHvq0zi/vDhhrzuk+4GgNbTXJ12YYQJn6ZKBDNIjYcuQGKudvqrIw==
@@ -11251,6 +11274,13 @@ node-forge@^0.10.0:
   resolved "https://registry.npmjs.org/node-forge/-/node-forge-0.10.0.tgz"
   integrity sha512-PPmu8eEeG9saEUvI97fm4OYxXVB6bFvyNTyiUOBichBpFG8A1Ljw3bY62+5oOjDEMHRnd0Y7HQ+x7uzxOzC6JA==
 
+node-localstorage@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/node-localstorage/-/node-localstorage-2.2.1.tgz#869723550a4883e426cb391d2df0b563a51c7c1c"
+  integrity sha512-vv8fJuOUCCvSPjDjBLlMqYMHob4aGjkmrkaE42/mZr0VT+ZAU10jRF8oTnX9+pgU9/vYJ8P7YT3Vd6ajkmzSCw==
+  dependencies:
+    write-file-atomic "^1.1.4"
+
 node-object-hash@^2.0.0:
   version "2.3.1"
   resolved "https://registry.npmjs.org/node-object-hash/-/node-object-hash-2.3.1.tgz"
@@ -12178,6 +12208,15 @@ platform@^1.3.6:
   version "1.3.6"
   resolved "https://registry.npmjs.org/platform/-/platform-1.3.6.tgz"
   integrity sha512-fnWVljUchTro6RiCFvCXBbNhJc2NijN7oIQxbwsyL0buWJPG85v81ehlHI9fXrJsMNgTofEoWIQeClKpgxFLrg==
+
+plist@^3.0.1:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/plist/-/plist-3.0.2.tgz#74bbf011124b90421c22d15779cee60060ba95bc"
+  integrity sha512-MSrkwZBdQ6YapHy87/8hDU8MnIcyxBKjeF+McXnr5A9MtffPewTs7G3hlpodT5TacyfIyFTaJEhh3GGcmasTgQ==
+  dependencies:
+    base64-js "^1.5.1"
+    xmlbuilder "^9.0.7"
+    xmldom "^0.5.0"
 
 pngjs@^3.0.0, pngjs@^3.3.3:
   version "3.4.0"
@@ -13171,6 +13210,18 @@ rechoir@^0.6.2:
   dependencies:
     resolve "^1.1.6"
 
+recoil-persist@^2.9.0:
+  version "2.9.0"
+  resolved "https://registry.yarnpkg.com/recoil-persist/-/recoil-persist-2.9.0.tgz#de0e0c7d462173d046a3cce5fb722524f30bd64a"
+  integrity sha512-8D1uPXY9EN1TmtjmdGoX3Zr3PWCNax9v3bpSppEAhDPJflJfRYFRnxQqtKpkqYU6dnGeo5FJUULq9weH4ImXUw==
+
+recoil@^0.3.1:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/recoil/-/recoil-0.3.1.tgz#40ef544160d19d76e25de8929d7e512eace13b90"
+  integrity sha512-KNA3DRqgxX4rRC8E7fc6uIw7BACmMPuraIYy+ejhE8tsw7w32CetMm8w7AMZa34wzanKKkev3vl3H7Z4s0QSiA==
+  dependencies:
+    hamt_plus "1.0.2"
+
 recursive-readdir@2.2.2:
   version "2.2.2"
   resolved "https://registry.npmjs.org/recursive-readdir/-/recursive-readdir-2.2.2.tgz"
@@ -14063,6 +14114,11 @@ slice-ansi@^4.0.0:
     ansi-styles "^4.0.0"
     astral-regex "^2.0.0"
     is-fullwidth-code-point "^3.0.0"
+
+slide@^1.1.5:
+  version "1.1.6"
+  resolved "https://registry.yarnpkg.com/slide/-/slide-1.1.6.tgz#56eb027d65b4d2dce6cb2e2d32c4d4afc9e1d707"
+  integrity sha1-VusCfWW00tzmyy4tMsTUr8nh1wc=
 
 slugify@^1.4.4:
   version "1.5.1"
@@ -15484,7 +15540,7 @@ unist-util-visit-parents@^3.0.0, unist-util-visit-parents@^3.1.1:
     "@types/unist" "^2.0.0"
     unist-util-is "^4.0.0"
 
-unist-util-visit@^1.1.0, unist-util-visit@^1.1.3:
+unist-util-visit@^1.1.0, unist-util-visit@^1.1.3, unist-util-visit@^1.4.1:
   version "1.4.1"
   resolved "https://registry.npmjs.org/unist-util-visit/-/unist-util-visit-1.4.1.tgz"
   integrity sha512-AvGNk7Bb//EmJZyhtRUnNMEpId/AZ5Ph/KUpTI09WHQuDZHKovQ1oEv3mfmKpWKtoMzyMC4GLBm1Zy5k12fjIw==
@@ -15806,6 +15862,16 @@ vscode-languageserver@^5.1.0:
   dependencies:
     vscode-languageserver-protocol "3.14.1"
     vscode-uri "^1.0.6"
+
+vscode-oniguruma@^1.4.0:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/vscode-oniguruma/-/vscode-oniguruma-1.5.1.tgz#9ca10cd3ada128bd6380344ea28844243d11f695"
+  integrity sha512-JrBZH8DCC262TEYcYdeyZusiETu0Vli0xFgdRwNJjDcObcRjbmJP+IFcA3ScBwIXwgFHYKbAgfxtM/Cl+3Spjw==
+
+vscode-textmate@^5.2.0:
+  version "5.4.0"
+  resolved "https://registry.yarnpkg.com/vscode-textmate/-/vscode-textmate-5.4.0.tgz#4b25ffc1f14ac3a90faf9a388c67a01d24257cd7"
+  integrity sha512-c0Q4zYZkcLizeYJ3hNyaVUM2AA8KDhNCA3JvXY8CeZSJuBdAy3bAvSbv46RClC4P3dSO9BdwhnKEx2zOo6vP/w==
 
 vscode-uri@1.0.6:
   version "1.0.6"
@@ -16262,6 +16328,15 @@ wrappy@1:
   resolved "https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz"
   integrity sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=
 
+write-file-atomic@^1.1.4:
+  version "1.3.4"
+  resolved "https://registry.yarnpkg.com/write-file-atomic/-/write-file-atomic-1.3.4.tgz#f807a4f0b1d9e913ae7a48112e6cc3af1991b45f"
+  integrity sha1-+Aek8LHZ6ROuekgRLmzDrxmRtF8=
+  dependencies:
+    graceful-fs "^4.1.11"
+    imurmurhash "^0.1.4"
+    slide "^1.1.5"
+
 write-file-atomic@^3.0.0:
   version "3.0.3"
   resolved "https://registry.npmjs.org/write-file-atomic/-/write-file-atomic-3.0.3.tgz"
@@ -16319,10 +16394,20 @@ xml2js@^0.4.5:
     sax ">=0.6.0"
     xmlbuilder "~11.0.0"
 
+xmlbuilder@^9.0.7:
+  version "9.0.7"
+  resolved "https://registry.yarnpkg.com/xmlbuilder/-/xmlbuilder-9.0.7.tgz#132ee63d2ec5565c557e20f4c22df9aca686b10d"
+  integrity sha1-Ey7mPS7FVlxVfiD0wi35rKaGsQ0=
+
 xmlbuilder@~11.0.0:
   version "11.0.1"
   resolved "https://registry.npmjs.org/xmlbuilder/-/xmlbuilder-11.0.1.tgz"
   integrity sha512-fDlsI/kFEx7gLvbecc0/ohLG50fugQp8ryHzMTuW9vSa1GJ0XYWKnhsUx7oie3G98+r56aTQIUB4kht42R3JvA==
+
+xmldom@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/xmldom/-/xmldom-0.5.0.tgz#193cb96b84aa3486127ea6272c4596354cb4962e"
+  integrity sha512-Foaj5FXVzgn7xFzsKeNIde9g6aFBxTPi37iwsno8QvApmtg7KYrr+OPyRHcJF7dud2a5nGRBXK3n0dL62Gf7PA==
 
 xmlhttprequest-ssl@~1.5.4:
   version "1.5.5"
