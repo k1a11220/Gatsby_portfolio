@@ -1,6 +1,9 @@
 import React, { createRef, useLayoutEffect } from "react";
+import { darkModeVar } from "hooks/useTheme";
 
 const src = "https://utteranc.es/client.js";
+const LIGHT_THEME = "github-light";
+const DARK_THEME = "github-dark";
 
 export interface IUtterancesProps {
   repo: string;
@@ -9,14 +12,16 @@ export interface IUtterancesProps {
 
 const Utterances: React.FC<IUtterancesProps> = React.memo(({ repo, theme }) => {
   const containerRef = createRef<HTMLDivElement>();
+  const themeMode = darkModeVar() === false ? LIGHT_THEME : DARK_THEME;
 
+  console.log(darkModeVar());
   useLayoutEffect(() => {
     const utterances = document.createElement("script");
 
     const attributes = {
       src,
       repo,
-      theme,
+      theme: themeMode,
       "issue-term": "pathname",
       label: "✨💬 comments ✨",
       crossOrigin: "anonymous",

@@ -38,7 +38,7 @@ const Wrapper = styled.div`
   @media (max-width: 1400px) {
     width: 92%;
   }
-  @media (max-width: 639px) {
+  @media (max-width: 768px) {
     justify-content: space-between;
   }
 `;
@@ -62,7 +62,7 @@ const ItemContainer = styled.div`
   transition: 0.44s 0.2s cubic-bezier(0.52, 0.16, 0.24, 1),
     height 0.56s cubic-bezier(0.52, 0.16, 0.24, 1);
 
-  @media (max-width: 639px) {
+  @media (max-width: 768px) {
     width: 100%;
     flex-direction: column;
     position: absolute;
@@ -91,7 +91,7 @@ const StyledBurger = styled.button`
   padding: 0;
   z-index: 10;
 
-  @media (max-width: 639px) {
+  @media (max-width: 768px) {
     display: flex;
   }
 
@@ -132,7 +132,7 @@ const ItemWrapper = styled.div`
   padding: 0;
   margin: 0;
   background-color: ${(props) => props.theme.bgColor};
-  @media (max-width: 639px) {
+  @media (max-width: 768px) {
     flex-direction: column;
   }
 `;
@@ -144,7 +144,7 @@ const Item = styled.li`
   font-weight: 400;
   margin-left: 40px;
 
-  @media (max-width: 639px) {
+  @media (max-width: 768px) {
     width: 92%;
     margin: 18px 0px;
   }

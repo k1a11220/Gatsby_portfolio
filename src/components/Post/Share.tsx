@@ -19,7 +19,7 @@ const Container = styled.div`
     color: #1d1d1d;
   }
   @media (max-width: 768px) {
-    width: 90vw;
+    width: 92%;
   }
 `;
 

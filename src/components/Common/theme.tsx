@@ -27,6 +27,7 @@ export const lightTheme = {
   borderColor: "solid 1px #EBEBEB",
   indexColor: "#F1F2F4",
   postCoverColor: "#FFFFFF",
+  commentColor: "github-light",
 };
 export const darkTheme = {
   fontColor: "#ffffff",
@@ -37,6 +38,7 @@ export const darkTheme = {
   borderColor: "solid 1px #2B2B2B",
   indexColor: "#1D1D1F",
   postCoverColor: "#2B2B2B",
+  commentColor: "github-dark",
 };
 
 const theme = {

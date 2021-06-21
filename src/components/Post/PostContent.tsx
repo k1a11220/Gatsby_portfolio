@@ -29,7 +29,7 @@ const MarkdownRenderer = styled.div`
   // Adjust Heading Element Style
 
   p {
-    margin-bottom: 2rem; //32px
+    margin-bottom: 1.5rem; //24ㅔㅌ
   }
 
   h1 {
@@ -87,10 +87,14 @@ const MarkdownRenderer = styled.div`
 
   // Adjust Quotation Element Style
   blockquote {
-    margin: 1.875rem 0;
+    margin-bottom: 1.5rem;
     padding: 5px 15px;
     border-left: 2px solid ${(props) => props.theme.fontColor};
     font-weight: 800;
+  }
+
+  blockquote p {
+    margin-bottom: 0;
   }
 
   // Adjust List Element Style
@@ -103,7 +107,7 @@ const MarkdownRenderer = styled.div`
   ol,
   ul {
     margin-left: 1.25rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
 
   // Adjust Horizontal Rule style
@@ -122,6 +126,10 @@ const MarkdownRenderer = styled.div`
   pre {
     max-width: 92vw;
     font-weight: 300;
+  }
+
+  pre {
+    margin-bottom: 1.5rem;
   }
 
   code * {
@@ -155,6 +163,11 @@ const MarkdownRenderer = styled.div`
     font-size: 0.75rem;
     vertical-align: super;
     line-height: 0;
+  }
+
+  td,
+  th {
+    border-bottom: 1px solid var(--color-gray-3);
   }
 
   // Markdown Responsive Design

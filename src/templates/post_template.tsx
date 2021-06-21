@@ -5,9 +5,9 @@ import PostHead, { PostHeadProps } from "components/Post/PostHead";
 import PostContent from "components/Post/PostContent";
 import CommentWidget from "components/Post/CommentWidget";
 import Share from "components/Post/Share";
-import { useReactiveVar } from "@apollo/client";
-import { darkModeVar } from "hooks/useTheme";
 import styled from "styled-components";
+import { darkModeVar } from "hooks/useTheme";
+import { useState } from "react";
 
 interface PostTemplateProps {
   data: {
@@ -28,8 +28,18 @@ interface PostTemplateProps {
   };
 }
 
+const CommentWrapper = styled.div`
+  width: 708px;
+  align-self: center;
+  @media (max-width: 768px) {
+    width: 92%;
+  }
+`;
+
 const Comment = styled(CommentWidget)`
-  theme: "github-dark";
+  & > iframe {
+    width: 100px;
+  }
 `;
 
 const PostTemplate: FunctionComponent<PostTemplateProps> = function ({
@@ -40,8 +50,6 @@ const PostTemplate: FunctionComponent<PostTemplateProps> = function ({
   const {
     node: { html, frontmatter },
   } = edges[0];
-  const theme = useReactiveVar(darkModeVar);
-  let CommentTheme = theme ? "github-dark" : "github-light";
 
   return (
     <Template
@@ -53,7 +61,9 @@ const PostTemplate: FunctionComponent<PostTemplateProps> = function ({
       <PostHead {...frontmatter} />
       <PostContent html={html} />
       <Share nextProject={frontmatter.path} prevProject="ageasda" />
-      <Comment repo="k1a11220/blog" theme={CommentTheme} />
+      <CommentWrapper>
+        <Comment repo="k1a11220/blog" />
+      </CommentWrapper>
     </Template>
   );
 };

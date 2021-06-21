@@ -20,7 +20,7 @@ const Container = styled.footer`
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  width: 1200px;
   max-width: 1200px;
   margin: auto;
   @media (max-width: 1400px) {
