@@ -89,7 +89,7 @@ module.exports = {
           {
             resolve: "gatsby-plugin-canonical-urls",
             options: {
-              siteUrl: "<https://blog.beomsoo.me/>",
+              siteUrl: "https://blog.beomsoo.me/",
               stripQueryString: true,
             },
           },
