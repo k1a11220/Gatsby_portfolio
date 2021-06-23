@@ -6,8 +6,6 @@ import PostContent from "components/Post/PostContent";
 import CommentWidget from "components/Post/CommentWidget";
 import Share from "components/Post/Share";
 import styled from "styled-components";
-import { darkModeVar } from "hooks/useTheme";
-import { useState } from "react";
 
 interface PostTemplateProps {
   data: {
@@ -20,6 +18,11 @@ interface PostTemplateProps {
               summary: string;
               title: string;
               path: string;
+            };
+          };
+          previous: {
+            frontmatter: {
+              title: string;
             };
           };
         }
@@ -60,7 +63,7 @@ const PostTemplate: FunctionComponent<PostTemplateProps> = function ({
     >
       <PostHead {...frontmatter} />
       <PostContent html={html} />
-      <Share nextProject={frontmatter.path} prevProject="ageasda" />
+      {/* <Share prev={frontmatter.title} next="ageasda" /> */}
       <CommentWrapper>
         <Comment repo="k1a11220/blog" />
       </CommentWrapper>

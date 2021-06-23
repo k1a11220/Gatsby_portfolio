@@ -1,10 +1,27 @@
-import React from "react";
+import React, { FunctionComponent } from "react";
 import styled from "styled-components";
 import Arrow from "./Arrow";
 import theme from "components/Common/Theme";
+import { graphql } from "gatsby";
 
 const Black = "#4A4A4A";
 const Blue = "#4080FF";
+
+interface InfoPageProps {
+  data: {
+    allMarkdownRemark: {
+      edges: [
+        {
+          previous: {
+            frontmatter: {
+              title: string;
+            };
+          };
+        }
+      ];
+    };
+  };
+}
 
 const Container = styled.div`
   width: 700px;
@@ -90,25 +107,23 @@ const NavWrapper = styled.div`
   }
 `;
 
-const Share = (props) => {
-  const copyToClipboard = () => {
-    let inputc = document.body.appendChild(document.createElement("input"));
-    inputc.value = window.location.href;
-    inputc.focus();
-    inputc.select();
-    document.execCommand("copy");
-    inputc.parentNode.removeChild(inputc);
-    alert("URL Copied.");
-  };
+const Share: FunctionComponent<InfoPageProps> = function ({
+  data: {
+    allMarkdownRemark: { edges },
+  },
+}) {
+  const {
+    previous: { frontmatter },
+  } = edges[0];
   return (
     <Container>
-      <h3>🚀 공유하기!</h3>
+      {/* <h3>🚀 공유하기!</h3>
       <div>
         <Button onClick={copyToClipboard} bgColor={Black}>
           Copy Link
         </Button>
         <Button bgColor={Blue}>Facebook</Button>
-      </div>
+      </div> */}
       <Line />
       <NavWrapper>
         <div>
@@ -121,8 +136,8 @@ const Share = (props) => {
           >
             <Arrow direction="" />
             <span>
-              <h4>이전 게시글</h4>
-              <p>{props.prevProject}</p>
+              <h4>{frontmatter.title}</h4>
+              <p></p>
             </span>
           </span>
         </div>
@@ -138,7 +153,7 @@ const Share = (props) => {
             <Arrow direction="180deg" />
             <span>
               <h4>다음 게시글</h4>
-              <p>{props.nextProject}</p>
+              <p></p>
             </span>
           </span>
         </div>
@@ -148,3 +163,17 @@ const Share = (props) => {
 };
 
 export default Share;
+
+export const metadataQuery = graphql`
+  {
+    allMarkdownRemark {
+      edges {
+        previous {
+          frontmatter {
+            title
+          }
+        }
+      }
+    }
+  }
+`;

@@ -3,7 +3,7 @@ module.exports = {
     title: `Beomsoo-log`,
     description: `좋은 제품을 만들기 위한 고민을 적고 있습니다.`,
     author: `Beomsoo Son`,
-    siteUrl: "https://blog.beomsoo.me", // 배포 후 변경 예정
+    siteUrl: "https://www.beomsoo.me/blog", // 배포 후 변경 예정
   },
   plugins: [
     {
@@ -89,7 +89,7 @@ module.exports = {
           {
             resolve: "gatsby-plugin-canonical-urls",
             options: {
-              siteUrl: "https://blog.beomsoo.me",
+              siteUrl: "https://www.beomsoo.me/blog",
               stripQueryString: true,
             },
           },
