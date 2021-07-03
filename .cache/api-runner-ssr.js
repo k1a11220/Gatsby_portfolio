@@ -1,19 +1,21 @@
 var plugins = [{
-      name: 'gatsby-plugin-react-helmet',
+      plugin: require('/Users/beomsoo/Documents/GitHub/blog/node_modules/gatsby-plugin-typography/gatsby-ssr'),
+      options: {"plugins":[],"pathToConfigModule":"src/styles/typography"},
+    },{
+      plugin: require('/Users/beomsoo/Documents/GitHub/blog/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
+      options: {"plugins":[],"name":"Beomsoo-log","short_name":"Beomsoo-log","description":"더 나은 제품을 만들기 위한 고민을 기록하고 있습니다.","lang":"ko","start_url":"/","background_color":"#ffffff","theme_color":"#ffffff","display":"standalone","icon":"src/images/icon.png","icon_options":{"purpose":"any maskable"},"legacy":true,"theme_color_in_head":true,"cache_busting_mode":"query","crossOrigin":"anonymous","include_favicon":true,"cacheDigest":"abfded2d68398b0949c75a0894fbf871"},
+    },{
+      plugin: require('/Users/beomsoo/Documents/GitHub/blog/node_modules/gatsby-plugin-styled-components/gatsby-ssr'),
+      options: {"plugins":[],"displayName":true,"fileName":true,"minify":true,"namespace":"","transpileTemplateLiterals":true,"pure":false},
+    },{
+      plugin: require('/Users/beomsoo/Documents/GitHub/blog/node_modules/gatsby-plugin-offline/gatsby-ssr'),
+      options: {"plugins":[]},
+    },{
       plugin: require('/Users/beomsoo/Documents/GitHub/blog/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
       options: {"plugins":[]},
     },{
-      name: 'gatsby-plugin-canonical-urls',
-      plugin: require('/Users/beomsoo/Documents/GitHub/blog/node_modules/gatsby-plugin-canonical-urls/gatsby-ssr'),
-      options: {"plugins":[],"siteUrl":"https://www.beomsoo.me/blog","stripQueryString":true},
-    },{
-      name: 'gatsby-plugin-use-dark-mode',
-      plugin: require('/Users/beomsoo/Documents/GitHub/blog/node_modules/gatsby-plugin-use-dark-mode/gatsby-ssr'),
-      options: {"plugins":[],"classNameDark":"dark-mode","classNameLight":"light-mode","storageKey":"darkMode","minify":true},
-    },{
-      name: 'gatsby-plugin-sitemap',
-      plugin: require('/Users/beomsoo/Documents/GitHub/blog/node_modules/gatsby-plugin-sitemap/gatsby-ssr'),
-      options: {"plugins":[],"output":"/sitemap","createLinkInHead":true,"entryLimit":45000,"query":"{ site { siteMetadata { siteUrl } } allSitePage { nodes { path } } }","excludes":[]},
+      plugin: require('/Users/beomsoo/Documents/GitHub/blog/gatsby-ssr'),
+      options: {"plugins":[]},
     }]
 // During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [
@@ -41,21 +43,11 @@ module.exports = (api, args, defaultReturn, argTransform) => {
     if (!plugin.plugin[api]) {
       return undefined
     }
-    try {
-      const result = plugin.plugin[api](args, plugin.options)
-      if (result && argTransform) {
-        args = argTransform({ args, result })
-      }
-      return result
-    } catch (e) {
-      if (plugin.name !== `default-site-plugin`) {
-        // default-site-plugin is user code and will print proper stack trace,
-        // so no point in annotating error message pointing out which plugin is root of the problem
-        e.message += ` (from plugin: ${plugin.name})`
-      }
-
-      throw e
+    const result = plugin.plugin[api](args, plugin.options)
+    if (result && argTransform) {
+      args = argTransform({ args, result })
     }
+    return result
   })
 
   // Filter out undefined results.
