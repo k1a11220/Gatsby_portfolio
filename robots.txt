@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://blog.beomsoo.me/sitemap/sitemap-index.xml
-Host: https://blog.beomsoo.me
