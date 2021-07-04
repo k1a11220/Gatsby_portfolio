@@ -87,7 +87,7 @@ const GlobalStyle = createGlobalStyle`
       --color-floating-button-shadow-hover: rgba(0, 0, 0, 0.4);
       --color-blue: #0066cc;
       --color-icon: #2c2c2c;
-      --color-footer: #FAFAFA;
+      --color-footer-background: #FAFAFA;
       --color-footer-button-background: #086BCE;
       --color-footer-button-color: #F3F3F3;
     }

@@ -1,8 +1,8 @@
-import React from 'react';
-import styled from 'styled-components';
-import CenteredImg from './centeredImg';
-import Category from 'styles/category';
-import DateTime from 'styles/dateTime';
+import React from "react";
+import styled from "styled-components";
+import CenteredImg from "./centeredImg";
+import Category from "styles/category";
+import DateTime from "styles/dateTime";
 
 const Card = ({ thumbnail, alt, category, title, desc, date }) => {
   return (
@@ -39,7 +39,6 @@ const Text = styled.div`
   flex: 1 1 auto;
   justify-content: space-between;
   padding: var(--sizing-md);
-
   & > * {
     display: block;
   }
@@ -49,8 +48,12 @@ const Title = styled.h3`
   margin-top: var(--sizing-xs);
   font-size: var(--text-lg);
   font-weight: var(--font-weight-bold);
-  line-height: 1.3;
-
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-height: 1.25;
   @media (max-width: ${({ theme }) => theme.device.md}) {
     font-size: 1.3125rem;
   }

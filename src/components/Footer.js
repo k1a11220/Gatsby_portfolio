@@ -89,15 +89,33 @@ const Footer = () => {
         </a>
         <IconWrapper>
           <IconContainer
-            href="https://www.beomsoo.me"
+            href="https://www.behance.net/sonbeomsoo"
             target="_blank"
             rel="noopener noreferrer"
           >
             <Icon className="font-icon" icon={faBehance} size="lg" />
           </IconContainer>
-          <Icon icon={faInstagram} size="lg" />
-          <Icon icon={faGithub} size="lg" />
-          <Icon icon={faLinkedinIn} size="lg" />
+          <IconContainer
+            href="https://www.instagram.com/beomsoo_son/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Icon icon={faInstagram} size="lg" />
+          </IconContainer>
+          <IconContainer
+            href="https://github.com/k1a11220"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Icon icon={faGithub} size="lg" />
+          </IconContainer>
+          <IconContainer
+            href="https://www.linkedin.com/in/beomsoo-son-65a201178/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Icon icon={faLinkedinIn} size="lg" />
+          </IconContainer>
         </IconWrapper>
       </Wrapper>
     </Container>

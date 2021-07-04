@@ -1,6 +1,3 @@
-# Hello
+## Let’s make HISTORY
 
-Welcome to my blog. My name is Ed.<br>
-I'm very interested in the web front-end development.
-
-Visit my [Github repository](https://github.com/sungik-choi/gatsby-starter-apple).
+안녕하세요 손범수입니다. 좋은 제품을 만들기 위한 고민을 적고 있습니다.

@@ -1,13 +1,13 @@
-import React from 'react';
-import { graphql } from 'gatsby';
-import styled from 'styled-components';
-import Layout from 'layout/layout';
-import SEO from 'components/seo';
-import Comment from 'components/comment';
-import { rhythm } from 'styles/typography';
-import Category from 'styles/category';
-import DateTime from 'styles/dateTime';
-import Markdown from 'styles/markdown';
+import React from "react";
+import { graphql } from "gatsby";
+import styled from "styled-components";
+import Layout from "layout/layout";
+import SEO from "components/seo";
+import Comment from "components/comment";
+import { rhythm } from "styles/typography";
+import Category from "styles/category";
+import DateTime from "styles/dateTime";
+import Markdown from "styles/markdown";
 
 const BlogPost = ({ data }) => {
   const {
@@ -36,6 +36,7 @@ const BlogPost = ({ data }) => {
                   <Desc>{desc}</Desc>
                 </header>
                 <Divider />
+                <thumbnailImg />
                 <Markdown
                   dangerouslySetInnerHTML={{ __html: html }}
                   rhythm={rhythm}
@@ -51,6 +52,12 @@ const BlogPost = ({ data }) => {
     </Layout>
   );
 };
+
+const thumbnailImg = styled.div`
+  width: 100%;
+  height: 400px;
+  background-color: black;
+`;
 
 const OuterWrapper = styled.div`
   margin-top: var(--sizing-xl);

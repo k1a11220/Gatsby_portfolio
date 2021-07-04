@@ -1,11 +1,11 @@
-import React, { useState, useLayoutEffect } from 'react';
-import { graphql } from 'gatsby';
-import styled from 'styled-components';
-import Layout from 'layout/layout';
-import SEO from 'components/seo';
-import PostGrid from 'components/postGrid/postGrid';
-import CategoryFilter from 'components/categoryFilter';
-import useSiteMetadata from 'hooks/useSiteMetadata';
+import React, { useState, useLayoutEffect } from "react";
+import { graphql } from "gatsby";
+import styled from "styled-components";
+import Layout from "layout/layout";
+import SEO from "components/seo";
+import PostGrid from "components/postGrid/postGrid";
+import CategoryFilter from "components/categoryFilter";
+import useSiteMetadata from "hooks/useSiteMetadata";
 
 const Home = ({ pageContext, data }) => {
   const [posts, setPosts] = useState([]);
@@ -57,6 +57,7 @@ const Home = ({ pageContext, data }) => {
       <SEO title="Home" />
       <Main>
         <Content>
+          <HeroText>좋은 제품을 만들기 위한 고민을 적고 있습니다.</HeroText>
           <CategoryFilter categoryList={data.allMarkdownRemark.group} />
           <PostTitle>{postTitle}</PostTitle>
           <PostGrid posts={posts} />
@@ -83,6 +84,20 @@ const Content = styled.div`
   @media (max-width: ${({ theme }) => theme.device.sm}) {
     padding-top: var(--grid-gap-lg);
     width: 87.5%;
+  }
+`;
+
+const HeroText = styled.div`
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  font-weight: 800;
+  font-size: 32px;
+
+  @media (max-width: ${({ theme }) => theme.device.sm}) {
+    height: 200px;
+    font-size: 1.75rem;
   }
 `;
 
