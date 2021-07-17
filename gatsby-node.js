@@ -5,11 +5,13 @@ const { createFilePath } = require(`gatsby-source-filesystem`);
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions;
   if (node.internal.type === `MarkdownRemark`) {
-    const slug = createFilePath({ node, getNode, basePath: `posts` });
+    const slug = createFilePath({ node, getNode, basePath: `posts/blog` });
+    // NNNN-NN-NN가 등장하는 첫 패턴을 찾은 후, NNNN/NN/NN으로 변경한다.
+    const value = slug.replace(/\/(\d{4})-(\d{2})-(\d{2})\//, "/$1/$2/$3/");
     createNodeField({
-      node,
       name: `slug`,
-      value: slug,
+      node,
+      value,
     });
   }
 };
