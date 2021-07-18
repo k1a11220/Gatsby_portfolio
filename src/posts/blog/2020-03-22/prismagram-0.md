@@ -2,9 +2,9 @@
 title: "인스타그램 클론코딩"
 date: "2020-03-21"
 category: "prismagram"
-desc: "Category Test"
+desc: ""
 thumbnail: "../images/default.jpg"
-alt: "apple big sur gradient"
+alt: ""
 ---
 
 # 인스타그램 클론코딩
