@@ -6,6 +6,7 @@ import { ProfileImageProps } from "components/Main/ProfileImage";
 import { graphql } from "gatsby";
 import queryString, { ParsedQuery } from "query-string";
 import styled from "styled-components";
+import Introduction from "components/Main/Introduction";
 
 interface CategoriesPageProps {
   location: {
@@ -24,7 +25,7 @@ interface CategoriesPageProps {
 }
 
 const Container = styled.div`
-  background-color: ${(props) => props.theme.indexColor};
+  background-color: #ffffff;
 `;
 
 const CategoriesPage: FunctionComponent<CategoriesPageProps> = function ({
@@ -74,6 +75,7 @@ const CategoriesPage: FunctionComponent<CategoriesPageProps> = function ({
       image="img"
     >
       <Container>
+        <Introduction profileImage={fluid} />
         <CategoryList
           selectedCategory={selectedCategory}
           categoryList={categoryList}

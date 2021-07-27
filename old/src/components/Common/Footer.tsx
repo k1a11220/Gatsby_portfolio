@@ -8,24 +8,25 @@ import {
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
 
-const Container = styled.footer`
-  width: 100vw;
+const Container = styled.div`
   height: 148px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: ${(props) => props.theme.subBgColor};
+  background-color: #fafafa;
+  margin-top: 40px;
 `;
 
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  width: 1200px;
+  width: 100%;
   max-width: 1200px;
   margin: auto;
   @media (max-width: 1400px) {
     width: 92%;
   }
+
   @media (max-width: 768px) {
     flex-direction: column;
     justify-content: center;
@@ -36,15 +37,14 @@ const Wrapper = styled.div`
 const Cta = styled.div`
   display: flex;
   align-items: center;
-  background-color: ${(props) => props.theme.btnBgColor};
+  background-color: #086bce;
   padding: 8px 24px 8px 24px;
   border-radius: 40px;
   font-size: 0.875rem;
   font-weight: 400;
-  color: ${(props) => props.theme.btnTextColor};
-  transition: all 0.2s ease-in-out;
+  color: #ffffff;
+
   &:hover {
-    transition: all 0.2s ease-in-out;
     transform: scale(1.02);
   }
 
@@ -84,15 +84,33 @@ const Footer = () => {
         </a>
         <IconWrapper>
           <IconContainer
-            href="https://www.beomsoo.me"
+            href="https://www.behance.net/sonbeomsoo"
             target="_blank"
             rel="noopener noreferrer"
           >
             <Icon className="font-icon" icon={faBehance} size="lg" />
           </IconContainer>
-          <Icon icon={faInstagram} size="lg" />
-          <Icon icon={faGithub} size="lg" />
-          <Icon icon={faLinkedinIn} size="lg" />
+          <IconContainer
+            href="https://www.instagram.com/beomsoo_son/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Icon icon={faInstagram} size="lg" />
+          </IconContainer>
+          <IconContainer
+            href="https://github.com/k1a11220"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Icon icon={faGithub} size="lg" />
+          </IconContainer>
+          <IconContainer
+            href="https://www.linkedin.com/in/beomsoo-son-65a201178/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Icon icon={faLinkedinIn} size="lg" />
+          </IconContainer>
         </IconWrapper>
       </Wrapper>
     </Container>

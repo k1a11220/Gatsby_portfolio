@@ -7,22 +7,11 @@ import Template from "components/Common/Template";
 import Introduction from "components/Main/Introduction";
 import PostList, { PostType } from "components/Main/PostList";
 import { ProfileImageProps } from "components/Main/ProfileImage";
-
-const Title = styled.p`
-  width: 1200px;
-  margin: 100px auto 0;
-  font-size: 28px;
-  font-weight: 700;
-  padding-top: 40px;
-  @media (max-width: 1400px) {
-    font-size: 20px;
-    width: 92%;
-    margin: 50px auto 0;
-  }
-`;
+import { useMemo } from "react";
+import CategoryList from "components/Main/CategoryList";
 
 const Container = styled.div`
-  background-color: ${(props) => props.theme.indexColor};
+  background-color: #ffffff;
 `;
 
 interface IndexPageProps {
@@ -55,6 +44,31 @@ const IndexPage: FunctionComponent<IndexPageProps> = function ({
     typeof parsed.category !== "string" || !parsed.category
       ? "All"
       : parsed.category;
+
+  const categoryList = useMemo(
+    () =>
+      edges.reduce(
+        (
+          list: CategoryListProps["categoryList"],
+          {
+            node: {
+              frontmatter: { categories },
+            },
+          }: PostType
+        ) => {
+          categories.forEach((category) => {
+            if (list[category] === undefined) list[category] = 1;
+            else list[category]++;
+          });
+
+          list["All"]++;
+
+          return list;
+        },
+        { All: 0 }
+      ),
+    []
+  );
   return (
     <Template
       title="Beomsoo-log"
@@ -63,8 +77,11 @@ const IndexPage: FunctionComponent<IndexPageProps> = function ({
       image="img"
     >
       <Container>
-        {/* <Introduction profileImage={fluid} /> */}
-        <Title>최근 게시글</Title>
+        <Introduction profileImage={fluid} />
+        <CategoryList
+          selectedCategory={selectedCategory}
+          categoryList={categoryList}
+        />
         <PostList selectedCategory={selectedCategory} posts={edges} />
       </Container>
     </Template>

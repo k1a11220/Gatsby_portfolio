@@ -14,20 +14,17 @@ const Background = styled.div`
 
 const Wrapper = styled.div`
   position: relative;
-  top: 64px;
+  top: 54px;
   width: 1200px;
-  height: 440px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   margin: 0 auto;
-  padding-bottom: 32px;
-  padding-top: 72px;
 
   @media (max-width: 1400px) {
     width: 92%;
-    height: 300px;
   }
 `;
 
@@ -41,8 +38,8 @@ const SubTitle = styled.div`
 `;
 
 const Title = styled.div`
-  font-size: 32px;
-  font-weight: 700;
+  font-size: 1.5rem;
+  font-weight: 600;
 
   @media (max-width: 768px) {
     font-size: 25px;
@@ -57,7 +54,10 @@ const Introduction: FunctionComponent<IntroductionProps> = function ({
       {/* <ProfileImage profileImage={profileImage} /> */}
       <div>
         {/* <SubTitle>안녕하세요</SubTitle> */}
-        <Title>좋은 제품을 만들기 위한 고민을 적고 있습니다.</Title>
+        <Title>
+          I'm Beomsoo Son, an Engineer and Designer based in Suwon, South Korea
+          focused on Industrial Design engineering and Digital product design.
+        </Title>
       </div>
     </Wrapper>
     // </Background>

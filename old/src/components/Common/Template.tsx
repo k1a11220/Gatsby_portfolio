@@ -16,9 +16,26 @@ interface TemplateProps {
   children: ReactNode;
 }
 
+interface CategoriesPageProps {
+  location: {
+    search: string;
+  };
+  data: {
+    allMarkdownRemark: {
+      edges: PostType[];
+    };
+    file: {
+      childImageSharp: {
+        fluid: ProfileImageProps["profileImage"];
+      };
+    };
+  };
+}
+
 const Container = styled.main`
   display: flex;
   flex-direction: column;
+  width: 100vw;
   height: 100%;
 `;
 
