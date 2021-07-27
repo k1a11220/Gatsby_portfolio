@@ -85,7 +85,12 @@ export const queryMarkdownDataBySlug = graphql`
             categories
             thumbnail {
               childImageSharp {
-                fluid(fit: INSIDE, quality: 100) {
+                fluid(
+                  maxWidth: 2160
+                  maxHeight: 1440
+                  fit: INSIDE
+                  quality: 100
+                ) {
                   ...GatsbyImageSharpFluid_withWebp
                 }
               }

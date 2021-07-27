@@ -6,6 +6,7 @@ import Img, { FluidObject } from "gatsby-image";
 interface PostItemProps {
   title: string;
   date: string;
+  client: string;
   categories: string[];
   summary: string;
   thumbnail: {
@@ -29,13 +30,23 @@ const PostItemWrapper = styled(Link)`
       0px 10px 10px -5px rgba(0, 0, 0, 0.04);
     transform: scale(1.02);
   }
+
+  @media (max-width: 1024px) {
+    height: 320px;
+  }
+
+  @media (max-width: 639px) {
+    height: 260px;
+  }
 `;
 
 const ThumbnailImage = styled(Img)`
   width: 100%;
-  height: 200px;
-  border-radius: 10px 10px 0 0;
+  border-radius: 10px;
   background-color: #fafafa;
+  position: absolute;
+  z-index: 0;
+  object-fit: contain;
 `;
 
 const PostItemContent = styled.div`
@@ -43,47 +54,59 @@ const PostItemContent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 24px;
   height: 380px;
+  border-radius: 10px;
+  background-color: #f1f2f4;
+
+  @media (max-width: 1024px) {
+    height: 320px;
+  }
+
+  @media (max-width: 639px) {
+    height: 260px;
+  }
 `;
-const Title = styled.div`
+
+const ItemInfo = styled.div`
+  position: absolute;
+  margin: 40px 0 0 40px;
+
+  & h4 {
+    font-weight: 500;
+    font-size: 1.125rem;
+  }
+
+  @media (max-width: 639px) {
+    margin: 24px 0 0 24px;
+
+    & h4 {
+      font-size: 1rem;
+    }
+  }
+`;
+
+const Title = styled.h2`
+  margin-bottom: 6px;
   display: -webkit-box;
   overflow: hidden;
-  margin-bottom: 3px;
   text-overflow: ellipsis;
   white-space: normal;
   overflow-wrap: break-word;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-  font-size: 20px;
+  font-size: 1.5rem;
   font-weight: 700;
   color: ${(props) => props.theme.fontColor};
-`;
 
-const Date = styled.div`
-  font-size: 14px;
-  font-weight: 600;
-  opacity: 0.7;
-  color: #6e6e73;
-`;
-
-const Category = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 0.5rem;
-`;
-
-const CategoryItem = styled.div`
-  border-radius: 3px;
-  font-size: 14px;
-  font-weight: 600;
-  color: #086bce;
+  @media (max-width: 768px) {
+    font-size: 1.25rem;
+  }
 `;
 
 const PostItem: FunctionComponent<PostItemProps> = function ({
   title,
   date,
-  categories,
+  client,
   thumbnail: {
     childImageSharp: { fluid },
   },
@@ -91,18 +114,14 @@ const PostItem: FunctionComponent<PostItemProps> = function ({
 }) {
   return (
     <PostItemWrapper to={link}>
-      <ThumbnailImage fluid={fluid} alt="Post Item Image" />
-
       <PostItemContent>
-        <div>
-          <Category>
-            {categories.map((item) => (
-              <CategoryItem key={item}>{item}</CategoryItem>
-            ))}
-          </Category>
+        <ThumbnailImage fluid={fluid} alt="Post Item Image" />
+        <ItemInfo>
           <Title>{title}</Title>
-        </div>
-        <Date>{date}</Date>
+          <h4>
+            {client} · {date}
+          </h4>
+        </ItemInfo>
       </PostItemContent>
     </PostItemWrapper>
   );

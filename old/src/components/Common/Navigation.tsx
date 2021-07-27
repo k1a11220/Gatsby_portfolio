@@ -26,10 +26,12 @@ const Navbar = styled.nav`
 `;
 
 const Container = styled.div`
-  width: 100%;
+  width: 1200px;
   height: 100%;
-  max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
+  @media (max-width: 1400px) {
+    width: 92%;
+  }
 `;
 
 const Wrapper = styled.div`
@@ -37,9 +39,6 @@ const Wrapper = styled.div`
   height: 100%;
   display: flex;
   margin: auto;
-  @media (max-width: 1400px) {
-    width: 92%;
-  }
   @media (max-width: 639px) {
     justify-content: space-between;
   }

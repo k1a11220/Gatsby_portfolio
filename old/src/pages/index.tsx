@@ -102,13 +102,14 @@ export const getPostList = graphql`
           frontmatter {
             title
             summary
-            date(formatString: "YYYY.MM.DD.")
+            client
+            date(formatString: "YYYY")
             categories
             thumbnail {
               childImageSharp {
                 fluid(
-                  maxWidth: 768
-                  maxHeight: 200
+                  maxWidth: 2160
+                  maxHeight: 1440
                   fit: INSIDE
                   quality: 100
                 ) {

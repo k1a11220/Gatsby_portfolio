@@ -15,6 +15,7 @@ export type PostType = {
     frontmatter: {
       title: string;
       summary: string;
+      client: string;
       date: string;
       categories: string[];
       thumbnail: {
@@ -33,7 +34,7 @@ interface PostListProps {
 
 const PostListWrapper = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 30px;
   width: 1200px;
   margin: 0 auto;
