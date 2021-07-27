@@ -45,10 +45,10 @@ const Wrapper = styled.div`
 `;
 
 const Logo = styled.div`
-  font-weight: 600;
   display: flex;
   align-items: center;
   & a {
+    font-weight: 600;
     font-size: 1.25rem;
     color: #1d1d1f;
   }
@@ -193,14 +193,14 @@ const Navigation = () => {
               <Item>
                 <Link to="/">Contact</Link>
               </Item>
-              <Item>
+              {/* <Item>
                 <DarkModeSwitch
                   checked={darkMode}
                   onChange={console.log}
                   onClick={darkMode ? disableDarkMode : enableDarkMode}
                   size={24}
                 />
-              </Item>
+              </Item> */}
             </ItemWrapper>
           </ItemContainer>
           <StyledBurger clicked={!clicked} onClick={click}>

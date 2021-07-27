@@ -38,10 +38,10 @@ const CategoryListWrapper = styled.div`
 const CategoryItem = styled(({ active, ...props }: GatsbyLinkProps) => (
   <Link {...props} />
 ))<CategoryItemProps>`
-  margin-right: 20px;
-  padding: 5px 0;
-  font-size: 18px;
-  font-weight: ${({ active }) => (active ? "700" : "400")};
+  margin-right: 24px;
+  font-size: 1.5rem;
+  font-weight: ${({ active }) => (active ? "700" : "500")};
+  color: ${({ active }) => (active ? "#0a0a0a" : "gray")};
   cursor: pointer;
 
   &:last-of-type {
@@ -49,7 +49,7 @@ const CategoryItem = styled(({ active, ...props }: GatsbyLinkProps) => (
   }
 
   @media (max-width: 768px) {
-    font-size: 15px;
+    font-size: 1.25rem;
   }
 `;
 
@@ -65,7 +65,7 @@ const CategoryList: FunctionComponent<CategoryListProps> = function ({
           active={name === selectedCategory}
           key={name}
         >
-          #{name}({count})
+          {name}
         </CategoryItem>
       ))}
     </CategoryListWrapper>

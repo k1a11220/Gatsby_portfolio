@@ -25,6 +25,7 @@ const PostItemWrapper = styled(Link)`
   transition: all 0.2s ease-in;
   height: 380px;
   background-color: ${(props) => props.theme.postCoverColor};
+
   &:hover {
     box-shadow: 0px 20px 25px -5px rgba(0, 0, 0, 0.1),
       0px 10px 10px -5px rgba(0, 0, 0, 0.04);
@@ -70,7 +71,7 @@ const PostItemContent = styled.div`
 const ItemInfo = styled.div`
   position: absolute;
   margin: 40px 0 0 40px;
-
+  opacity: 0;
   & h4 {
     font-weight: 500;
     font-size: 1.125rem;
@@ -96,8 +97,6 @@ const Title = styled.h2`
   -webkit-box-orient: vertical;
   font-size: 1.5rem;
   font-weight: 700;
-  color: ${(props) => props.theme.fontColor};
-
   @media (max-width: 768px) {
     font-size: 1.25rem;
   }
