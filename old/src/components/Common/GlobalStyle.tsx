@@ -2,6 +2,7 @@ import { createGlobalStyle } from "styled-components";
 export const GlobalStyles = createGlobalStyle`
  @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
  @import url('https://fonts.googleapis.com/css2?family=Oxygen+Mono&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@500&display=swap');
 
   * {
     margin: 0;

@@ -4,19 +4,11 @@ import { ProfileImageProps } from "components/Main/ProfileImage";
 
 type IntroductionProps = ProfileImageProps;
 
-const Background = styled.div`
-  align-self: center;
-  background-color: ${(props) => props.theme.bgColor};
-  color: #ffffff;
-  margin-top: 40px;
-  border-radius: 10px;
-`;
-
 const Wrapper = styled.div`
   position: relative;
   top: 54px;
   width: 1200px;
-  height: 300px;
+  height: 280px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -28,20 +20,16 @@ const Wrapper = styled.div`
   }
 `;
 
-const SubTitle = styled.div`
-  font-size: 20px;
-  font-weight: 400;
-
-  @media (max-width: 768px) {
-    font-size: 15px;
-  }
-`;
-
 const Title = styled.div`
+  width: 80%;
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #1d1d1f;
+  font-family: "Oxygen", sans-serif;
 
   @media (max-width: 768px) {
+    width: 100%;
     font-size: 25px;
   }
 `;
@@ -55,8 +43,9 @@ const Introduction: FunctionComponent<IntroductionProps> = function ({
       <div>
         {/* <SubTitle>안녕하세요</SubTitle> */}
         <Title>
-          I'm Beomsoo Son, an Engineer and Designer based in Suwon, South Korea
-          focused on Industrial Design engineering and Digital product design.
+          I'm <strong>Beomsoo Son</strong>, an Engineer and Designer based in
+          Suwon, South Korea focused on Industrial design engineering and
+          Digital product design.
         </Title>
       </div>
     </Wrapper>

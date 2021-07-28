@@ -21,8 +21,6 @@ export interface CategoryListProps {
 
 const CategoryListWrapper = styled.div`
   position: relative;
-  top: 64px;
-  padding-bottom: 64px;
   display: flex;
   flex-wrap: wrap;
   width: 1200px;
@@ -30,7 +28,6 @@ const CategoryListWrapper = styled.div`
 
   @media (max-width: 1400px) {
     width: 92%;
-    margin-top: 50px;
   }
 `;
 

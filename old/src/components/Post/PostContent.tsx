@@ -14,7 +14,7 @@ const MarkdownRenderer = styled.div`
   word-break: break-all;
 
   // Markdown Style
-  line-height: 1.8125;
+  line-height: 1.75;
   letter-spacing: -0.02rem;
   /* word-break: keep-all; */
   font-weight: 300;
@@ -29,7 +29,7 @@ const MarkdownRenderer = styled.div`
   // Adjust Heading Element Style
 
   p {
-    margin-bottom: 1.5rem; //24ㅔㅌ
+    margin-bottom: 8px;
   }
 
   h1 {
@@ -37,13 +37,13 @@ const MarkdownRenderer = styled.div`
   }
 
   h2 {
-    font-size: 1.625rem; //26px
-    margin: 36px 0 32px 0;
+    font-size: 1.75rem; //26px
+    margin-bottom: 8px;
   }
 
   h3 {
-    font-size: 1.375rem; //22px
-    margin: 20px 0px 20px 0px;
+    font-size: 1.5rem; //24px
+    margin-bottom: 8px;
   }
 
   strong {
