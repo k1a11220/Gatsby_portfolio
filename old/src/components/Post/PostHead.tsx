@@ -27,11 +27,12 @@ const PostHeadWrapper = styled.div`
 `;
 
 const BackgroundImage = styled((props: GatsbyImgProps) => <Img {...props} />)`
-  width: 700px;
-  height: 400px;
+  width: 1200px;
+  height: 675px;
   object-fit: cover;
   margin: 0 auto;
-  margin-bottom: 60px;
+  margin-top: 40px;
+  margin-bottom: 20px;
   object-position: center center;
   border-radius: 10px;
 
@@ -46,14 +47,20 @@ const PostHead: FunctionComponent<PostHeadProps> = function ({
   title,
   date,
   categories,
+  client,
   thumbnail: {
     childImageSharp: { fluid },
   },
 }) {
   return (
     <PostHeadWrapper>
-      <PostHeadInfo title={title} date={date} categories={categories} />
       <BackgroundImage fluid={fluid} alt="thumbnail" />
+      <PostHeadInfo
+        client={client}
+        title={title}
+        date={date}
+        categories={categories}
+      />
     </PostHeadWrapper>
   );
 };

@@ -18,6 +18,7 @@ interface PostTemplateProps {
               summary: string;
               title: string;
               path: string;
+              client: string;
             };
           };
           previous: {
@@ -81,7 +82,8 @@ export const queryMarkdownDataBySlug = graphql`
           frontmatter {
             title
             summary
-            date(formatString: "YYYY.MM.DD.")
+            client
+            date(formatString: "YYYY")
             categories
             thumbnail {
               childImageSharp {

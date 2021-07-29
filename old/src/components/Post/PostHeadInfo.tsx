@@ -4,38 +4,38 @@ import styled from "styled-components";
 export interface PostHeadInfoProps {
   title: string;
   date: string;
+  client: string;
   categories: string[];
 }
 
 const SCategories = styled.div`
   color: #086bce;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1.125rem;
-  margin-bottom: 1.125rem;
+  margin-bottom: 4px;
+  line-height: 1.75;
+
   @media (max-width: 768px) {
     font-size: 1rem;
-    margin-bottom: 1rem;
   }
 `;
 
 const SDate = styled(SCategories)`
   color: #a1a1a1;
-  font-weight: 700;
-  margin-top: 1.125rem;
+  font-weight: 500;
   margin-bottom: 0px;
+  line-height: 1.75;
+
   @media (max-width: 768px) {
     font-size: 1rem;
-    margin-top: 1rem;
     margin-bottom: 0;
   }
 `;
 
 const Hr = styled.hr`
-  margin-top: 60px;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
   color: #4e5968;
-  @media (max-width: 768px) {
-    margin-top: 40px;
-  }
 `;
 
 const PostHeadInfoWrapper = styled.div`
@@ -44,7 +44,6 @@ const PostHeadInfoWrapper = styled.div`
   width: 700px;
   height: 100%;
   margin: 0 auto;
-  padding: 60px 0;
   color: #ffffff;
   position: relative;
   top: 64px;
@@ -65,8 +64,9 @@ const Title = styled.div`
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   font-size: 3rem;
-  font-weight: 700;
+  font-weight: 800;
   color: ${(props) => props.theme.fontColor};
+  margin-bottom: 4px;
 
   @media (max-width: 768px) {
     font-size: 1.875rem;
@@ -76,13 +76,13 @@ const Title = styled.div`
 const PostHeadInfo: FunctionComponent<PostHeadInfoProps> = function ({
   title,
   date,
-  categories,
+  client,
 }) {
   return (
     <PostHeadInfoWrapper>
-      <SCategories>{categories.join(" / ")}</SCategories>
+      <SCategories>{client}</SCategories>
       <Title>{title}</Title>
-      <SDate>업데이트 : {date}</SDate>
+      <SDate>{date}</SDate>
       <Hr />
     </PostHeadInfoWrapper>
   );
