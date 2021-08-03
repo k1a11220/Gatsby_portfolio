@@ -13,10 +13,6 @@ module.exports = {
     postTitle: "All",
     menuLinks: [
       {
-        link: "/",
-        name: "Home",
-      },
-      {
         link: "/about/",
         name: "About",
       },

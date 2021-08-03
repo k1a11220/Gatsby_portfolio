@@ -2,7 +2,7 @@
 title: "[FrontEnd] 4. Auth 페이지에 Hooks 추가."
 date: "2020-09-13"
 category: "prismagram"
-desc: "이메일의 형식지정, 비밀번호 input의 \*\*\*처리처럼 value와 type등이 필요합니다. input을 먼저 만들고 hooks를 더할 예정입니다."
+desc: "이메일의 형식지정, 비밀번호 input의 value와 type등이 필요합니다. input을 먼저 만들고 hooks를 더할 예정입니다."
 thumbnail: "../images/default.jpg"
 alt: "[FrontEnd] 4. Auth 페이지에 Hooks 추가."
 ---
