@@ -2,9 +2,10 @@
 title: "10. 회고"
 date: "2021-04-22"
 category: "볶다"
-desc: "Category Test"
-thumbnail: "../images/default.jpg"
-alt: "apple big sur gradient"
+desc: "3달 넘게 블로그에 내용을 작성했지만 실 개발기간은 1월 초 2주 남짓이었습니다. MVP의 특성상 빨리 최소기능을 구현하고 테스트를 해야 했기 때문에 나이, 지역별 분류 등 많은 기능을 제거했습니다.
+특히 CORS에러부터 JSON 타입 변환까지 공공데이터를 다루면서 생기는 여러 문제를 해결해보았습니다."
+thumbnail: "./Mobile.jpeg"
+alt: "10. 회고"
 ---
 
 ## 첫 MVP 개발
@@ -20,6 +21,8 @@ alt: "apple big sur gradient"
 
 결과는 아쉬웠지만 그래도 많을걸 배울 수 있었던 프로젝트였습니다.
 
-![Search](/assets/2021-04-22-bokdda-10/Search.gif)
-![Mobile](/assets/2021-04-22-bokdda-10/Mobile.jpeg)
-![PC](/assets/2021-04-22-bokdda-10/PC.png)
+![Search](./Search.gif)
+
+![Mobile](./Mobile.jpeg)
+
+![PC](./PC.png)

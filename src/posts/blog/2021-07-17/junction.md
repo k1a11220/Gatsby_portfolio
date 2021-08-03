@@ -4,7 +4,7 @@ date: "2021-07-17"
 category: "ETC"
 desc: ""
 thumbnail: "../images/default.jpg"
-alt: "apple big sur gradient"
+alt: "Junction X Seoul 2021 후기"
 ---
 
 ## 참가 계기

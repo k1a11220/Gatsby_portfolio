@@ -2,9 +2,9 @@
 title: "7. map 함수를 활용하여 리스트 생성하기"
 date: "2021-04-13"
 category: "볶다"
-desc: "Category Test"
-thumbnail: "../images/default.jpg"
-alt: "apple big sur gradient"
+desc: "map 함수를 활용하여 리스트 생성하기"
+thumbnail: "./console-1.png"
+alt: "7. map 함수를 활용하여 리스트 생성하기"
 ---
 
 ## javascript에서의 map
@@ -25,7 +25,7 @@ console.log(map1);
 // expected output: Array [2, 8, 18, 32]
 ```
 
-쉽게 말하면 모든 배열의 값(array1 -> [1, 4, 9, 16]에 특정 함수((x) => x \* 2))를 실행한다고 생각하시면 됩니다.
+쉽게 말하면 모든 배열의 값(array1 -> [1, 4, 9, 16]에 특정 함수((x) => x \* 2))를 실행한다고 생각하면 됩니다.
 
 직접 만들면서 익혀보도록 하겠습니다.
 
@@ -33,9 +33,9 @@ console.log(map1);
 
 저번에 ResultCard들 만들어 API 데이터를 다루기로 했습니다. 먼저, 반환되는 데이터를 살펴봅시다.
 
-![console](/assets/2021-04-13-bokdda-7/console-1.png)
+![console](./console-1.png)
 
-0~3번, 마지막 배열은 API의 정보를 담고있는 데이터기 때문에 servList만 걸러내야 합니다. slice 함수를 통해 배열을 정제한 뒤 hook을 사용해 만들 배열에 JSON을 넣겠습니다.
+0~3번, 마지막 배열은 API의 정보를 담고 있는 데이터기 때문에 servList만 걸러내야 합니다. slice 함수를 통해 배열을 정제한 뒤 hook을 사용해 만들 배열에 JSON을 넣겠습니다.
 
 Home.js
 
@@ -59,7 +59,8 @@ async function parseStr(dataSet) {
 ```
 
 정상적으로 원하는 데이터만 출력되는 것을 확인할 수 있습니다.
-![console-2](/assets/2021-04-13-bokdda-7/console-2.png)
+
+![console-2](./console-2.png)
 
 ## ResultList 함수 만들기
 
@@ -68,8 +69,9 @@ async function parseStr(dataSet) {
 JSON 타입의 API 데이터를 result라는 인자로 받아 map 함수를 통해 ResultCard를 생성합니다.
 
 이때 데이터를 살펴보면, 우리가 필요한 정보는 n/children/n/value 라는 것을 알 수 있습니다. (n은 숫자를 의미 0, 1, 2, 3, ...)
-따라서 ResultCard에 필요한 데이터를 입력해주면 됩니다.
-![console-3](/assets/2021-04-13-bokdda-7/console-3.png)
+따라서 ResultCard에 필요한 데이터를 입력하면 됩니다.
+
+![console-3](./console-3.png)
 
 ResultList.js
 

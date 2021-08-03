@@ -2,14 +2,13 @@
 title: "애플 스페셜 이벤트 신제품 요약."
 category: "Apple"
 date: "2020-09-16"
-desc: ""
-thumbnail: "../images/default.jpg"
-alt: ""
+desc: "애플의 9월 스페셜 이벤트가 열렸습니다. 이번 이벤트에서는 ios, watchOS의 공식버전 배포와 애플워치, 아이패드의 발표가 있었는데요, 간단하게 주요 포인트를 한눈에 확인할 수 있도록 정리해보았습니다."
+thumbnail: "./1.png"
+alt: "애플 스페셜 이벤트 신제품 요약."
 ---
 
 애플의 9월 스페셜 이벤트가 열렸습니다.
-
-이번 이벤트에서는 ios, watchOS의 공식버전 배포와 애플워치, 아이패드의 발표가 있었는데요, 간단하게 주요 포인트를 한눈에 확인할 수 있도록 정리해보았습니다. 추후 틀리거나 추가해야할 정보가 생기면 수정하도록 하겠습니다.
+이번 이벤트에서는 ios, watchOS의 공식버전 배포와 애플워치, 아이패드의 발표가 있었는데요, 간단하게 주요 포인트를 한눈에 확인할 수 있도록 정리해보았습니다. 추후 틀리거나 추가해야 할 정보가 생기면 수정하도록 하겠습니다.
 
 ## 1. Apple Watch Series 6
 
@@ -17,14 +16,14 @@ alt: ""
 - 더 밝아진 AOD
 - S6 칩
 - 4가지 색상 (Blue, classic gold stainless steel, graphite stainless steel, PRODUCT(RED))
-- 혈중 산소농도 측정센서 추가, 모니터링을 통해 이상신호 감지 가능
+- 혈중 산소 농도 측정센서 추가, 모니터링을 통해 이상신호 감지 가능
 - Solo Loop (버클이 없는 밴드) 출시
 - USB 어댑터 제거
 - 가족설정을 통해 iPhone이 없는 가족들도 사용 가능함 (한국 미출시)
 - 구매시 Fitness Plus 3개월 무료 (한국 미출시)
 - ₩539,0000부터 시작
 
-![Watch 6](/assets/2020-09-16-appleEvent-1/1.png)
+![Watch 6](./1.png)
 
 ## 2. Apple Watch SE
 
@@ -34,7 +33,7 @@ alt: ""
 - 구매시 애플 피트니스 플러스 3개월 무료 (한국 미출시)
 - ₩359,000부터 시작
 
-![Watch SE](/assets/2020-09-16-appleEvent-1/2.png)
+![Watch SE](./2.png)
 
 ## 3. iPad
 
@@ -46,7 +45,7 @@ alt: ""
 - 라미네이팅 처리 X
 - ₩449,000부터 시작
 
-![iPad](/assets/2020-09-16-appleEvent-1/3.png)
+![iPad](./3.png)
 
 ## 4. iPad Air
 
@@ -62,7 +61,7 @@ alt: ""
 - 120hz 지원 X
 - ₩779,000부터 시작
 
-![iPad Air](/assets/2020-09-16-appleEvent-1/4.png)
+![iPad Air](./4.png)
 
 ## 5. Apple One
 
@@ -72,4 +71,4 @@ alt: ""
 - \$19.95/mo. Music, TV Plus, Arcade, iCloud 200 GB 제공 최대 5명과 공유가능
 - \$29.95/mo. Music, TV Plus, Arcade, News Plus, Fitness Plus, iCloud 2 TB 제공 최대 5명과 공유가능
 
-![Apple One](/assets/2020-09-16-appleEvent-1/5.png)
+![Apple One](./5.png)

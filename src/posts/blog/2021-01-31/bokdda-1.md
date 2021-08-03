@@ -2,9 +2,9 @@
 title: "1. 복지서비스 API를 활용한 복지검색 서비스 만들기."
 category: "볶다"
 date: "2021-01-31"
-desc: "Category Test"
+desc: "간단한 정보만 입력하면 복지 서비스를 검색할 수 있는 MVP를 만들어보기로 했습니다."
 thumbnail: "../images/default.jpg"
-alt: "apple big sur gradient"
+alt: "1. 복지서비스 API를 활용한 복지검색 서비스 만들기."
 ---
 
 ## 개요

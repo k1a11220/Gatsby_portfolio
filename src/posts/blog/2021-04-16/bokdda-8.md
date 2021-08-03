@@ -2,14 +2,14 @@
 title: "8. 로딩 애니메이션 구현하기."
 date: "2021-04-16"
 category: "볶다"
-desc: "Category Test"
+desc: "로딩 여부를 확인해야 하는 컴포넌트는 ResultList 입니다. 따라서 검색 결과를 불러올 때 까지 로딩 애니메이션을 표시하겠습니다."
 thumbnail: "../images/default.jpg"
-alt: "apple big sur gradient"
+alt: "8. 로딩 애니메이션 구현하기."
 ---
 
 ## 로딩 애니메이션 가져오기
 
-로딩 여부를 확인해야 하는 컴포넌트는 ResultList 입니다. 따라서 검색 결과를 불러올 때 까지 로딩 애니메이션을 표시하겠습니다.
+로딩 여부를 확인해야 하는 컴포넌트는 ResultList입니다. 따라서 검색 결과를 불러올 때까지 로딩 애니메이션을 표시하겠습니다.
 애니메이션은 따로 만들지 않고, 구글 머티리얼 디자인에서 사용합니다.
 
 Home.js
@@ -37,9 +37,11 @@ const [loaded, setLoaded] = useState(false);
 
 loaded hook의 작동 로직입니다.
 
-기본상태 = false
-검색버튼 클릭 = true
-컴포넌트 로딩 완료 = false
+| 상태               | Boolean |
+| ------------------ | ------- |
+| 기본               | false   |
+| 검색버튼 클릭      | true    |
+| 컴포넌트 로딩 완료 | false   |
 
 삼항연산자를 사용하여 애니메이션을 관리하겠습니다.
 
@@ -81,7 +83,7 @@ const onSubmit = (data) => {
 };
 ```
 
-getAPI 이후 parseStr 함수가 차례대로 실행되면 loaded의 값을 다시 false 로 변경합니다.
+getAPI 이후 parseStr 함수가 차례대로 실행되면 loaded의 값을 다시 false로 변경합니다.
 
 ```js
 async function parseStr(dataSet) {

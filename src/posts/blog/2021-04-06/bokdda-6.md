@@ -2,9 +2,9 @@
 title: "6. 컴포넌트 && 라우트 관리하기"
 date: "2021-04-06"
 category: "볶다"
-desc: "Category Test"
-thumbnail: "../images/default.jpg"
-alt: "apple big sur gradient"
+desc: "지금까지 App.js에서 모든 작업을 수행했습니다. 하지만 효율적인 코드 관리를 위해 역할별로 컴포넌트를 나누어 관리하겠습니다."
+thumbnail: "./folder.png"
+alt: "6. 컴포넌트 && 라우트 관리하기"
 ---
 
 ## 컴포넌트와 라우트 정리하기
@@ -13,9 +13,9 @@ alt: "apple big sur gradient"
 
 복지 이름, 기관, 설명 등 복지 정보를 알려줄 컴포넌트인 ResultCard와 ResultCard를 관리할 ResultList를 만듭니다. 컴포넌트의 구조는 'ResultList > ResultCard'가 되겠습니다.
 
-또한 컴포넌트를 App.js에서 다루지 않고 추후 페이지가 더 생길것을 고려해 Home 라우트를 만들어 작업을 수행하겠습니다.
+또한 컴포넌트를 App.js에서 다루지 않고 추후 페이지가 더 생길 것을 고려해 Home 라우트를 만들어 작업을 수행하겠습니다.
 
-![폴더구조](/assets/2021-04-06-bokdda-6/folder.png)
+![폴더구조](./folder.png)
 
 ## 라우트 생성
 
@@ -47,7 +47,7 @@ export default App;
 2. 담당 기관
 3. 설명
 
-필요한 값을 인자로 셋팅한뒤 html 코드를 정리합니다.
+필요한 값을 인자로 세팅한 뒤 html 코드를 정리합니다.
 
 ResultCard.js
 

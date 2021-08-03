@@ -2,25 +2,20 @@
 title: "[BackEnd] 8. nodemailer를 활용한 메일보내기 - Part1"
 date: "2020-04-12"
 category: "prismagram"
-desc: "Category Test"
+desc: "nodemailer를 활용하여 메일을 보내봅시다. 먼저 nodemailer를 설치합니다."
 thumbnail: "../images/default.jpg"
-alt: "apple big sur gradient"
+alt: "[BackEnd] 8. nodemailer를 활용한 메일보내기 - Part1"
 ---
-
-_모든 내용은 MacOS Catalina 기준으로 작성되었습니다_
-
-**await, async, \_, args 등 JavaScript내용은 따로 정리하겠습니다.**
 
 ## 1. nodemailer 설치하기
 
-nodemailer를 활용하여 메일을 보내봅시다.  
-먼저 nodemailer를 설치합니다.
+nodemailer를 활용하여 메일을 보내봅시다. 먼저 nodemailer를 설치합니다.
 
 ```
 yarn add nodemailer
 ```
 
-nodemailer를 설치했으면 utils.js에 메일에 들어갈 내용을 작성해줍니다.
+nodemailer를 설치했으면 utils.js에 메일에 들어갈 내용을 작성해 줍니다.
 
 ```js
 export const sendMail = (email) => null;
@@ -37,7 +32,7 @@ export const sendSecretMail = (adress, secret) => {
 
 ## 2. transport 설치하기
 
-그런데, 메일을 전송해주기 위해서는 transport를 설치해줘야 합니다. 일단 sendgrid를 사용해보겠습니다.  
+그런데, 메일을 전송해 주기 위해서는 transport를 설치해 줘야 합니다. 일단 sendgrid를 사용해보겠습니다.  
 sendgrid에서 회원가입을 하고 sendgrid transport를 설치합니다.
 
 ```
@@ -110,11 +105,11 @@ import { sendSecretMail } from "./utils";
 sendSecretMail("k1a11220@naver.com", "123");
 ```
 
-그런데, sendgrid가 계정승인을 안해줘서 mailgun으로 바꾸겠습니다.
+그런데, sendgrid가 계정 승인을 안 해줘서 mailgun으로 바꾸겠습니다.
 
 ## 이슈
 
-yarn dev 할때 포트 중복이라고 오류가 나옵니다
+yarn dev 할 때 포트 중복이라고 오류가 나옵니다
 
 ```js
 events.js:298
@@ -145,8 +140,7 @@ Emitted 'error' event on WebSocketServer instance at:
 }
 ```
 
-nodemon에 --delay 2s를 추가하거나 포트값을 변경해도 동일하게 오류가 나옵니다.
-따라서 그냥 server.js에 시작포트를 입력해줍니다.
+nodemon에 --delay 2s를 추가하거나 포트 값을 변경해도 동일하게 오류가 나옵니다. 따라서 그냥 server.js에 시작 포트를 입력해 줍니다.
 
 ```js
 server.start({ port: 4000 }, () =>

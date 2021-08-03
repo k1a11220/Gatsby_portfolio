@@ -2,12 +2,10 @@
 title: "[FrontEnd] 1. create-react-app"
 date: "2020-09-02"
 category: "prismagram"
-desc: "Category Test"
+desc: "리액트 웹앱을 활용하여 제작할 예정이므로 CRA를 통해 프로젝트를 생성해 주어야 합니다."
 thumbnail: "../images/default.jpg"
-alt: "apple big sur gradient"
+alt: "[FrontEnd] 1. create-react-app"
 ---
-
-_모든 내용은 MacOS Bigsur 기준으로 작성되었습니다_
 
 ## 1. CRA (Create React App)
 
@@ -15,13 +13,13 @@ _모든 내용은 MacOS Bigsur 기준으로 작성되었습니다_
 
 먼저, github에 Repository를 만든 후 프로젝트를 생성합니다.
 
-```bash
+```s
 npx create-react-app prismagram-frontend
 ```
 
 ## 2. Clean Up
 
-프로젝트를 생성하였으면 순서대로 프로젝트를 정리해줍니다.
+프로젝트를 생성하였으면 순서대로 프로젝트를 정리합니다.
 
 - App.js를 제외한 파일을 모두 제거한 뒤 src/components 폴더를 생성합니다.
 - styled-components, react-router-dom, graphql, react-apollo-hooks, apollo-boost, react-helmet, react-toastify를 추가합니다.

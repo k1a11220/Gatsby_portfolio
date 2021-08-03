@@ -4,10 +4,8 @@ date: "2020-03-22"
 category: "prismagram"
 desc: "prismagram 프로젝트 셋업 하기"
 thumbnail: "../images/default.jpg"
-alt: "프로젝트 셋업 하기"
+alt: "[BackEnd] 1. 프로젝트 생성, 셋업하기"
 ---
-
-_모든 내용은 MacOS Catalina 기준으로 작성되었습니다_
 
 ## 프로젝트 셋업 하기
 

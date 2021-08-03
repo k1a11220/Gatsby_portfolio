@@ -2,9 +2,9 @@
 title: "shell-init: error retrieving current directory: getcwd: cannot access parent directories: Operation not permitted 에러 해결법"
 date: "2020-03-24"
 category: "Issue"
-desc: "Category Test"
+desc: "삭제된 디렉토리에서 명령을 실행할 때 생기는 오류입니다."
 thumbnail: "../images/default.jpg"
-alt: "apple big sur gradient"
+alt: "shell-init: error retrieving current directory: getcwd: cannot access parent directories: Operation not permitted 에러 해결법"
 ---
 
 ## 원인

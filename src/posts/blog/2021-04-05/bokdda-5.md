@@ -2,9 +2,9 @@
 title: "5. xml 데이터를 json 타입으로 변환하기"
 category: "볶다"
 date: "2021-04-05"
-desc: "Category Test"
-thumbnail: "../images/default.jpg"
-alt: "apple big sur gradient"
+desc: "hook을 통해 html의 select 값을 가져왔습니다. 먼저, let 으로 선언한 변수에 select 값을 넣어줍니다."
+thumbnail: "./console.png"
+alt: "5. xml 데이터를 json 타입으로 변환하기"
 ---
 
 ## select 값을 API에 집어넣기
@@ -28,7 +28,7 @@ const onSubmit = (data) => {
 
 변수에 들어있는 값을 API에 집어넣기 위해서 처음에 만들었던 axios 함수를 응용해봅시다.
 
-getAPI라는 함수를 만들겠습니다. async와 await를 사용하는 이유는 API가 로드될 때 까지 기다린 후 다음 함수를 실행하기 위함입니다. async와 await는 나중에 더 자세히 설명하도록 하겠습니다.
+getAPI라는 함수를 만들겠습니다. async와 await를 사용하는 이유는 API가 로드될 때까지 기다린 후 다음 함수를 실행하기 위함입니다. async와 await는 나중에 더 자세히 설명하도록 하겠습니다.
 
 ```js
 async function getAPI() {
@@ -42,7 +42,7 @@ async function getAPI() {
 }
 ```
 
-정상적으로 dataSet이 console에 출력되는걸 알 수 있습니다.
+정상적으로 dataSet이 console에 출력되는 걸 알 수 있습니다.
 
 ## xml 데이터를 json 타입으로 변환하기
 
@@ -60,7 +60,7 @@ yarn add react-xml-parser
 import XMLParser from "react-xml-parser";
 ```
 
-parseStr 함수를 만들고, getAPI 함수의 리턴값을 parseStr에 넣겠습니다.
+parseStr 함수를 만들고, getAPI 함수의 리턴 값을 parseStr에 넣겠습니다.
 
 ```js
 function parseStr(dataSet) {
@@ -81,4 +81,4 @@ async function getAPI() {
 
 console에 정상적으로 json 타입으로 변환된 데이터가 출력되었습니다.
 
-![콘솔출력](/assets/2021-04-05-bokdda-5/console.png)
+![콘솔출력](./console.png)

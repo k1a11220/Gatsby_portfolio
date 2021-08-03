@@ -2,16 +2,16 @@
 title: "4. React hook 으로 select 값 관리하기"
 category: "볶다"
 date: "2021-03-29"
-desc: "Category Test"
-thumbnail: "../images/default.jpg"
-alt: "apple big sur gradient"
+desc: "리액트에서는 Hook을 사용해서 좀 더 쿨하게 태그의 값을 받아올 수 있습니다. 직접 만들어보면서 구현해보겠습니다."
+thumbnail: "./console.png"
+alt: "4. React hook 으로 select 값 관리하기"
 ---
 
-## 리액트 Hook && ref와 Select 태그로 선택값 받아오기
+## 리액트 Hook && ref와 Select 태그로 선택 값 받아오기
 
-바닐라 자바스크립트에서는 document.qureySelector("") 로 태그를 선택해서 값을 받아왔습니다. 그런데, 리액트에서는 Hook을 사용해서 좀 더 쿨하게 태그의 값을 받아올 수 있습니다. 직접 만들어보면서 구현해보겠습니다.
+바닐라 자바스크립트에서는 document.qureySelector("")로 태그를 선택해서 값을 받아왔습니다. 그런데, 리액트에서는 Hook을 사용해서 좀 더 쿨하게 태그의 값을 받아올 수 있습니다. 직접 만들어보면서 구현해보겠습니다.
 
-1. react-hook-form 에서 useForm을 불러옵니다.
+1. react-hook-form에서 useForm을 불러옵니다.
 
 ```
 yarn add react-hook-form
@@ -61,7 +61,8 @@ export default App;
 select 태그에 name과 ref를 추가합니다. name은 option의 값을 저장할 변수의 이름이고, ref는 id나 class처럼 DOM에 붙이는 이름이라 생각하면 됩니다.
 ref는 id와 달리 컴포넌트 내부에서만 사용하기 때문에 충돌할 위험성이 줄어듭니다. 또한 react 매서드의 사용이 가능합니다.
 
-![콘솔출력](/assets/2021-03-29-bokdda-4/console.gif)
+![콘솔출력](./console.gif)
+
 폼을 제출하면 정상적으로 데이터가 콘솔에 출력됩니다.
 
 더 디테일한 내용은 아래 공식 문서를 참고하면 좋습니다.

@@ -2,12 +2,10 @@
 title: "[FrontEnd] 2. Setup Apollo-Client"
 date: "2020-09-03"
 category: "prismagram"
-desc: "Category Test"
-thumbnail: "../images/default.jpg"
-alt: "apple big sur gradient"
+desc: "로그인 여부를 확인하기 위해 Apollo Client를 사용합니다. apollo-boost 라이브러리를 통해 Apollo Client를 사용하겠습니다."
+thumbnail: "./application.png"
+alt: "[FrontEnd] 2. Setup Apollo-Client"
 ---
-
-_모든 내용은 MacOS Bigsur 기준으로 작성되었습니다_
 
 ## 1. Apollo Client
 
@@ -58,11 +56,11 @@ Backend 프로젝트에서 서버를 실행시키고 apollo-dev-tools를 실행�
 
 ## 4. ClientState 만들기
 
-ClientState를 만들기 전에 ApolloClient를 index.js로 이동합니다. 그 이유는 Components보다 Query를 먼저 생성하기 위해서 입니다. ClientState는 App이 오프라인일때 발생합니다.
+ClientState를 만들기 전에 ApolloClient를 index.js로 이동합니다. 그 이유는 Components보다 Query를 먼저 생성하기 위해서입니다. ClientState는 App이 오프라인일 때 발생합니다.
 
 처음 Router가 Auth가 될지, Post가 될지 결정하는 인자인 isLoggedIn을 defaults에서 정의하고 Mutation은 resolvers에서 정의합니다.
 
-isLoggedIn은 localstorage에 token이 저장되어있을경우 ture 아닐경우 false를 리턴합니다. (로컬에 저장하여도 문제가 없음.)
+isLoggedIn은 localstorage에 token이 저장되어 있을 경우 ture 아닐 경우 false를 리턴합니다. (로컬에 저장하여도 문제가 없음.)
 
 logUserIn Mutation은 token, cache를 인자로 받아 저장합니다.  
 logUserOut Mutation은 token, cache를 초기화합니다.
@@ -159,5 +157,6 @@ export default () => {
 };
 ```
 
-token 값을 입력해주면 Auth 가 아닌 Feed 페이지가 나타납니다.
-![application](/assets/2020-09-03-prismagram-frontend-2/application.png)
+token 값을 입력하면, Auth 가 아닌 Feed 페이지가 나타납니다.
+
+![application](./application.png)
