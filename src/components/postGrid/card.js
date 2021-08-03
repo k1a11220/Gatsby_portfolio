@@ -12,7 +12,7 @@ const Card = ({ thumbnail, alt, category, title, desc, date }) => {
         <div>
           <Category>{category}</Category>
           <Title>{title}</Title>
-          <Desc>{desc}</Desc>
+          {/* <Desc>{desc}</Desc> */}
         </div>
         <DateTime dateTime={date}>{date}</DateTime>
       </Text>
@@ -54,6 +54,7 @@ const Title = styled.h3`
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   line-height: 1.25;
+
   @media (max-width: ${({ theme }) => theme.device.md}) {
     font-size: 1.3125rem;
   }
