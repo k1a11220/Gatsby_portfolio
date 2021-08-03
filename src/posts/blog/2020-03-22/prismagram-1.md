@@ -2,20 +2,20 @@
 title: "[BackEnd] 1. 프로젝트 생성, 셋업하기"
 date: "2020-03-22"
 category: "prismagram"
-desc: "Category Test"
+desc: "prismagram 프로젝트 셋업 하기"
 thumbnail: "../images/default.jpg"
-alt: "apple big sur gradient"
+alt: "프로젝트 셋업 하기"
 ---
 
 _모든 내용은 MacOS Catalina 기준으로 작성되었습니다_
 
-## 프로젝트 셋업하기
+## 프로젝트 셋업 하기
 
 ## 1. 프로젝트 생성
 
 - Github에서 Repository 만들기
 - .gitignore: Node
-- yarn init 혹은 npm init 한뒤 Git 연동.
+- yarn init 혹은 npm init 한 뒤 Git 연동.
 
 ## 2. GraphQL 서버 구축을 위한 라이브러리 설치
 
@@ -52,10 +52,10 @@ _모든 내용은 MacOS Catalina 기준으로 작성되었습니다_
   }
   ```
 
-- nodemon을 실행할 때마다 babel-node로 src폴더의 server.js 파일을 실행하게 됩니다.
+- nodemon을 실행할 때마다 babel-node로 src 폴더의 server.js 파일을 실행하게 됩니다.
 - nodemon은 저장할 때마다 실행을 해주는 도구입니다. 서버를 껐다가 킬 필요가 없어지게 해주는 도구입니다.
 - babel은 코드를 호환성 있게 만들어줍니다.
-- .babelrc 파일을 만든뒤 node가 import를 인식할 수 있도록 아래와 같은 코드를 입력합니다.
+- .babelrc 파일을 만든 뒤 node가 import를 인식할 수 있도록 아래와 같은 코드를 입력합니다.
 
   ```js
   {
@@ -67,9 +67,9 @@ _모든 내용은 MacOS Catalina 기준으로 작성되었습니다_
 
 ## 5. 환경변수 설정하기
 
-로컬서버를 사용하기위한 PORT와 같은 환경변수를 설정해주는 작업을 해야합니다. 이러한 환경변수들은 따로 .env파일을 통해 관리합니다.
+로컬 서버를 사용하기 위한 PORT와 같은 환경 변수를 설정해 주는 작업을 해야 합니다. 이러한 환경 변수들은 따로. env 파일을 통해 관리합니다.
 
-- .env파일을 src 폴더에 만든 뒤 설정할 포트 PORT = 4000을 선언합니다. 모든 환경변수들은 .env에 선언하는 것이 좋습니다.
+- .env 파일을 src 폴더에 만든 뒤 설정할 포트 PORT = 4000을 선언합니다. 모든 환경 변수들은. env에 선언하는 것이 좋습니다.
 
   ```js
   PORT = 4000;
@@ -82,12 +82,12 @@ _모든 내용은 MacOS Catalina 기준으로 작성되었습니다_
   const PORT = process.env.PORT || 4000;
   ```
 
-이때, .config()에서 아무것도 입력하지 않은 경우에는 .env 파일로 인식하여 실제 .env파일에는 아무내용도 입력하지 않는 것 같습니다.
+이때, .config()에서 아무것도 입력하지 않은 경우에는 .env 파일로 인식하여 실제 .env 파일에는 아무 내용도 입력하지 않는 것 같습니다.
 
 ## 6. typeDefs, Resolvers 만들기
 
-서버를 만들기 위해서는 query를 생성해야하는데, query를 생성하기 위해서는 typeDefs과 Resolvers가 필요합니다.
-그 Type과 Resolvers를 Server.js안에 우선 만들어보도록 하겠습니다.
+서버를 만들기 위해서는 query를 생성해야 하는데, query를 생성하기 위해서는 typeDefs과 Resolvers가 필요합니다.
+Type과 Resolvers를 Server.js 안에 우선 만들어보도록 하겠습니다.
 
 ```js
 //typeDefs
@@ -106,7 +106,7 @@ server.start({ port: PORT }, () =>
 
 ## 7. 마무리
 
-yarn dev를 하면 server is running http://localhost:4000 라는 메시지가 뜨며 서버가 동작합니다.
+yarn dev를 하면 server is running http://localhost:4000 이라는 메시지가 뜨며 서버가 동작합니다.
 
 ## 이슈
 
