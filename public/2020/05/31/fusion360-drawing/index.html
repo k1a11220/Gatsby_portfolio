@@ -1,0 +1,970 @@
+<!DOCTYPE html><html lang="ko"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:100%/1.45 'georgia',serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.8);font-family:'georgia',serif;font-weight:normal;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;color:inherit;font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:2rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;color:inherit;font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:1.51572rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;color:inherit;font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:1.31951rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;color:inherit;font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;color:inherit;font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:0.87055rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;color:inherit;font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:0.81225rem;line-height:1.1;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}ul{margin-left:1.45rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;list-style-position:outside;list-style-image:none;}ol{margin-left:1.45rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;font-size:0.85rem;line-height:1.45rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;font-size:1rem;line-height:1.45rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}blockquote{margin-left:1.45rem;margin-right:1.45rem;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.45rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}b{font-weight:bold;}strong{font-weight:bold;}dt{font-weight:bold;}th{font-weight:bold;}li{margin-bottom:calc(1.45rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.45rem;margin-bottom:calc(1.45rem / 2);margin-top:calc(1.45rem / 2);}li > ul{margin-left:1.45rem;margin-bottom:calc(1.45rem / 2);margin-top:calc(1.45rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.45rem / 2);}code{font-size:0.85rem;line-height:1.45rem;}kbd{font-size:0.85rem;line-height:1.45rem;}samp{font-size:0.85rem;line-height:1.45rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:0.96667rem;padding-right:0.96667rem;padding-top:0.725rem;padding-bottom:calc(0.725rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}</style><meta name="generator" content="Gatsby 2.32.13"/><link rel="icon" href="/favicon-32x32.png?v=abfded2d68398b0949c75a0894fbf871" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><meta name="theme-color" content="#ffffff"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=abfded2d68398b0949c75a0894fbf871"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=abfded2d68398b0949c75a0894fbf871"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=abfded2d68398b0949c75a0894fbf871"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=abfded2d68398b0949c75a0894fbf871"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=abfded2d68398b0949c75a0894fbf871"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=abfded2d68398b0949c75a0894fbf871"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=abfded2d68398b0949c75a0894fbf871"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=abfded2d68398b0949c75a0894fbf871"/><style data-styled="" data-styled-version="5.3.0">.djUCMb{position:absolute;top:0;left:0;width:100%;height:100%;z-index:1;-webkit-backdrop-filter:saturate(180%) blur(20px);backdrop-filter:saturate(180%) blur(20px);background-color:var(--color-nav-bar);border-bottom:1px solid var(--color-nav-border);}/*!sc*/
+data-styled.g1[id="background__Background-sc-1vcxrxq-0"]{content:"djUCMb,"}/*!sc*/
+.jYswdd{width:1.125rem;height:1.125rem;fill:var(--color-icon);-webkit-transform:translateY(-1px);-ms-transform:translateY(-1px);transform:translateY(-1px);}/*!sc*/
+@media (max-width:767px){.jYswdd{width:0;height:1rem;-webkit-transition:width 0.3s ease;transition:width 0.3s ease;}}/*!sc*/
+data-styled.g2[id="themeToggleButton__Icon-k69aai-0"]{content:"jYswdd,"}/*!sc*/
+.hbuOjz{border:none;background-color:var(--color-floating-button);border-radius:var(--border-radius-lg);box-shadow:0 3px 15px var(--color-floating-button-shadow);}/*!sc*/
+@media (max-width:767px){.hbuOjz{visibility:hidden;background-color:transparent;border-radius:0;box-shadow:none;}}/*!sc*/
+data-styled.g3[id="themeToggleButton__ButtonBackground-k69aai-1"]{content:"hbuOjz,"}/*!sc*/
+.fYbUwy{z-index:2;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;background-color:transparent;}/*!sc*/
+data-styled.g4[id="themeToggleButton__Content-k69aai-2"]{content:"fYbUwy,"}/*!sc*/
+.gEfCtU{color:var(--color-floating-button-text);margin-left:6px;}/*!sc*/
+@media (max-width:767px){.gEfCtU{color:var(--color-text);margin-left:0;font-weight:var(--font-weight-medium);border-radius:50%;}}/*!sc*/
+data-styled.g5[id="themeToggleButton__Text-k69aai-3"]{content:"gEfCtU,"}/*!sc*/
+.framaH{cursor:pointer;box-sizing:border-box;position:fixed;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;background-color:transparent;z-index:100;right:var(--sizing-md);bottom:var(--sizing-md);padding:var(--sizing-base);padding-right:20px;border:1px solid var(--color-floating-button-border);border-radius:var(--border-radius-lg);font-weight:var(--font-weight-medium);}/*!sc*/
+@media (min-width:767px){.framaH:hover{outline:none;border:1px solid var(--color-floating-button-border-hover);}.framaH:hover .themeToggleButton__Icon-k69aai-0,.framaH:hover .themeToggleButton__Text-k69aai-3{color:var(--color-floating-button-text-hover);fill:var(--color-floating-button-text-hover);}.framaH:hover .themeToggleButton__ButtonBackground-k69aai-1{background-color:var(--color-floating-button-hover);box-shadow:0 3px 15px var(--color-floating-button-shadow-hover);}}/*!sc*/
+@media (max-width:767px){.framaH{-webkit-box-pack:start;-webkit-justify-content:start;-ms-flex-pack:start;justify-content:start;position:static;border-radius:0;border:none;width:100%;padding:0.5rem 0;}.framaH:hover .themeToggleButton__Icon-k69aai-0,.framaH:hover .themeToggleButton__Text-k69aai-3{fill:var(--color-blue);color:var(--color-blue);}.framaH:hover .themeToggleButton__Icon-k69aai-0{width:1rem;margin-right:4px;}.framaH:focus-visible .themeToggleButton__Icon-k69aai-0,.framaH:focus-visible .themeToggleButton__Text-k69aai-3{fill:var(--color-blue);color:var(--color-blue);}.framaH:focus-visible .themeToggleButton__Icon-k69aai-0{width:1rem;margin-right:4px;}}/*!sc*/
+data-styled.g6[id="themeToggleButton__Button-k69aai-4"]{content:"framaH,"}/*!sc*/
+.hcckrq{top:22px;}/*!sc*/
+data-styled.g7[id="menuIcon__MenuIconBreadTop-gj45br-0"]{content:"hcckrq,"}/*!sc*/
+.iqepKH{bottom:22px;}/*!sc*/
+data-styled.g8[id="menuIcon__MenuIconBreadBottom-gj45br-1"]{content:"iqepKH,"}/*!sc*/
+.eoVYJQ{z-index:9999;display:none;}/*!sc*/
+@media (max-width:767px){.eoVYJQ{position:relative;margin-left:auto;display:block;cursor:pointer;width:var(--nav-height);height:var(--nav-height);border:none;background-color:transparent;}.eoVYJQ > div{position:absolute;width:18px;height:1px;right:var(--padding-sm);opacity:0.8;-webkit-transition:opacity 0.3s ease,-webkit-transform 0.2s ease 0.1s;-webkit-transition:opacity 0.3s ease,transform 0.2s ease 0.1s;transition:opacity 0.3s ease,transform 0.2s ease 0.1s;}.eoVYJQ > div > div{width:100%;height:100%;background-color:var(--color-text);-webkit-transition:-webkit-transform 0.1s ease;-webkit-transition:transform 0.1s ease;transition:transform 0.1s ease;}.eoVYJQ .menuIcon__MenuIconBreadTop-gj45br-0{-webkit-transform:none;-ms-transform:none;transform:none;}.eoVYJQ .menuIcon__MenuIconBreadTop-gj45br-0 div{-webkit-transform:none;-ms-transform:none;transform:none;}.eoVYJQ .menuIcon__MenuIconBreadBottom-gj45br-1{-webkit-transform:none;-ms-transform:none;transform:none;}.eoVYJQ .menuIcon__MenuIconBreadBottom-gj45br-1 div{-webkit-transform:none;-ms-transform:none;transform:none;}.eoVYJQ:hover > div{opacity:1;}}/*!sc*/
+data-styled.g9[id="menuIcon__MenuIconButton-gj45br-2"]{content:"eoVYJQ,"}/*!sc*/
+.bgyUqt{min-width:var(--min-width);position:-webkit-sticky;position:sticky;top:0;left:0;width:100%;height:var(--nav-height);z-index:10;}/*!sc*/
+.bgyUqt a:hover{-webkit-text-decoration:none;text-decoration:none;}/*!sc*/
+data-styled.g10[id="navBar__Nav-sc-89kxxv-0"]{content:"bgyUqt,"}/*!sc*/
+.cjfpX{box-sizing:content-box;position:relative;margin:0 auto;max-width:var(--width);padding:0 var(--padding-lg);height:100%;z-index:2;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}/*!sc*/
+.cjfpX li{margin:0;list-style-type:none;}/*!sc*/
+@media (max-width:767px){.cjfpX{padding:0 var(--padding-sm);}}/*!sc*/
+data-styled.g11[id="navBar__Content-sc-89kxxv-1"]{content:"cjfpX,"}/*!sc*/
+.dZeHhl{z-index:9999;padding:0;border:none;font-size:var(--text-title);font-weight:var(--font-weight-semi-bold);color:var(--color-text);}/*!sc*/
+.dZeHhl a{color:inherit;}/*!sc*/
+@media (max-width:767px){.dZeHhl{font-size:var(--text-md);}}/*!sc*/
+data-styled.g12[id="navBar__Title-sc-89kxxv-2"]{content:"dZeHhl,"}/*!sc*/
+.iSFZXm{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}/*!sc*/
+.iSFZXm a{font-weight:var(--font-weight-regular);}/*!sc*/
+.iSFZXm a:hover,.iSFZXm a:focus{color:var(--color-blue);}/*!sc*/
+.iSFZXm li{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-left:32px;}/*!sc*/
+.iSFZXm li:first-child,.iSFZXm li:last-child{margin-left:0;}/*!sc*/
+@media (max-width:767px){.iSFZXm{pointer-events:none;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;padding:0 var(--sizing-lg);}.iSFZXm li:nth-child(0){-webkit-transition-property:-webkit-transform,opacity;-webkit-transition-property:transform,opacity;transition-property:transform,opacity;-webkit-transition-duration:0.5s,0.3s;transition-duration:0.5s,0.3s;-webkit-transition-delay:0.25s;transition-delay:0.25s;-webkit-transition-timing-function:ease-in,ease-out;transition-timing-function:ease-in,ease-out;}.iSFZXm li:nth-child(1){-webkit-transition-property:-webkit-transform,opacity;-webkit-transition-property:transform,opacity;transition-property:transform,opacity;-webkit-transition-duration:0.5s,0.3s;transition-duration:0.5s,0.3s;-webkit-transition-delay:0.19s;transition-delay:0.19s;-webkit-transition-timing-function:ease-in,ease-out;transition-timing-function:ease-in,ease-out;}.iSFZXm li:nth-child(2){-webkit-transition-property:-webkit-transform,opacity;-webkit-transition-property:transform,opacity;transition-property:transform,opacity;-webkit-transition-duration:0.5s,0.3s;transition-duration:0.5s,0.3s;-webkit-transition-delay:0.13s;transition-delay:0.13s;-webkit-transition-timing-function:ease-in,ease-out;transition-timing-function:ease-in,ease-out;}.iSFZXm li:nth-child(3){-webkit-transition-property:-webkit-transform,opacity;-webkit-transition-property:transform,opacity;transition-property:transform,opacity;-webkit-transition-duration:0.5s,0.3s;transition-duration:0.5s,0.3s;-webkit-transition-delay:0.07s;transition-delay:0.07s;-webkit-transition-timing-function:ease-in,ease-out;transition-timing-function:ease-in,ease-out;}.iSFZXm li:nth-child(4){-webkit-transition-property:-webkit-transform,opacity;-webkit-transition-property:transform,opacity;transition-property:transform,opacity;-webkit-transition-duration:0.5s,0.3s;transition-duration:0.5s,0.3s;-webkit-transition-delay:0.010000000000000009s;transition-delay:0.010000000000000009s;-webkit-transition-timing-function:ease-in,ease-out;transition-timing-function:ease-in,ease-out;}.iSFZXm li:nth-child(5){-webkit-transition-property:-webkit-transform,opacity;-webkit-transition-property:transform,opacity;transition-property:transform,opacity;-webkit-transition-duration:0.5s,0.3s;transition-duration:0.5s,0.3s;-webkit-transition-delay:-0.04999999999999999s;transition-delay:-0.04999999999999999s;-webkit-transition-timing-function:ease-in,ease-out;transition-timing-function:ease-in,ease-out;}.iSFZXm li:nth-child(6){-webkit-transition-property:-webkit-transform,opacity;-webkit-transition-property:transform,opacity;transition-property:transform,opacity;-webkit-transition-duration:0.5s,0.3s;transition-duration:0.5s,0.3s;-webkit-transition-delay:-0.10999999999999999s;transition-delay:-0.10999999999999999s;-webkit-transition-timing-function:ease-in,ease-out;transition-timing-function:ease-in,ease-out;}.iSFZXm li:nth-child(7){-webkit-transition-property:-webkit-transform,opacity;-webkit-transition-property:transform,opacity;transition-property:transform,opacity;-webkit-transition-duration:0.5s,0.3s;transition-duration:0.5s,0.3s;-webkit-transition-delay:-0.16999999999999998s;transition-delay:-0.16999999999999998s;-webkit-transition-timing-function:ease-in,ease-out;transition-timing-function:ease-in,ease-out;}.iSFZXm li:nth-child(8){-webkit-transition-property:-webkit-transform,opacity;-webkit-transition-property:transform,opacity;transition-property:transform,opacity;-webkit-transition-duration:0.5s,0.3s;transition-duration:0.5s,0.3s;-webkit-transition-delay:-0.22999999999999998s;transition-delay:-0.22999999999999998s;-webkit-transition-timing-function:ease-in,ease-out;transition-timing-function:ease-in,ease-out;}.iSFZXm li:nth-child(9){-webkit-transition-property:-webkit-transform,opacity;-webkit-transition-property:transform,opacity;transition-property:transform,opacity;-webkit-transition-duration:0.5s,0.3s;transition-duration:0.5s,0.3s;-webkit-transition-delay:-0.29000000000000004s;transition-delay:-0.29000000000000004s;-webkit-transition-timing-function:ease-in,ease-out;transition-timing-function:ease-in,ease-out;}.iSFZXm li{display:block;margin-left:0;font-size:var(--text-md);-webkit-transform:translateY(0);-ms-transform:translateY(0);transform:translateY(0);opacity:0;}.iSFZXm a{display:block;height:100%;padding:0.5rem 0;font-weight:var(--font-weight-medium);}.iSFZXm li + li::before{content:'';display:block;position:absolute;width:calc(100vw - var(--sizing-lg) * 2);height:1px;-webkit-transform:translateY(-2px);-ms-transform:translateY(-2px);transform:translateY(-2px);background-color:var(--color-divider);}}/*!sc*/
+data-styled.g13[id="navBar__LinkUl-sc-89kxxv-3"]{content:"iSFZXm,"}/*!sc*/
+@media (max-width:767px){.kkTtkb::after{-webkit-transition:opacity 0.4s ease-in-out 0.48s;transition:opacity 0.4s ease-in-out 0.48s;opacity:0;content:'';display:block;position:absolute;top:0;left:0;width:100%;height:100%;background-color:var(--color-post-background);}}/*!sc*/
+data-styled.g14[id="navBar__NavBackground-sc-89kxxv-4"]{content:"kkTtkb,"}/*!sc*/
+.iAqZrY{display:none;}/*!sc*/
+@media (max-width:767px){.iAqZrY{-webkit-transition:-webkit-transform 0.6s cubic-bezier(0.41,0.06,0.05,1) 0.1s;-webkit-transition:transform 0.6s cubic-bezier(0.41,0.06,0.05,1) 0.1s;transition:transform 0.6s cubic-bezier(0.41,0.06,0.05,1) 0.1s;-webkit-transform:scaleY(0);-ms-transform:scaleY(0);transform:scaleY(0);-webkit-transform-origin:top;-ms-transform-origin:top;transform-origin:top;display:block;position:fixed;top:calc(var(--nav-height) - 1px);left:0;width:100%;height:calc(100% - var(--nav-height) + 1px);background-color:var(--color-post-background);}}/*!sc*/
+data-styled.g15[id="navBar__Curtain-sc-89kxxv-5"]{content:"iAqZrY,"}/*!sc*/
+@media (max-width:767px){.gSUYvg{width:100%;z-index:200;}}/*!sc*/
+data-styled.g16[id="navBar__LinkContent-sc-89kxxv-6"]{content:"gSUYvg,"}/*!sc*/
+.dXbPgo{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}/*!sc*/
+@media (max-width:767px){.dXbPgo{position:absolute;top:0;left:0;width:100%;height:var(--nav-height);}}/*!sc*/
+data-styled.g17[id="navBar__LinkWrap-sc-89kxxv-7"]{content:"dXbPgo,"}/*!sc*/
+:root{font-size:100%;--width:1200px;--min-width:320px;--post-width:650px;--nav-height:54px;--footer-height:60px;--grid-gap-sm:10px;--grid-gap-lg:24px;--grid-gap-xl:36px;--padding-sm:16px;--padding-lg:22px;--border-radius-sm:6px;--border-radius-base:8px;--border-radius-lg:28px;--sizing-xs:4px;--sizing-sm:8px;--sizing-base:16px;--sizing-md:24px;--sizing-lg:40px;--sizing-xl:64px;--text-xs:0.625rem;--text-sm:0.75rem;--text-base:1rem;--text-md:1.125rem;--text-title:1.25rem;--text-lg:1.5rem;--text-xl:3rem;--device-xs-max-width:419px;--device-sm-max-width:767px;--device-md-max-width:1023px;--device-lg-max-width:1441px;--device-xs-max-width-query:(max-width:419px);--device-sm-max-width-query:(max-width:767px);--device-md-max-width-query:(max-width:1023px);--device-lg-max-width-query:(max-width:1441px);--font-weight-regular:400;--font-weight-medium:500;--font-weight-semi-bold:600;--font-weight-bold:700;--font-weight-extra-bold:800;--color-outline:rgba(0,125,250,0.6);}/*!sc*/
+:root body.light{--color-text:#1d1d1d;--color-text-2:#1d1d1d;--color-text-3:#086BCE;--color-white:#ffffff;--color-nav-bar:rgba(255,255,255,0.7);--color-nav-border:rgba(200,200,200,0.7);--color-category-button:#f2f2f2;--color-background:#f2f2f2;--color-post-background:#ffffff;--color-card:#ffffff;--color-code:#f2f2f2;--color-code-block:#fafafa;--color-code-highlight:rgba(0,0,0,0.05);--color-code-highlight-border:rgba(0,0,0,0.2);--color-gray-1:#f2f2f2;--color-gray-2:#e0e0e0;--color-gray-3:#d1d1d1;--color-gray-4:#868686;--color-gray-5:#6e6e6e;--color-gray-6:#696969;--color-divider:rgba(0,0,0,0.15);--color-dimmed:rgba(0,0,0,0.15);--color-floating-button:rgba(255,255,255,0.7);--color-floating-button-hover:rgba(50,50,50,0.7);--color-floating-button-border:rgba(230,230,230,0.7);--color-floating-button-border-hover:rgba(255,255,255,0.2);--color-floating-button-text:#202020;--color-floating-button-text-hover:#f2f2f2;--color-floating-button-shadow:rgba(0,0,0,0.2);--color-floating-button-shadow-hover:rgba(0,0,0,0.4);--color-blue:#0066cc;--color-icon:#2c2c2c;--color-footer-background:#FAFAFA;--color-footer-button-background:#086BCE;--color-footer-button-color:#F3F3F3;}/*!sc*/
+:root body.dark{--color-text:#e6e6e6;--color-text-2:#d1d1d1;--color-text-3:#086BCE;--color-white:#e6e6e6;--color-nav-bar:rgba(29,29,29,0.7);--color-nav-border:rgba(255,255,255,0.2);--color-category-button:#484848;--color-background:#1c1c1c;--color-post-background:#1c1c1c;--color-card:#2c2c2c;--color-code:#3a3a3a;--color-code-block:#242424;--color-code-highlight:rgba(255,255,255,0.05);--color-code-highlight-border:rgba(255,255,255,0.2);--color-gray-1:#1c1c1c;--color-gray-2:#2c2c2c;--color-gray-3:#3a3a3a;--color-gray-4:#484848;--color-gray-5:#646464;--color-gray-6:#868686;--color-divider:rgba(255,255,255,0.15);--color-dimmed:rgba(0,0,0,0.15);--color-floating-button:rgba(50,50,50,0.7);--color-floating-button-hover:rgba(255,255,255,0.7);--color-floating-button-border:rgba(255,255,255,0.2);--color-floating-button-border-hover:rgba(230,230,230,0.7);--color-floating-button-text:#d1d1d1;--color-floating-button-text-hover:#202020;--color-floating-button-shadow:rgba(0,0,0,0.4);--color-floating-button-shadow-hover:rgba(0,0,0,0.4);--color-blue:#0a84ff;--color-icon:#d1d1d1;--color-footer-background:#2B2B2B;--color-footer-button-background:#203E5C;--color-footer-button-color:#62B1FF;}/*!sc*/
+html,body,#___gatsby,#gatsby-focus-wrapper{min-height:100%;}/*!sc*/
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';background-color:var(--color-post-background);-webkit-font-smoothing:antialiased;}/*!sc*/
+body *{color:var(--color-text);}/*!sc*/
+:lang(ko){word-break:keep-all;}/*!sc*/
+ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,hgroup,p,blockquote,figure,form,fieldset,input,legend,pre,abbr,button{margin:0;padding:0;}/*!sc*/
+h1 a,li a{-webkit-text-decoration:none;text-decoration:none;}/*!sc*/
+a{-webkit-text-decoration:none;text-decoration:none;}/*!sc*/
+*:focus:not(:focus-visible){outline:none;}/*!sc*/
+:focus-visible{outline:4px solid var(--color-outline);outline-offset:1px;}/*!sc*/
+.js-focus-visible :focus:not(.focus-visible){outline:none;}/*!sc*/
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;-webkit-clip:rect(1px,1px,1px,1px);clip:rect(1px,1px,1px,1px);white-space:no-wrap;}/*!sc*/
+data-styled.g18[id="sc-global-gQkPvm1"]{content:"sc-global-gQkPvm1,"}/*!sc*/
+.lermzt{min-width:var(--min-width);width:100%;height:148px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;background-color:var(--color-footer-background);}/*!sc*/
+data-styled.g19[id="Footer__Container-sc-1epg5cn-0"]{content:"lermzt,"}/*!sc*/
+.kGGhgJ{box-sizing:content-box;position:relative;margin:0 auto;max-width:var(--width);width:100%;padding:0 var(--padding-lg);height:100%;z-index:2;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}/*!sc*/
+@media (max-width:1023px){.kGGhgJ{padding:22px;}}/*!sc*/
+@media (max-width:768px){.kGGhgJ{-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}}/*!sc*/
+data-styled.g20[id="Footer__Wrapper-sc-1epg5cn-1"]{content:"kGGhgJ,"}/*!sc*/
+.heTUjG{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;background-color:var(--color-footer-button-background);padding:8px 24px 8px 24px;border-radius:40px;font-size:0.875rem;font-weight:500;color:var(--color-footer-button-color);}/*!sc*/
+.heTUjG:hover{-webkit-transform:scale(1.02);-ms-transform:scale(1.02);transform:scale(1.02);}/*!sc*/
+@media (max-width:768px){.heTUjG{margin-bottom:24px;}}/*!sc*/
+data-styled.g21[id="Footer__Cta-sc-1epg5cn-2"]{content:"heTUjG,"}/*!sc*/
+.kvkZMZ{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}/*!sc*/
+.kvkZMZ svg{margin-left:16px;}/*!sc*/
+data-styled.g22[id="Footer__IconWrapper-sc-1epg5cn-3"]{content:"kvkZMZ,"}/*!sc*/
+.hFflNT:hover > svg{color:green;}/*!sc*/
+data-styled.g24[id="Footer__IconContainer-sc-1epg5cn-5"]{content:"hFflNT,"}/*!sc*/
+.gDzggU{width:100%;height:100%;min-height:calc(100vh - var(--footer-height));background-color:var(--color-post-background);}/*!sc*/
+data-styled.g25[id="layout__Container-sc-1vfwv5p-0"]{content:"gDzggU,"}/*!sc*/
+.bLxQed h1,.bLxQed h2,.bLxQed h3,.bLxQed h4,.bLxQed h5,.bLxQed h6{font-weight:var(--font-weight-bold);}/*!sc*/
+.bLxQed td,.bLxQed th{border-bottom:1px solid var(--color-gray-3);}/*!sc*/
+.bLxQed strong{font-weight:var(--font-weight-semi-bold);}/*!sc*/
+.bLxQed a,.bLxQed p{font-weight:var(--font-weight-regular);}/*!sc*/
+.bLxQed a{-webkit-text-decoration:none;text-decoration:none;color:var(--color-blue) !important;}/*!sc*/
+.bLxQed a *{color:var(--color-blue) !important;}/*!sc*/
+.bLxQed a:hover,.bLxQed a:active{-webkit-text-decoration:underline;text-decoration:underline;}/*!sc*/
+.bLxQed > *:first-child{margin-top:0;}/*!sc*/
+.bLxQed h1{font-size:2.5rem;}/*!sc*/
+@media (max-width:767px){.bLxQed h1{font-size:2rem;}}/*!sc*/
+.bLxQed h2{font-size:1.75rem;line-height:1.3;margin-bottom:1.45rem;margin-top:3.2625rem;}/*!sc*/
+@media (max-width:767px){.bLxQed h2{font-size:1.3125rem;}}/*!sc*/
+.bLxQed h3{font-size:1.31951rem;line-height:1.3;margin-bottom:1.45rem;margin-top:2.175rem;}/*!sc*/
+@media (max-width:767px){.bLxQed h3{font-size:1.1875rem;}}/*!sc*/
+.bLxQed h4,.bLxQed h5,.bLxQed h6{margin-bottom:0.725rem;margin-top:1.45rem;}/*!sc*/
+.bLxQed ul,.bLxQed ol{margin-top:1.45rem;margin-bottom:1.45rem;margin-left:1.8125rem;}/*!sc*/
+.bLxQed li > ul,.bLxQed li > ol{margin-top:0;margin-bottom:0;}/*!sc*/
+.bLxQed li > p{margin-bottom:0;}/*!sc*/
+.bLxQed li > ol,.bLxQed li > ul{margin-left:1.8125rem;}/*!sc*/
+.bLxQed li{margin-bottom:0.435rem;}/*!sc*/
+.bLxQed p,.bLxQed li,.bLxQed blockquote{font-size:1.0625rem;}/*!sc*/
+.bLxQed p{line-height:1.68;text-align:left;margin-bottom:var(--sizing-md);}/*!sc*/
+.bLxQed hr{margin:var(--sizing-lg) 0;background:var(--color-gray-3);}/*!sc*/
+.bLxQed blockquote{border-left:0.25rem solid var(--color-gray-2);padding-left:var(--sizing-base);margin:var(--sizing-md) 0;}/*!sc*/
+.bLxQed blockquote *{color:var(--color-gray-6);}/*!sc*/
+.bLxQed img{display:block;}/*!sc*/
+.bLxQed pre,.bLxQed code{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;background-color:var(--color-code-block);}/*!sc*/
+.bLxQed pre{border:1px solid var(--color-gray-3);}/*!sc*/
+.bLxQed pre.grvsc-container{margin:var(--sizing-md) 0;}/*!sc*/
+.bLxQed .grvsc-line-highlighted::before{background-color:var(--color-code-highlight) !important;box-shadow:inset 4px 0 0 0 var(--color-code-highlight-border) !important;}/*!sc*/
+.bLxQed *:not(pre) > code{background-color:var(--color-code);padding:0.2rem 0.4rem;margin:0;font-size:85%;border-radius:3px;}/*!sc*/
+data-styled.g34[id="markdown__Markdown-sc-1nu2ipt-0"]{content:"bLxQed,"}/*!sc*/
+.cmznyg{display:block;font-size:0.875rem;font-weight:var(--font-weight-semi-bold);color:var(--color-text-3);}/*!sc*/
+data-styled.g40[id="category__Category-lbijks-0"]{content:"cmznyg,"}/*!sc*/
+.iCwcLl{margin-top:24px;font-size:0.875rem;font-weight:var(--font-weight-regular);color:var(--color-text-2);}/*!sc*/
+data-styled.g41[id="dateTime__DateTime-sc-19r1ive-0"]{content:"iCwcLl,"}/*!sc*/
+.bXWGv{margin-top:var(--sizing-xl);}/*!sc*/
+@media (max-width:767px){.bXWGv{margin-top:var(--sizing-lg);}}/*!sc*/
+data-styled.g58[id="blogPost__OuterWrapper-sc-109dgz0-1"]{content:"bXWGv,"}/*!sc*/
+.cyhUqr{width:var(--post-width);margin:0 auto;padding-bottom:var(--sizing-lg);}/*!sc*/
+@media (max-width:767px){.cyhUqr{width:87.5%;}}/*!sc*/
+data-styled.g59[id="blogPost__InnerWrapper-sc-109dgz0-2"]{content:"cyhUqr,"}/*!sc*/
+.dWmEsY{width:100%;padding:0 var(--padding-sm);margin:0 auto;margin-bottom:var(--sizing-xl);}/*!sc*/
+@media (max-width:767px){.dWmEsY{width:auto;}}/*!sc*/
+data-styled.g60[id="blogPost__CommentWrap-sc-109dgz0-3"]{content:"dWmEsY,"}/*!sc*/
+.LrwoL{font-size:0.875rem;font-weight:var(--font-weight-semi-bold);}/*!sc*/
+data-styled.g61[id="blogPost__PostCategory-sc-109dgz0-4"]{content:"LrwoL,"}/*!sc*/
+.ifdEPg{margin-bottom:var(--sizing-md);}/*!sc*/
+data-styled.g62[id="blogPost__Info-sc-109dgz0-5"]{content:"ifdEPg,"}/*!sc*/
+.iULTmc{display:block;margin-top:var(--sizing-xs);}/*!sc*/
+data-styled.g63[id="blogPost__Time-sc-109dgz0-6"]{content:"iULTmc,"}/*!sc*/
+.bRZrtm{width:100%;height:1px;background-color:var(--color-gray-3);margin-top:var(--sizing-lg);margin-bottom:var(--sizing-lg);}/*!sc*/
+data-styled.g65[id="blogPost__Divider-sc-109dgz0-8"]{content:"bRZrtm,"}/*!sc*/
+.iTZRa{font-weight:var(--font-weight-bold);line-height:1.1875;font-size:var(--text-xl);}/*!sc*/
+@media (max-width:1023px){.iTZRa{line-height:1.21875;font-size:2.5rem;}}/*!sc*/
+@media (max-width:767px){.iTZRa{line-height:1.21875;font-size:2rem;}}/*!sc*/
+data-styled.g66[id="blogPost__Title-sc-109dgz0-9"]{content:"iTZRa,"}/*!sc*/
+</style><title data-react-helmet="true">[fusion 360] fusion 360 도면 템플릿 만들기 | Beomsoo-log</title><meta data-react-helmet="true" name="description" content="퓨전 360에서 기본으로 제공되는 도면 템플릿은 바로 사용하기에는 조금 부족한 부분들이 있어 직접 디자인한 템플릿을 만들어 사용해보려고 합니다."/><meta data-react-helmet="true" property="og:title" content="[fusion 360] fusion 360 도면 템플릿 만들기"/><meta data-react-helmet="true" property="og:description" content="퓨전 360에서 기본으로 제공되는 도면 템플릿은 바로 사용하기에는 조금 부족한 부분들이 있어 직접 디자인한 템플릿을 만들어 사용해보려고 합니다."/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:creator" content="Beomsoo"/><meta data-react-helmet="true" name="twitter:title" content="[fusion 360] fusion 360 도면 템플릿 만들기"/><meta data-react-helmet="true" name="twitter:description" content="퓨전 360에서 기본으로 제공되는 도면 템플릿은 바로 사용하기에는 조금 부족한 부분들이 있어 직접 디자인한 템플릿을 만들어 사용해보려고 합니다."/><meta data-react-helmet="true" property="image" content="https://blog.beomsoo.me/static/8869cbde9532e8b59a41a852ebe113b5/497c6/1.png"/><meta data-react-helmet="true" property="og:image" content="https://blog.beomsoo.me/static/8869cbde9532e8b59a41a852ebe113b5/497c6/1.png"/><meta data-react-helmet="true" property="twitter:image" content="https://blog.beomsoo.me/static/8869cbde9532e8b59a41a852ebe113b5/497c6/1.png"/><link as="script" rel="preload" href="/webpack-runtime-1d17d9a2356dfdae6fd6.js"/><link as="script" rel="preload" href="/framework-6c3ead24af170cdcb87c.js"/><link as="script" rel="preload" href="/app-c4339d0f1e891812f46f.js"/><link as="script" rel="preload" href="/a9a7754c-63e6cd1fbd37df71b2d2.js"/><link as="script" rel="preload" href="/133dca110fad53aa1997b630637bbac3134a2d14-87b3f2968e4d84eea06d.js"/><link as="script" rel="preload" href="/e5f5b259f3bc5bd31060582de6626886320e23cc-3305ee4c1e21d53e4b33.js"/><link as="script" rel="preload" href="/component---src-templates-blog-post-js-19ecd659ca46d44618ec.js"/><link as="fetch" rel="preload" href="/page-data/2020/05/31/fusion360-drawing/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/1990743003.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><script>
+          (() => {    
+            window.__onThemeChange = function() {};      
+
+            function setTheme(newTheme) {                  
+              window.__theme = newTheme;                  
+              preferredTheme = newTheme;                  
+              document.body.className = newTheme;
+              document.body.dataset.theme = newTheme;                 
+              window.__onThemeChange(newTheme);                
+            }
+
+            let preferredTheme
+
+            try {
+              preferredTheme = localStorage.getItem('theme')
+            } catch (err) {}
+
+            window.__setPreferredTheme = newTheme => {
+              setTheme(newTheme)
+
+              try {
+                localStorage.setItem('theme', newTheme)
+              } catch (err) {}
+            }
+
+            let darkQuery = window.matchMedia('(prefers-color-scheme: dark)')
+
+            darkQuery.addEventListener('change', e => {
+              window.__setPreferredTheme(e.matches ? 'dark' : 'light')
+            })
+
+            setTheme(preferredTheme || (darkQuery.matches ? 'dark' : 'light'))
+          })()
+        </script><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="layout__Container-sc-1vfwv5p-0 gDzggU"><nav aria-label="Global Navigation" class="navBar__Nav-sc-89kxxv-0 bgyUqt"><div class="background__Background-sc-1vcxrxq-0 navBar__NavBackground-sc-89kxxv-4 djUCMb kkTtkb"></div><div class="navBar__Content-sc-89kxxv-1 cjfpX"><h1 class="navBar__Title-sc-89kxxv-2 dZeHhl"><a href="/">Beomsoo-log</a></h1><div class="navBar__LinkWrap-sc-89kxxv-7 dXbPgo"><div class="navBar__Curtain-sc-89kxxv-5 iAqZrY"></div><div class="navBar__LinkContent-sc-89kxxv-6 gSUYvg"><button aria-label="Menu" class="menuIcon__MenuIconButton-gj45br-2 eoVYJQ"><div class="menuIcon__MenuIconBreadTop-gj45br-0 hcckrq"><div></div></div><div class="menuIcon__MenuIconBreadBottom-gj45br-1 iqepKH"><div></div></div></button><ul class="navBar__LinkUl-sc-89kxxv-3 iSFZXm"><li><a href="/about/">About</a></li><li><a target="__blank" rel="noreferrer" href="https://works.beomsoo.me">Works</a></li><li><button class="themeToggleButton__Button-k69aai-4 framaH"><div class="background__Background-sc-1vcxrxq-0 themeToggleButton__ButtonBackground-k69aai-1 djUCMb hbuOjz"></div><div class="themeToggleButton__Content-k69aai-2 fYbUwy"><svg version="1.1" x="0px" y="0px" viewBox="0 0 24 24" class="themeToggleButton__Icon-k69aai-0 jYswdd"><path d="M16.3,15.2c-4.1-1.2-7.2-4.8-7.5-9.1C8.8,4.8,8.9,3.5,9.3,2.4C4.8,3.6,1.5,8,2.1,13.1c0.5,4.6,4.2,8.3,8.7,8.8 c4.9,0.6,9.2-2.4,10.6-6.7C19.9,15.7,18.1,15.8,16.3,15.2z"></path></svg><span class="themeToggleButton__Text-k69aai-3 gEfCtU">Dark theme</span></div></button></li></ul></div></div></div></nav><main><article><div class="blogPost__OuterWrapper-sc-109dgz0-1 bXWGv"><div class="blogPost__InnerWrapper-sc-109dgz0-2 cyhUqr"><div><header><div class="blogPost__Info-sc-109dgz0-5 ifdEPg"><span class="category__Category-lbijks-0 blogPost__PostCategory-sc-109dgz0-4 cmznyg LrwoL">Engineering</span><time dateTime="2020-05-31" class="dateTime__DateTime-sc-19r1ive-0 blogPost__Time-sc-109dgz0-6 iCwcLl iULTmc">2020-05-31</time></div><h1 class="blogPost__Title-sc-109dgz0-9 iTZRa">[fusion 360] fusion 360 도면 템플릿 만들기</h1></header><div class="blogPost__Divider-sc-109dgz0-8 bRZrtm"></div><thumbnailImg></thumbnailImg><article class="markdown__Markdown-sc-1nu2ipt-0 bLxQed"><h2>0. 퓨전 360의 도면</h2>
+<p>퓨전 360에서 기본으로 제공되는 도면 템플릿은 바로 사용하기에는 조금 부족한 부분들이 있어 직접 디자인한 템플릿을 만들어 사용해보려고 합니다.</p>
+<h2>1. 도면 표제란 만들기.</h2>
+<p>퓨전 360 내부에서도 도면 표제란을 만들 수 있지만 저는 오토캐드에서 만든 표제란을 불러오겠습니다.</p>
+<p>오토캐드를 실행시켜줍니다.</p>
+<p>먼저 간단하게 표제란을 그리겠습니다.<br>
+표제란에 들어갈 항목들의 제목도 입력합니다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 62.576687116564415%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACLklEQVQ4y32T23LSUBiF8yAth3ImQBIISUhESDkVkQIDFLWHcdDWi974Dl61o0JLSw9TOlXrlQ+53P8OEaOjF2vWPn577f0nwoeTM5xOrjG5WODy9ivOrx7waXaH6fweFzdfML97xP3jDz43Y/3z6wdcLb6z8W+YXi7w8ewWJ5M5Tqc3+DxbQFCsZxDzFYTSJuK5MqJKGf6kgaBYQCCps7bO5iz4Ezp8CY0rIBrco3IRSdWGWu4wdZErbUOodg4gm1X4YzICCQX+uOOBuOI4HyPPerQeldBoD1BvD9HaOUTn1TFqvTGE9ugIOauGtYjEEuX+2vgv0SExuYBkroji1gjl1i6XsD06hGLWsE7A5cL/K+vxYFKFWRugu3uM5vAdhEZ/DMmsO0CWcENUuYKJHFu8VIKSr+T2XeCT+pADtwZHEJqDMU+4FslwUCSjI5zWeDuUynO50F9aHuQCS80Rhq/fO8BaZx+SUeEJCRJOaRxIIHISbSLAhsdVVkgHaLde8oRVKkqje8BKX+JVCy6LQu9DzqHsgJCY56K2m5zcF3MTvoD9fA9WfURFeYOUZnOg+3YukJK4MAeY/wMoM89Ds3vQK30YTILdGiGVt+GLyqvr/F4Qj1RPoegNCUigQnXAJZjVPuLZInvDDF9Ap9JVKDF95NSntitnfjVON9HYn2K4CS32DUmFOqtugSucNrjSegUZo8aeo+JRVLL4urhi8SCitonN3ls8be2h2NjBTytDtHtde0hlAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="오토캐드"
+        title="오토캐드"
+        src="/static/8869cbde9532e8b59a41a852ebe113b5/a6d36/1.png"
+        srcset="/static/8869cbde9532e8b59a41a852ebe113b5/222b7/1.png 163w,
+/static/8869cbde9532e8b59a41a852ebe113b5/ff46a/1.png 325w,
+/static/8869cbde9532e8b59a41a852ebe113b5/a6d36/1.png 650w,
+/static/8869cbde9532e8b59a41a852ebe113b5/e548f/1.png 975w,
+/static/8869cbde9532e8b59a41a852ebe113b5/3c492/1.png 1300w,
+/static/8869cbde9532e8b59a41a852ebe113b5/a2b91/1.png 3360w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span>
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 62.576687116564415%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACSUlEQVQ4y21S2VITURCdD4Hs62SZbJNMMoYsk6VIyL4pImgikir1K3zCBQKBsBRJoeKTH3nseyeDTsnDqb53bs/pc7pb+HR8hs+n1zi9WOLy9gfOr+7xbX6H2WKFi5vvWNw9YPXwm7/N6X5+fY+r5S/6/hOzyyW+nt3i+GSBL7MbnMxXECJqDQFZgzOUgS+ehyeah1VUYA+kYRNTdE7RmwqrPwWLP8lhCyg8eiJZiIkC5HyL0EY814RQbh0gki7B6o3A5o/C6tOjzRfVI//GYsyETY+EaqOPSmOA2uAQzd33KHfGEJovjhBXy9hwS6QoTsnx/35+CqyIN5KGGM8iV9uF1jwg7ENojA4RzZSxyQgp0UJKrV5d1dOImaJdTOBZZYjO3kfUhkcQqr0xpEyFW2CEzpACVyjFz3ZSzOE3lOsw7qywM5gkwgHqw3fQWq8hbPfHXOGGOwxHIAGPpMAdTvGzMyhzGKSPWBdihI6AjHSpTwo/UA8nbCivICkat8xIXETgoqqMyBVKcjBbjMBhiglOaBdlKMUu2Z2i2HxDltv7NPoct2wX1wPx6Y13GuSkgoGdDeUsWtYK2dpUuxNsbb+kKY8mCCYLnJAlMUvWNSFTwgkeCWUTIVs1g7DxfIrCDk25UB8hKBdg8UT+2vmnT2YkTINiU3ZywjZ2RlOUWmQ5U+rBF8tSD8M8ga0Ns8IUPwX9XYexGUlSqGhdQg+CWu5DSldosmkOF18bBaGURihROzQTPJLK83xRlQsJJIsodt5iq76HbHWIP4YztO4eKkubAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="오토캐드"
+        title="오토캐드"
+        src="/static/8ffefec3e53bcb75abf2e2b3d7a028c5/a6d36/2.png"
+        srcset="/static/8ffefec3e53bcb75abf2e2b3d7a028c5/222b7/2.png 163w,
+/static/8ffefec3e53bcb75abf2e2b3d7a028c5/ff46a/2.png 325w,
+/static/8ffefec3e53bcb75abf2e2b3d7a028c5/a6d36/2.png 650w,
+/static/8ffefec3e53bcb75abf2e2b3d7a028c5/e548f/2.png 975w,
+/static/8ffefec3e53bcb75abf2e2b3d7a028c5/3c492/2.png 1300w,
+/static/8ffefec3e53bcb75abf2e2b3d7a028c5/a2b91/2.png 3360w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
+<p>퓨전에서 설정한 attributes를 불러와 표제란에 입력해야 하기 때문에 오토캐드의 attdef 명령어를 사용해서 속성을 넣어줍니다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 62.576687116564415%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACSUlEQVQ4y22T2VbaUBSG8x5VBpUxTAkhDJFCJEylCBSQWu2wbK0X3vQhemMHpQ44LGHZ1l71If+evUMQ2l58a5+Ts/Pv/+ydSB+PvuHTyRVOzse4uPmB08s7fD27xXA0wfn1d4xu7zG5/81nZ2J/enWHy/Ev8fwnhhdjfDm9wdHxCJ+H1zg+m0BSjCeQUyWsRnMIJovwK0W4wxl45Sw84bRYp8WZAXcoDVdIZzxyhqM/kUdIM6EVW4I2koVNSFbrNRJZC+5AAp6QAnfQjjbq9JmzfmDZH0e12UOl2Udjax+tF4cod/YgbW4fIGmUseSLC0dJkWyz7E/AFVCme/UfqEggkUU4mUe+NkCxscNIzcE+lFwZyyQoEkmExM36M1HIwqO12EzARl2I3rCGXLmH9s4h6v0DSNXuHuK5ii0oHAaVHFblFLR8DSF1HR7xonfOOeGdRkdwvdJnwVrvPaR6b48dLvliWJE1voYvKoYhnNJ+NZJiQW9ojrCNI1ioD9B/88EWLLdeIp4psUNHYC2qMyRMkV4igZWFqHFRimZjmx1aNJRq+xXCWoGnZl9N5f5QZPGIzi0gaO0UpegKOA6fw3y6C6MyEFMevEVEN1mQkrzcG1uQnLDATDD1l2BCxBR0s4N0qYuMQDIbA0RSJlziM5ldZ65Pi2gP6+lQSJCEslaPkXJWF0E1L3oY4wSqSlchx//DPrehPd1EF39KxnFoiG8onq3AF8sya9EME02XBJZoR2kBf9zgvKBisBFZ38BG5x0eN3aRr27hD5FItVsdHbYTAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="오토캐드"
+        title="오토캐드"
+        src="/static/c9d8c1c46fc3298efe54bc221524909f/a6d36/3.png"
+        srcset="/static/c9d8c1c46fc3298efe54bc221524909f/222b7/3.png 163w,
+/static/c9d8c1c46fc3298efe54bc221524909f/ff46a/3.png 325w,
+/static/c9d8c1c46fc3298efe54bc221524909f/a6d36/3.png 650w,
+/static/c9d8c1c46fc3298efe54bc221524909f/e548f/3.png 975w,
+/static/c9d8c1c46fc3298efe54bc221524909f/3c492/3.png 1300w,
+/static/c9d8c1c46fc3298efe54bc221524909f/a2b91/3.png 3360w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span>
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 62.576687116564415%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAAC3klEQVQ4y22TWU9TURSF729Qo0HoBO3tTIfbuVRaOoEVCqGlIjgERVQiEjQxvhPCWAqUggioKDEajL4Z46/AN+sDxsYHE4oUNSKRLM85TSVGH1bO2XfvfHvtfXK5wZEpjE7OYzK9hNmFFUzPPcDEzCJSmWUWzy2t4v7qGjL3VpAm8cz8Q/LtMTKLj5CaXcL49AJGkhmMpe4iObMMzuQ+Ca3Vjyq9CyrBC97khUTjgFhtR7lCQDkvQKyykrsZZXIzKngLpFqat4E3eqC2+GDxRomaIdQ2gQtEz8PoDECiNEKqNkGmMeOYVI0r1wfw6vUbPF17gSfPnpPzJYuv3bjF8hKVCeHGGEKNcUTauhE904tgSxe4pvYeCO4gKhQGSDUCqnRWHCpXYGJqFl93dvB5s4Afe0Dh2y729/cxkUqTPI9KrQVKoxMawQNPfQLeSAcT15johskVhIgC1WbiUGDAweFx5Dc3kc1mkfv4Ae83PmFraxtDo0mWp0DqUqaxwBWMobmjFw3xHnDh1i4YXKEikMC0lhoclagxNJJEobCN9fW3BPoO2Y0cAeYxPJbEYZGSTVIC1oTiDFgfuwyuIdbFHFYoqllXjVBDdqTBWHIaez93kcvlkM/nsf1lC4XvvzA0nsYREQ+53vYHWNuQQPxCfxEYjJ6FweFnDimwWGhmC+8buI2rfTfZA/X09qOt+w4bT6KktQcOfZF25jBAHyXcfA4aSy1EvIHtj+5RqhZwvErHRqdu6UlVJlORxtWQ62ysuVhZcngavlOdcIcS5JUTF6Gz+RiQFskIjHauJIUKvR2Kajv4kgwOsjsb218RaGRObb4W2P2tcBBxvkgCOqsPYt7IHFIQhdL7v7Ic3EuNCZCCnIEYE+cKtEJl9rBRaAHtSkehjv+nYr4oGtMV2cif4ig5dJMlG5whMpqTSa53MOntfqIAWYf/L/FGN6tTkpMa0drqUNdyCScinfCE2/Abij73O3WBzGoAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="오토캐드"
+        title="오토캐드"
+        src="/static/f4eb21b271634107088e01dfd5832c45/a6d36/4.png"
+        srcset="/static/f4eb21b271634107088e01dfd5832c45/222b7/4.png 163w,
+/static/f4eb21b271634107088e01dfd5832c45/ff46a/4.png 325w,
+/static/f4eb21b271634107088e01dfd5832c45/a6d36/4.png 650w,
+/static/f4eb21b271634107088e01dfd5832c45/e548f/4.png 975w,
+/static/f4eb21b271634107088e01dfd5832c45/3c492/4.png 1300w,
+/static/f4eb21b271634107088e01dfd5832c45/a2b91/4.png 3360w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span>
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 62.576687116564415%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAAC3klEQVQ4y22T2U8TURTG529Qo1EobYFOd7pM91Jp6QZWKISWiuASFFGJSNDE+E4IaylQCiJ1QXkxEF81/hdgjKa4pYlPtALGBYJ+3nubSow+fLlz5pz8znfOneEGhicxMjGHiWQaM/OLmJp9gPHpBSRS91g8m17C/aVlpO4uIkni6bmH5N1jpBYeITGTxtjUPIbjKYwk7iA+nQZncJ6A2uxFhdYBheAGb3BDrLKhTGlFiUzAMSKRwkxOI45WGlHKmyBR07wFvN4FpckDkztM1AShphGcL3wOersPYrkeEqUBUpURRyRKXL7Wj2fPX2B55SmeLK+wk8ZXr99kebHCgGBDBIGGKEKtXQif7oG/uRNcY1s3BKcfpTIdJCoBFRozDpTIMD45gy/bW1h/9xHfvu8S7eDXzz2MJ5Ikz6NcbYJcb4dKcMFVF4M71M7ENcS6YHD4IaJApZE4FBhwYGgMGxsbWH35Gpm3H/Bq/RNy+U0MjsRZngKpS6nKBIc/gqb2HtRHu8EFWzqhcwQKQAJTm6pxWKzE4HAc21ubWFtbRSbzBpn3WeTzOQyNxnFQJGeTFIHVgSgD1kUugauPdDKHpbIq1lUlVJMdqTAan8Luzg9ks1nkcjlsfs5j6+seBseSOCTiUam1/AHW1McQPd9XAPrDZ6CzeZlDCiwUGtnCe/tv4UrvDXZB3T19aO26zcYTy2ntvkNPqI059NFLCTadhcpUAxGvY/uje5QoyedSoWGjU7f0pDoqVZDGVajUWFjzMnnR4Sl4TnbAGYiRW45dgMbiYUBaJCUw2rmcFMq0VsiqrOCL0tnI7ixsfwWgnjm1eJph9bbARsR5QjFozB6U8XrmkIIolD7/K9P+c7ExAVKQ3Rdh4hy+FiiMLjYKLaBd6SjU8f9UyBdEY7oiC/lTbEWHTrJknT1ARrMzVWptTFqrl8hH1uH9S7zOyeoUBiczorbUorb5Io6HOuAKtuI3yZf2+krIJIIAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="오토캐드"
+        title="오토캐드"
+        src="/static/f47de4334f1b9bd813e33c2843950ff7/a6d36/5.png"
+        srcset="/static/f47de4334f1b9bd813e33c2843950ff7/222b7/5.png 163w,
+/static/f47de4334f1b9bd813e33c2843950ff7/ff46a/5.png 325w,
+/static/f47de4334f1b9bd813e33c2843950ff7/a6d36/5.png 650w,
+/static/f47de4334f1b9bd813e33c2843950ff7/e548f/5.png 975w,
+/static/f47de4334f1b9bd813e33c2843950ff7/3c492/5.png 1300w,
+/static/f47de4334f1b9bd813e33c2843950ff7/a2b91/5.png 3360w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
+<p>Drawn은 퓨전 360의 기본 속성인 Created_by를 사용하겠습니다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 62.576687116564415%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACQUlEQVQ4y22T21baUBCG8yCVgEQOCYdAICFEChECUqrAAqRWe1i01gtv+g690tUqBcXDEpdt7VUf8u/eEwLSevGvyezDN/+eAeHL8XecnF3h7HyKi5ufGF3e49v4FsPJHc6vf2By+4C7hz+0N2b56Ooel9PfbP0XhhdTfB3d4Ph0gpPhNU7HUwiq9QJKtoxgPI+IVkIoVYIo5xBQTPhlg30bbM+CGDXgi+okv5KjGFILkDM2sqUmMqUWtOI2BKf5DqpZgRhW4Y+mIEZ4TMMfSc0l8hhNueszrYSSqG51mXpo7Byg+foITnsAYXv3EJrlYGUtyRxp7LD26KKGwFK+WOdFwqoJWSugsNlHqbFHErb6B0jlHaooUmWVDruu0gjI2ixPPxkDcgZ5p4vW3hHqvUMItc4AyXyVOUxgVclA0dZZzM5hrkPtP4c8esD1ao+Am91PEOrdATl8JiWwljBYP22EkyakmE65FNexyi4RfCZe2HPOgcX6K/Tef3aBTvMNkrky9TAwuxiMZRFkLiUemQjyCOp9i2EXaDd2yWGFD6XWestGX6QeBmTvKe7TgjMgd+RFDnMdZuALLxzaL/dhVftsyv0PiOk2ARdPcYEEUlyo9C+cgCr1W7fbMMod5JgEu9FHLGvDx6Y7f05UW+rZk5oNhQM5yKx0SUK+0kEkXaAp857wqvwp3PFTcvdd8ZxPXGf/lJzn0GK/oaRZZRM1SVI8R4obZaYKa0d5SSHVonORlEVGFH0DG+2PeN7YR6G2g7/aerS2zo9SCwAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="오토캐드"
+        title="오토캐드"
+        src="/static/e40a494dc27c66133d5ab104d08b4045/a6d36/6.png"
+        srcset="/static/e40a494dc27c66133d5ab104d08b4045/222b7/6.png 163w,
+/static/e40a494dc27c66133d5ab104d08b4045/ff46a/6.png 325w,
+/static/e40a494dc27c66133d5ab104d08b4045/a6d36/6.png 650w,
+/static/e40a494dc27c66133d5ab104d08b4045/e548f/6.png 975w,
+/static/e40a494dc27c66133d5ab104d08b4045/3c492/6.png 1300w,
+/static/e40a494dc27c66133d5ab104d08b4045/a2b91/6.png 3360w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span>
+<span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 62.576687116564415%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACQElEQVQ4y22T2VIaURCG5z0SGTbZcTYYmJkQGFaRKFCAxGiWIjFeeJN3yJVWEggoLiWWScxVHvJPnzMMaMLFX302vv67mxE+n3zH6fASw7MZzq9/Ynxxh6+TG4ymtzi7+oHpzT1u7//wuwntx5d3uJj9pvNfGJ3P8GV8jZPhFKejK3ybzCDI1hbi6RICSRMRrYCQUoAYy8IXN+CNZWidoTsLYjQDT1Tn8sazPIbkHKIpG+lCE6lCC1p+B0Kl+RayUYYYluGNKhAjLKrwRhS+d87ctbrQWkhCdbtL6qGxe4jmq2NU2gMIO3tH0KwK1tYlcqTRY+3RD1dL40nCsoGYlkNus49CY59L2O4fQjErPKPIMpNTx5FKUeXrZVT+O/PFUjArXbT2j1HvHUGodQaQzCp36COHUdWCP55CIJ6Gnx77oqtca/OEDvBZtceBm92PEOrdARQq+UkwiYhiwixuIUbQQCKN9Y0MgkndAVMyVywhiy4wX3+J3rtPDrDSfA0pW8JTcugnVwwQTOjcIY8E5pAHUHcthh2g3djjDstsKLXWG8RSeXhC8jyruughgzHxFswjgzkOU/CElw7tFwewqn2acv89ErrNh7IsxemV20sGC/4L50CZV6XbbWRKHWRJgt3oI5G2Fw7dQTzs2UrNh8KADGSUu1yCWe4gouZoyhu8JywrK4U5XiXn3hHbs4nr9KVkXYcW/Ycko0oTNbiCySxXMlMilakdpUcKSRZ/F5YtbiSuF1Fsf8DzxgFytV38BUattOhsmRidAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="오토캐드"
+        title="오토캐드"
+        src="/static/c4821dc0e3aeca8cba1de9c2aaf4c95d/a6d36/7.png"
+        srcset="/static/c4821dc0e3aeca8cba1de9c2aaf4c95d/222b7/7.png 163w,
+/static/c4821dc0e3aeca8cba1de9c2aaf4c95d/ff46a/7.png 325w,
+/static/c4821dc0e3aeca8cba1de9c2aaf4c95d/a6d36/7.png 650w,
+/static/c4821dc0e3aeca8cba1de9c2aaf4c95d/e548f/7.png 975w,
+/static/c4821dc0e3aeca8cba1de9c2aaf4c95d/3c492/7.png 1300w,
+/static/c4821dc0e3aeca8cba1de9c2aaf4c95d/a2b91/7.png 3360w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
+<p>Created_Date도 같이 적어줍니다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 62.576687116564415%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACa0lEQVQ4y21T21bTUBDNh2gvXNomaZukSXOlDaFpS61QWLRWBNSFIg/44D/4hEtZXKQCC/CGT37kduY0RVEf9jqZMzN79pmZSG/3j/Du8AxHo884vfiGw9MrfDi5xOHoGh/Pv2J0eYPrm5/Cd0L28dkXfLr6QfffRez74wvsH4yI4xwHJ1eQ9OABinYMlZAz6kjJNtKyg6zqIaM4SBOmS764Yx8jo7rizOk1yFYEa75HWIEZLkNq9p5B92KkcmVkZCNBBZmCcWunC8kdIZuc93Ma2kt9tJYG6A520Huyh+bqNqTl9V2YQVMEZBSTlFRukzOFBPK/4CJ53YNi1lBbHGK+uyEgLQ13YPhEOKv9N3GSPD7/hoGsYsFv9rGy8RqdwS6k9to2NL9FhGXqmwXDi1C0aig7IbUiEvZs2YFcCZDT3DHInqLYCeFca0CEe1jsv4LU6W8LhfeIcKZkwwnbsOZiQhMVvyGgmnOiiO5GKNkhVPrmIun8mDDsDDF4/mZM2OxtQXMbRKhhulgVwUwiGz7KlMwkChGWqnWhim32ZbnficKouy4UxjyU9spTKFZIU9ZFn5hUoeexWj5ZnRmMlU6rVdj1NjRn/g5h2HmM6OEmgtaQpjx8QXsYiSlPkZOJeHpMzASsiu089Y79BVLHz83Kpngy39nRKpzGGlyCFHWHKFajW4W8JqkkkFVMppxO1odJfk+d4qgoE3nxgNCH5MdrKFRqYsoiMT9GKq9TEU0oTyXg7z/9YneJ2KY/xZ0oDGiHNK9Fz/AEZkquQMlpEGJqR+MOclpAcS61IRBCVHsBC6svUe9uotZ+hF8MT7mN8WUhDwAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="오토캐드"
+        title="오토캐드"
+        src="/static/0bcd89ddf17b06d22cb042d9ac463e2d/a6d36/8.png"
+        srcset="/static/0bcd89ddf17b06d22cb042d9ac463e2d/222b7/8.png 163w,
+/static/0bcd89ddf17b06d22cb042d9ac463e2d/ff46a/8.png 325w,
+/static/0bcd89ddf17b06d22cb042d9ac463e2d/a6d36/8.png 650w,
+/static/0bcd89ddf17b06d22cb042d9ac463e2d/e548f/8.png 975w,
+/static/0bcd89ddf17b06d22cb042d9ac463e2d/3c492/8.png 1300w,
+/static/0bcd89ddf17b06d22cb042d9ac463e2d/a2b91/8.png 3360w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
+<p>이어서 다른 속성들도 입력해서 표제란을 완성합니다.</p>
+<h2>2. 표제란 내보내기</h2>
+<p>표제란을 다 만들었으면 wblock 명령어를 통해 내보내주어야 합니다. 만약 wblock을 사용하지 않고 그냥 dwg를 퓨전에서 불러오면 에러가 뜹니다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 62.576687116564415%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACe0lEQVQ4y21T21bTUBDNf6BtSqFN0qZpkjZX2hCaNtQKpdJakSouFHnABz/CF1zK4iIVWIA3fPIjt3NOQ5eoD3tNZs7Mnn1mToR3+0d4f3iGo/EXnF58x+HpFT6eXOJwfI1P598wvrzB9c0vfnZC/vHZV3y++knxHzz3w/EF9g/GxHGOg5MrCLr/AAUr4sjpdaRkC2nZRqbgQlRspAlZ1eMxdsYgFhxuc+Ua5EqIymKXsAYzWIUQdbdQdiOkciWIsp7AgCjpUz8tJTFCJrH3cxrilT5aKwN0BjvoPt1Ds7cNYXVjF6bf5AmiYpISY1osSgnkf8Ga5MsuFLOG2vIQi51NDmFluAPdI8J57b+Ft8UT+zd0ZJQKvGYfa5tv0B7sQojXt6F5LSIs0dwq0N0QxUoNJTugUYTcny/ZkA0fOc2ZgPxZyr0lXGgNiHAPy/3XENr9ba7wHhHOqRbsIEZlISI0YXgNjoK5wJuUnRCqFaBA36xJOj8hDNpDDF68nRA2u8+gOQ0i1JAtVnkyI5F1DyUqZiQKEarVOlfFfHaWYfNOFIadDa4wYkuJ155DqQS05TKfEyNV6HpMLbNMnelPlGYLVVj1GJq9eIcwaD9B+HAEvzWkLQ9fomiFfMuzdMiI2PYYMQNTJZHPYrNEIpE6dt2MbPIrsxor7MFurMMhCGFniGI1nCoUJePOuxOpkDXjz4q+U3n9j60TIalmRG40IPQheNE6JKPGt8wS0kkBI0gRZuZUml+Nz3Amq05zUvly0sSARX+Kc6vQpzekuS26hssxpzocqt1AyWlSswBxbwuPRnsUa9Kz8XheXve5kIK1hKXeK9Q7I9Tix/gNQ/C6i97hyOMAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="오토캐드"
+        title="오토캐드"
+        src="/static/7bfbb826d6edabe0961147aa1787f66c/a6d36/9.png"
+        srcset="/static/7bfbb826d6edabe0961147aa1787f66c/222b7/9.png 163w,
+/static/7bfbb826d6edabe0961147aa1787f66c/ff46a/9.png 325w,
+/static/7bfbb826d6edabe0961147aa1787f66c/a6d36/9.png 650w,
+/static/7bfbb826d6edabe0961147aa1787f66c/e548f/9.png 975w,
+/static/7bfbb826d6edabe0961147aa1787f66c/3c492/9.png 1300w,
+/static/7bfbb826d6edabe0961147aa1787f66c/a2b91/9.png 3360w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
+<p>단위는 mm로 설정합니다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 62.576687116564415%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAADJUlEQVQ4y1WT3W/TVRjHf3+AV6IxhrF23WjXrlvbtesrpWv3W7u1jG2utUMQzQAXBMGp4BRfIGoMBOYGbCBjJUJG4r2Jf4I3XhpYmDhcN9aG2WQm3mk+PudUSLx4cnLO8z2f87wd48vzM1yYvs7M3C1mb9xmenaBqas3tV26Ms+0nF8v3eUb2V+8rPYlrpUWmb15R2svXr7B+ak5YXzL1JUFDF8sS1vQ1Gb37abRGaTB0UV7yKRnT5FEX55UtkBSLJUr4goktcbiCmH3xnHKPtA9KDaEP7EXwxx8A2/EpNHegdXpo9kd4IUddsbfeY9KtcLj9TV+XVnlwfIyG4/XGT8+of1WZyeZgTzpgQK5whEGXztG7/AYxt594/hjveywe7C6/NjautjWYOfoyQ95slmjVqux+UeNld8eUq1UePvkKe23tQVweCO4/HHifUW6c/u1GQPFI/iiAtzp0a82u+tAdXFz8wnVapWKgMprZf7c2uLoiQ94/j+gpdVHkytAtDfP0P7j9BfGMTIjY3iiaQF20CQi/y5TC0+fOcvvArl3777A1rj/YInKxgYn3p/kZZubnR2hZ8Bd6YIAj9GXfwujPz+mI2wQYEt7kGgqS6ukMvnJOVYerbK0tMTGepnVRyu6hhOnzwioUzRRLI46MNFfpPDmu3Vg7+DreMI9AvTodD2hbr1+9NkXwD+U1yv8srzGcrnG1l9/8/HnX7G9pf740wiTuX06QlM1JTN0UEYhIV326hqqVBQwNzzKhUvTMo8L3P3hJ77/8Wcmzs4yNHoIV2fsfzVM9I+S3HOAWLooXS4ewh1M6i7bxKlebvXV03nuRQuxniyl7xaZv3WH7TanaPzYPWGanH6tUXeCyWFCPSOExYykDKu7K/ksQqvUp1EJZXzUmsqOMHOtxFX5RQ6pmzpTNVRaFaHSKVDELIjlMaLmCK2dcd1lJbDoC2r18pLVKcBXmJu/Ld9vkWZJU2Wi/I3i17Mr4KD8lPDTCGMyQ55IWmoX0dbSHtbWETZx+rvl+40yMXmOU59+jTeaEU1U6xy+mA6kLZgiNXyY3bkDxDOv8i9fGBVQnmxUYgAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="오토캐드"
+        title="오토캐드"
+        src="/static/85cd0728fe83aa420b12fb4e7acda608/a6d36/10.png"
+        srcset="/static/85cd0728fe83aa420b12fb4e7acda608/222b7/10.png 163w,
+/static/85cd0728fe83aa420b12fb4e7acda608/ff46a/10.png 325w,
+/static/85cd0728fe83aa420b12fb4e7acda608/a6d36/10.png 650w,
+/static/85cd0728fe83aa420b12fb4e7acda608/e548f/10.png 975w,
+/static/85cd0728fe83aa420b12fb4e7acda608/3c492/10.png 1300w,
+/static/85cd0728fe83aa420b12fb4e7acda608/a2b91/10.png 3360w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 62.576687116564415%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACoElEQVQ4y01T21baQBTNh7SAcktICAQIkJAIQS4CIlKh1Kptl631wT70H/pkLy7UStWl9maf+pG7O8OlPux1Zs6Z2XPO2WekD8en+Di+xOnkOy6uf2F8cYsv5zcYT+7w9eonJjf3uLv/K2Ln3J9d/sC32z/0/xZnP59d4/hkgk/jK5yc30FKl9rQ8jWoRMxYQUDJI6gUsKRaCCUKCBLhpC18fsxHSC0KG0u7UHIecpUesYlseQNSvfcSaauGQExHSDGIzBSysdgH5f/+pZl9HEuh2R2g0R2iMzxA7/kR6v19SBvbh8iW6uJAKJGdXpYzAov1/IGZf/5IPG0hkXXhro1Q6ewISN3RAQybhFESKlmS5h7AnFrFX+ene2W2V6aPLzFu1wfY3HmH1vAQUnNrHym7gUfRJMK6A83uQrV70Eo9JJ0+krRyvgO1vIc4rVxYR9xsI5IuLwidxpCER1gbvIXUGuwzQxJGkoikXOildehOj3aDZF0+QIJMhSgLAWTaOMWLpldImBGE5dYIw1fvp4T13h5SxRoz1JmhLS4nzCoVLyNRWINqtekjUdZD1KhCyVZELKy7C0Kvsy0yrPmiNDdfQM1VKIqOJc3CsmoiouV4MIOExdKdATSrIxAzW9DtNtRiiyV7DzJ8Bm99F6XGiCqPXnMOPaHyslZg2Q7LcTh7FmJ5n4TIVAUixiqzrSJK+P0OxNJYJmHe66OwuoUiIXmdETTTQyCens0a1ZurLUbFEJkEF+MyWxMRzURYy5PsCazakBhAsmtbbLTLsdGFakESB+OG2Pt9DTBzP/uFncV9K6f4i0hq8ocU5xmWOEMpq4GobglEkkWWW+TvaSDrttiOVQGVQvnn4gZbohchGyV+PYdftopq/w1WOrtwm0/xD3mlvCqZYBG0AAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="오토캐드"
+        title="오토캐드"
+        src="/static/e8f956c985c30eb7ee1b888922358147/a6d36/11.png"
+        srcset="/static/e8f956c985c30eb7ee1b888922358147/222b7/11.png 163w,
+/static/e8f956c985c30eb7ee1b888922358147/ff46a/11.png 325w,
+/static/e8f956c985c30eb7ee1b888922358147/a6d36/11.png 650w,
+/static/e8f956c985c30eb7ee1b888922358147/e548f/11.png 975w,
+/static/e8f956c985c30eb7ee1b888922358147/3c492/11.png 1300w,
+/static/e8f956c985c30eb7ee1b888922358147/a2b91/11.png 3360w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
+<p>이때 블록의 삽입 기준점은 오른쪽 아래를 설정해야 합니다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 62.576687116564415%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACd0lEQVQ4y21T2VbaUBTNh7QSQAkBQhISMgAhpkxaqmCFUqsdli7rg33oP/TJDi7UStWldrJP/cjdcy7B1elhr3vPcPfdOftGenNwhLfjMxxNPuP04hvGp1f4cHKJ8eQaH8+/YnJ5g+ubn6J2QvHx2Rd8uvpB+e+i9/3xBQ4OJ3g3PsfhyTUko3ofBaeJPCFj1jGnOkioLpJ5H3LORYKQ1ioixzWGnPfEmjECqHYEe7FH6MMKVyG1es9h+E3MZYqQVTNGCXLWvI0T2ThHSMbr3YyOzsoA7ZUhusNd9J7so7W2DWl1Yw9WtSUa5JxFSkq3h+VsDPVf8CWK4SNnBQiWRljsbgpIK6NdmBUiXND/e3B2eLr+DRPJnI1Ka4D+5issD/cgdda3oVfaRFikudkw/QgFO0DRDWkUkYgXii7UUhUZ3ZuC4hT1zghr7SER7mNp8BLS8mBbKLxDhPOaAzfswK41CS2UKg2BvFUTlxheBM0Jkac9X5JQpoTh8gjDF6+nhK3eU+hegwh1pAtl0cwkqllBkQ4zSY4ItXJdqOKYa0maN8+XCaPuhlDYZFM6/WfI2SG5bIg5MWmOPo/V8srqrOpUaTpfhlPvQHcXY6eNWOFjRA+2UG2PyOXRDr3DSLicoiITsXtMzGBVHCs0O66zOs5r5RqK5UAQOtEa3MY6PIIUdUcolKNbhXK29Me7m7mcyP6+N8VFaUKKVHuNh/CbQ8IAUqW5jmwpEC6LZmV6gBWzUbzOxRB7xRA9LIDrLMChP8WbKazSG9L9NrnmC8xrHv1qHuVacMIuPZ8mjYScLt8TfYpZE32KUYVqhdAoF/V3UO9uIeg8wi9c0LoBPb0xXwAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="오토캐드"
+        title="오토캐드"
+        src="/static/eaec61868050fe911287c1cb70b1bea1/a6d36/12.png"
+        srcset="/static/eaec61868050fe911287c1cb70b1bea1/222b7/12.png 163w,
+/static/eaec61868050fe911287c1cb70b1bea1/ff46a/12.png 325w,
+/static/eaec61868050fe911287c1cb70b1bea1/a6d36/12.png 650w,
+/static/eaec61868050fe911287c1cb70b1bea1/e548f/12.png 975w,
+/static/eaec61868050fe911287c1cb70b1bea1/3c492/12.png 1300w,
+/static/eaec61868050fe911287c1cb70b1bea1/a2b91/12.png 3360w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 62.576687116564415%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAADDklEQVQ4y1VTWU9TQRi9/0GNGFkKhe507+1GKV1ZLlAaWmrdMBUkigRjXGI0RiMxKbK0YI2gYqLRd2N81/gfgJhoQAoSqiUgRh+U4zeDkPhw8s3MPffM+ZYRhtJZDGceIvvgKXLTz5DJPcHY/ccco5OPkKHzhzMvMZKdQpp447kZ2r9A7vFzzh2ZmEZ67AHuZaYwNjkDweRugVYMcihM9ShXiyhV2lBrDyLQmoC3KYaA1IXWWDfaEynoxADKVCIqNHYojB6orT5YGyKEDli87RCCkW4YnUGUK/SQqU2Q66zYX6ZA38BFrK6u4svKMuY/fEJ6NIvMRA7Jkz04KFNDpjKhsS2GcFscUrwXkaP9CEVTENqTfbC4QyhTGCDTWFCltWFfqQJnB6+i8PUbNjc2sLi0Am+ojdAKKZrEoSodXW6B0uiExuKBpymBBukYh9CW6IXJRYI1JKg2k8MdwXODl1EoFLC2toZlcvnq9Ru8ffceqb4BykBJF1tRQS4rNVa4QjF0HDuP5ngfhMbOFAyuMAnqUUkkS12QE69cv4XF/BJmZ+eQX85jYWkRxeI6Bi9dQ0mVFjV6+55gXThOgv1oip2B0BxLcYelJFhdK8Llb4GKUrl64zYWFj5jdm4e+SWK8x/x4VMeF69cJyEzcVyoUO4IepsTiJ+6sCMYipyAwREgQQNP12Bv4PHazTvY/vMb68Uifmx9x+bWT2z92qbzIRyupst14p5Dn5TkDoOsKY0dJ6GxeqnLRl5DlgoTlKJHMDI+gbvpUYxmJjFMXb5wcwIdyR5ozK7/auhtPgJf63G4wwnqcuI0zZaPd7mKPrK0VSYX37PmMJRUajgOlMrJmRUKvYMmwswF2T+iLwp7oBMOguCTEtDZfHsOZVSf8n+1YWnJCWyUGNiacZjQbmTnTMgZjBNiEFzBTqjMHt5lRmCFZpE5ZI1isfwf+Fpp5BwW+eySsEgvxbHr0E0zZHCGqXZOjupaB+QEgzME0StBT0+QPTetzc95SlMd8Rw01G5uRCv64Y/2oF46Dk9jF/4Cd3gCbiQ1S+YAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="오토캐드"
+        title="오토캐드"
+        src="/static/0b0bd0b7685ab5404dec5daae604a0d7/a6d36/13.png"
+        srcset="/static/0b0bd0b7685ab5404dec5daae604a0d7/222b7/13.png 163w,
+/static/0b0bd0b7685ab5404dec5daae604a0d7/ff46a/13.png 325w,
+/static/0b0bd0b7685ab5404dec5daae604a0d7/a6d36/13.png 650w,
+/static/0b0bd0b7685ab5404dec5daae604a0d7/e548f/13.png 975w,
+/static/0b0bd0b7685ab5404dec5daae604a0d7/3c492/13.png 1300w,
+/static/0b0bd0b7685ab5404dec5daae604a0d7/a2b91/13.png 3360w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
+<p>버전은 2010년으로 저장하면 됩니다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 62.576687116564415%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAADMklEQVQ4y0WT/U9TZxTH+x8sU7MYBQoUKLSlpdCWviivfbEQgYYq1heWoJONLNkvMy6LGxEdCGVQcE7HZC5Ltv0f02TbzwMDvoBBElYMBcERW9p+du7j4m7yzTn33nM/z/d5zrm666NTjCXuMPXtPW7N/ETi1iwT39zl65t3GZ+eYVLub8/+zMTN74lPzTB1+x4zP/7KnR9+YVpyrTYu348lvpOaWXR2Xxtml1+pwt5AUZWLAqMTmydIOHKOYMdpjkkMdZ2hrbsXo9TsKzRzQF8tdQ70JjfVnjDOpi7qGjvQ+Tvfp8bjp6jCSnGVHYPFwf6CCgY+ucRa8m+eLj9laWmJ3+4/4Pc//uTayDjRM330Xhjgy6FhBq/d4NMrI3TEBghG+tB1xPqp8wUorLBRbKqj1OwUoJGPBJhMJll/8YL19XWer6yw8PgZq2sbbO28ZmNzh1Qqxe7uP/w195CGcIym9rPojvd8gN0rwHIBVtWKwzdAzaEGWV1dJbW1xcpakqSANyTXQJubKRXT6dc8XFjk+KkPCZ/sRxfq7sPmDQrQSonZQd0RP8WVtVz6fJDHTx7xaHGRl9s7vHy1SyadJpvLsZfNks9DOpNGu5aerQiwn2PRi+jC0T7lsECAZdUuvC1tVNq9XL5ylfm5Oebm5wW4TTabIyewrMByuazEPTKZzBvg8jKRsx8TPiHAQOc5bO5WAdrUdm31TQr82RdDvNrZVmeUz+feQrJ7GQEJLKeh8gq48OS5chjQmhLq6sXkaJQu16gzLLfWK3B7JMZIfILrI3HiE9OMjk8y9NUo45PT3IgnuDocl3djDA5PcvFygsa2GL5Qj3S55zwWV7PqcqnJodxpWy6UBQ4UGtUIHSwxKe07XM4hg4X39FW8e9jAOwdL2S/PbO4g7tZuJV1zew8WZ/Nbh1pDiox2SmSEDBaXkjZKmspU7lC5eiex3OrBEziBxx9V0nn93VTWHlVd1lfa0QtMi5pjrVFaLPpPKjfWqBotqtkVE66mzv8d+gJR9ZtpK2kqq3ZjENk8AVyN7Vjr/XIkrZidLarOaD8idW6MNT5lxOxqoSVygQYZ6qOhk/wLZbRSb+KUaLMAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="오토캐드"
+        title="오토캐드"
+        src="/static/d7fdc6339779cfc1ea067db1327e02aa/a6d36/14.png"
+        srcset="/static/d7fdc6339779cfc1ea067db1327e02aa/222b7/14.png 163w,
+/static/d7fdc6339779cfc1ea067db1327e02aa/ff46a/14.png 325w,
+/static/d7fdc6339779cfc1ea067db1327e02aa/a6d36/14.png 650w,
+/static/d7fdc6339779cfc1ea067db1327e02aa/e548f/14.png 975w,
+/static/d7fdc6339779cfc1ea067db1327e02aa/3c492/14.png 1300w,
+/static/d7fdc6339779cfc1ea067db1327e02aa/a2b91/14.png 3360w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
+<h2>3. 퓨전 360에서 불러오기</h2>
+<p>퓨전을 실행합니다. 퓨전에서는 드로잉템플릿을 만드는 기능이 내장되어 있기 때문에 템플릿은 쉽게 만들 수 있습니다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 62.576687116564415%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAABTElEQVQ4y8VTW27CMBDM/W/EBfpVKdAQCqqIIfiRBCgpKQRih+mu1SBU0UL705VGHts74/UrCAcDTMbPGA4jRFGEURwjHo0wFQKZMUjTFAnxxUJCzOZQSkFr7cE8SQTCfh9hGBL6CFj0NJlhMBzT5BSGkoTSeEw0xFxCpjkSaRDPM7yoAkqTodHICoXlssCDKBDODKpyQ/0lAiklUhKkVIGm5NVqBSESvJYl6voAa1s41+LYWLRtS33r4Ry3DWoeByj3iKqqEPR6Pb81jyzDbrfzKzkS/SaOhwPe2ZBN8jw/n4tz7px0Op3uBgfvIDBUWWfG3H5W1iV17XdxacjaoDP7q+FlDu/upuE98X+GP17ClUu5q8JLwbXLuGnYNM1ZwM+gC+YssNYRv34c/tl8NWTwu9xutx77/Z5+Qe35ZlPST1rjjTiP8VyHLucDHTvqCaKDp6AAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="오토캐드"
+        title="오토캐드"
+        src="/static/b9094d80e9a9f683e3f4b59b7d3c516d/a6d36/15.png"
+        srcset="/static/b9094d80e9a9f683e3f4b59b7d3c516d/222b7/15.png 163w,
+/static/b9094d80e9a9f683e3f4b59b7d3c516d/ff46a/15.png 325w,
+/static/b9094d80e9a9f683e3f4b59b7d3c516d/a6d36/15.png 650w,
+/static/b9094d80e9a9f683e3f4b59b7d3c516d/e548f/15.png 975w,
+/static/b9094d80e9a9f683e3f4b59b7d3c516d/3c492/15.png 1300w,
+/static/b9094d80e9a9f683e3f4b59b7d3c516d/a2b91/15.png 3360w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
+<p>New Drawing Template를 실행합니다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 62.576687116564415%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAABXklEQVQ4y5WT646CMBCFef838gX2LyKS1exqWUppQYkgq9w922nShBgN7CQnHdqZr+10cDzPw373ie3Wh+/72Gw2CIIAjDEoKcF5hKP2Oedg4Q+EEEiSxIj845HBXa/huq7WGg4lbfYhvO1OLx50UmhgiVT4ZhEiJnHgEkGU4ktkEIkGygQqEzidMnywDG4oURUX/X2CI+IYUSwRcYFY+3meo6oqlGUJHgukKkPTtGj7AeM4ou97o2GgsUPd9RgB1HVr8pzVamWuppSE1COBuq4zGoYBj8cDS6xtGvwSUCmFNE1NTQhYFIXZ6Xa7GSAZQedERjdwCGKLTH6jd2rb1sgGPo9TmwKpFI6FWSBNPifMmY2hG70FTneegy4GLrV/nfDtI7x4lEUnnCa8eoxZIPWfTaA2sEY+JfSmwV+Xw7TNM5BEfXm9Xo3u97v+C2rjXy4FzuccpfZpjtasbMwfvqXpNu0m15cAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="오토캐드"
+        title="오토캐드"
+        src="/static/b8ef8f20e039d132146658d3338cb8d6/a6d36/16.png"
+        srcset="/static/b8ef8f20e039d132146658d3338cb8d6/222b7/16.png 163w,
+/static/b8ef8f20e039d132146658d3338cb8d6/ff46a/16.png 325w,
+/static/b8ef8f20e039d132146658d3338cb8d6/a6d36/16.png 650w,
+/static/b8ef8f20e039d132146658d3338cb8d6/e548f/16.png 975w,
+/static/b8ef8f20e039d132146658d3338cb8d6/3c492/16.png 1300w,
+/static/b8ef8f20e039d132146658d3338cb8d6/a2b91/16.png 3360w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
+<p>크기는 a3, 템플릿은 From Scratch, 단위는 mm, ISO로 하겠습니다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 62.576687116564415%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAABZElEQVQ4y51Ti26CQBDk///If2hiKWK1jaB4Dx4iolUedzi9vRZjDG2tm0xu2ZuZ7C7guK6L+ewVk4kHz/Mw9X340ykWYYhYSkRRhMDk6zVDuFyBcw4hhAUzeWjuyGM8Hhs8wyHRy3wJdzJDECwgicQFngKBcMXAogQBk/BXMd55Ci6MoRRIUg6ZpHiTGbI0xnZbYLPZwOGMITKCyHQgDJmKYRhgu9uhqmoo1UHrDk2r0HWdeVYWWtPZ2joFcQ+HA5zRaGRHs4hjHI9HZFkGrb6I90bTNPggQzJJkuSyF631hXQ+n+8CdU4naR1pOuvNKFffnRHh+ryNvn46nYxO2O7KsoTTmz1qWNeVmTBFmhfI8/xvw5+iv6dx67oBy0qU+/3jhkMcMv/V8L8g7V07HOr21ozCvuVbw7ZtLwIa4XocEiilTT68jsGRCfRd7s2CCfRZVFVl86LYmT8pt8unGt316DmfbWnocTwPfi4AAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="오토캐드"
+        title="오토캐드"
+        src="/static/16e71365f07347a2346a2560afe82a3a/a6d36/17.png"
+        srcset="/static/16e71365f07347a2346a2560afe82a3a/222b7/17.png 163w,
+/static/16e71365f07347a2346a2560afe82a3a/ff46a/17.png 325w,
+/static/16e71365f07347a2346a2560afe82a3a/a6d36/17.png 650w,
+/static/16e71365f07347a2346a2560afe82a3a/e548f/17.png 975w,
+/static/16e71365f07347a2346a2560afe82a3a/3c492/17.png 1300w,
+/static/16e71365f07347a2346a2560afe82a3a/a2b91/17.png 3360w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
+<p>템플릿 / sheet1 / Sheet Settings / Title Block / New Title Block을 클릭합니다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 62.576687116564415%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAABoUlEQVQ4y5WT226CQBCGef+nMDF6U7TXXjdtL3ojB12gHMSyHDRKwaqJUf/ObIJNra11kj8zu8x+OwOMZhgGXEfAti1YloXRaAThOHBIQjhqzTk2+TAMURQF0jRFkiTKTyYTmKapcoZDA1qeZTDdCQzbQRyFGL+S/IgSI7h+iBcnQOC68IWLlHJns5mC5nl+iht4Rs81SYs4yfCWSEynMR6fniHfpvhYVSjLEp5PQN9HyIoiBEGgKmVxzIrjmKobotfrQRsMBuAqC7qRb9L1Hp5ND1Feov7Y4L/GFbfbbWqZgua9SJmgT7c8mD5sL6ALJDabDY7HIw6Hg/Ln4n02KSU6nQ407rvpn4E6AedFjrp6x2q1wm63UwcuwRp9AzLsCyipZV1VzNZU1QDP7WbgJdjVlq8Bz2GXqrwZeKmq/X5/0p/Auztd/bC/GcNYdV1jvV4rz8aMbrf7E3jf7yOjNR/abreoqkodYs8A/vK8ns/n6sdfLBZYLpcYj8dotVrnwBQvlqCpSVBSEu/zTLs0ekIImqSpmgqOPc9T+40YyNPyCeV1xKXkM1AqAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="오토캐드"
+        title="오토캐드"
+        src="/static/3daf44426f8362d9a25e47d77dabf5f9/a6d36/18.png"
+        srcset="/static/3daf44426f8362d9a25e47d77dabf5f9/222b7/18.png 163w,
+/static/3daf44426f8362d9a25e47d77dabf5f9/ff46a/18.png 325w,
+/static/3daf44426f8362d9a25e47d77dabf5f9/a6d36/18.png 650w,
+/static/3daf44426f8362d9a25e47d77dabf5f9/e548f/18.png 975w,
+/static/3daf44426f8362d9a25e47d77dabf5f9/3c492/18.png 1300w,
+/static/3daf44426f8362d9a25e47d77dabf5f9/a2b91/18.png 3360w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
+<p>이때 타이틀 블록의 소스를 from DWG file에서 가져오면 됩니다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 62.576687116564415%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAABqUlEQVQ4y51T22rCQBDN/3+FDyqIqX32qU+1lLaaGM0maa6aixrvVgRRT2cWImKthQ4cZnZ39szZyyi6rsO2BHo9A4ZhoN/vQ1gWLIIQlhxzTo+87/sYj8dI0xRxHEsfBIFcb7c76HQ0KKMsQ9cOofcsRIEP85PgBhQHsF0f75YHz7bhChsp5U4mE0k6Go1knOe59MvVUsZKQpWiOMMwTjAYRHhuvSAeDvG12WCxWMBxXXgEn0FFPM+TShkcR2EIyw/x1HqFQ4WVZrMJVjmminyMuvqAj24fSZJgvV7jL9vv96QwR0fT5ZUpLL24lySJoT408GGYUtV0OsXpdLqLw+EgifnYtVoNSkbqmIw9q1JVFTktFvYXIYON95bLZShMdk3IitmOx+N5Q+EvCxU5BWGlUrlPeEvJ9dy/CK9V3VL6L4WXqvgxCtwlrNdV+WK/GZMx+Ettt9vz12KOarX6k/Cx0UBGY9602+2wWq3kJvZMsKEPz2PuCv74s9kM8/kcpmmiVCpdE6Z4MwR1TYwFJfE897RNHSCEoE4aIIoiGTuOI+cLMKGmafgGObHFzKB3AhsAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="오토캐드"
+        title="오토캐드"
+        src="/static/87b4d4dfc740f1540dc8f62078f35fcb/a6d36/19.png"
+        srcset="/static/87b4d4dfc740f1540dc8f62078f35fcb/222b7/19.png 163w,
+/static/87b4d4dfc740f1540dc8f62078f35fcb/ff46a/19.png 325w,
+/static/87b4d4dfc740f1540dc8f62078f35fcb/a6d36/19.png 650w,
+/static/87b4d4dfc740f1540dc8f62078f35fcb/e548f/19.png 975w,
+/static/87b4d4dfc740f1540dc8f62078f35fcb/3c492/19.png 1300w,
+/static/87b4d4dfc740f1540dc8f62078f35fcb/a2b91/19.png 3360w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
+<p>아까 만들었던 block을 선택하면</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 62.576687116564415%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACFUlEQVQ4y4WTW2/aQBCF/f9/BXkAIaWkD7wEUMVLU5VWLRBzMWB8i7ENlIttLhIYTudsAuo1GWm0uyPvt2dmPFq73cbA6KPT0aHrOrrdLvqGAUO832e8g1arBV3i4/EYURRhMpnA930EQQDbtkFGs9lCs9WGFoUhHgcOWh0Drm2hO3p227JgmDa+DR04YxP20MR0NsNyucRiscBM9vT5fH5dwyiENpGXXD/Ekx/Akdc+N77AdV34ngvPseB4DqIwQCDf2Y6r1BFgmiZGoxEsedj1PNjRD8wEqlUqFVDlbDqVCw7u7ysqtaEToTFY4PFph+x0xumUSdoPCEMftN1up9bj8YjNZoNQ7jcaDUlZajKVQyirI8BarabAy3WKeHfCapupi1mW4eHTB3iimEYIY+fzWZ2p/ObmBloo6ljc6AVYrVZVofcvCmhJEmO9Xosn2O/3zwq3W1F++g2Yz+ehEXYBElSv1xU4TdMrcLVaXUG0dLPHOk6kDG8A2Yxyuax+FRadtaSz8HTubWuMj98tjNy5AhH6TyBTZ7BYLCqlLHqSJErpr87apekGh8NBgf6r8AIslUrqn3rLqIxNob8KvL19p7r+GohO9VtpDFcaGYVC4W/g+7s7hHLmJTYijmN1iSsBTJtnZsFmcWo4Pb1eD7lc7k9ggK96X6bGx0o+YpwzPRgM1Fx7MhFsHPfD4VDFL04gZ/4nNh2+dBFzEIoAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="오토캐드"
+        title="오토캐드"
+        src="/static/0b1618d13ad3f79cd4e5967286d7518b/a6d36/20.png"
+        srcset="/static/0b1618d13ad3f79cd4e5967286d7518b/222b7/20.png 163w,
+/static/0b1618d13ad3f79cd4e5967286d7518b/ff46a/20.png 325w,
+/static/0b1618d13ad3f79cd4e5967286d7518b/a6d36/20.png 650w,
+/static/0b1618d13ad3f79cd4e5967286d7518b/e548f/20.png 975w,
+/static/0b1618d13ad3f79cd4e5967286d7518b/3c492/20.png 1300w,
+/static/0b1618d13ad3f79cd4e5967286d7518b/a2b91/20.png 3360w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
+<p>도면 템플릿에 반영이 됩니다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 62.576687116564415%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAABmUlEQVQ4y5WT226CQBCGef+nMDHGC8Fe+wBtL9qmAlpAAeXsIZ6rXunf+TfBqKVpO8lkZpfh2382s9q7acJzHfR6NmzbRr/fx4fjwnVdOBK5NqWmJzEMQ0ynU+R5jjRNVRyPx7AsS9V0uya0SVHA8sYwey6iUYiPobg/knwELwjx6gYIPA++4yGX2tlspqCTyeSSl/BCvmtcRGmBJM0QxxEen56RJgk+dzssVyt4Qx+B7yOkyyFBECildOb0KIpEXReGYUDrdDqgyqmcSHhLN/Bm9ZFlGfb7Pf5qVFyv16VlScp7ybIUutHGm+3AHw6x3mxU8el0wvl8rnR+o1FAo9GAxr7L/rmp6zrmcjel8acy/uQ3QMLugVRcBasCf1P4G/AaVmX/Vniv7hp0rZCMfwFL2HK5VLX09Xqt/HA4qNGpBLZauhrYn2y73WKxWGA+n6tI4E5mliPXbDa/Ax/abRSyZivH4xEbGR1CGDmXjOULieP4otaT11Sr1e6BOV5kBhM5bSWtcZ9vmsWO4ygAW2M+GAxunHt8LV+fHsMZoxGGXwAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="오토캐드"
+        title="오토캐드"
+        src="/static/06c420b4380f7be08f435dec299def3c/a6d36/21.png"
+        srcset="/static/06c420b4380f7be08f435dec299def3c/222b7/21.png 163w,
+/static/06c420b4380f7be08f435dec299def3c/ff46a/21.png 325w,
+/static/06c420b4380f7be08f435dec299def3c/a6d36/21.png 650w,
+/static/06c420b4380f7be08f435dec299def3c/e548f/21.png 975w,
+/static/06c420b4380f7be08f435dec299def3c/3c492/21.png 1300w,
+/static/06c420b4380f7be08f435dec299def3c/a2b91/21.png 3360w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
+<h2>4. 도면 템플릿 저장하기</h2>
+<p>이렇게 만들어진 도면 템플릿을 COM 폴더에 저장하도록 하겠습니다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 62.576687116564415%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACM0lEQVQ4y42T+28SQRDH+eeN2hjrgyamiTHBahU0Qg1QOO56cNwdB+WQR3kWrIn+YNJGyiMcHPB1ZuEQRRM3mczuZOez89jxyWkduplHOmviTDNhWEVcNFpotDqoNzu0b6NWbwrdbHdx2btC+/IzyrUGPlXryNtl8jOgpA3Iqg5fSjUQjKoIRpL4eCpD0nK4+dHHdDqFs5bpRmaYz+eYOA50ejhFEIWCSCgZJNWsOPskoibUHBlMxKU0wtGEcOa1XC6xWsvfzgxVsxYFoCAmqTiVNYTCMez7D+F79jwAJUPp0oV4KoPAqyBGo5FwXiwWO8J2frDRuUK50UWFpN75AjmTw90HT+BTKEWFYGxg4Mvjd3Bd948IsRPhRasHu9oSwlCJSnf/oR8+BqXSJhjsAcfj8QbAziwcnadns9kKWGujRFJt9tbAp9QUgm0DA69D6PdvN84Mn0wmAsLaoYYMBoN/AP27QI6QHThtBrrufJMqa96565RL/wvc7rLXCE/EWsxRa3ZF/Rjo1fDe31I+evNepOfVbwVZel3BdL7At7ELI28jYxaRtUqw7Kr4OjsRsvHF0VtcX99gOBzhdjDcfG6HPrVDNfzeH0L5OoBZKEHVCwJoFMpInunY2z/4BeRuc9iPDw7F2a40YRWr0HI2OdlCG+cVmhDSeg6yZtGE8HSsfkkklsKdvUfbQBMSjc7xSZJeyxLgXIxSJCbhJJ6iCUoSQKMsMvhAe7Z5wiPLExYKR/ETSKeK+E1JwvMAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="오토캐드"
+        title="오토캐드"
+        src="/static/ca67e47a19be85da394b4999b12786aa/a6d36/22.png"
+        srcset="/static/ca67e47a19be85da394b4999b12786aa/222b7/22.png 163w,
+/static/ca67e47a19be85da394b4999b12786aa/ff46a/22.png 325w,
+/static/ca67e47a19be85da394b4999b12786aa/a6d36/22.png 650w,
+/static/ca67e47a19be85da394b4999b12786aa/e548f/22.png 975w,
+/static/ca67e47a19be85da394b4999b12786aa/3c492/22.png 1300w,
+/static/ca67e47a19be85da394b4999b12786aa/a2b91/22.png 3360w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
+<h2>5. 도면 템플릿 불러오기</h2>
+<p>그럼 만든 도면 템플릿을 불러와 사용해보겠습니다. 먼저, 도면을 작성할 모델을 불러옵니다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 62.576687116564415%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACCUlEQVQ4y42Ty27TQBSG/XasgAqhkjZEVYBIqHkAFsCKBeqqXdBFpUoIWpSyYYNQ3oBVKyfk0laK7Vw8viWNc3diJ/mZM9VAEiDiSL88Hv/nm+PjYyWfz+P66hKFwg+uAsqlEsrlS2i6Ace2Ua/XoRsG6o0GjGoNlsW4LCHGGPfpUHM5qKrKlYNCSfkrA6VrDbquweYJuslwrjEYNRNm3YXWsFCsOaiwJkzThGVbcD2GZtPDd8ODWrXR7/j8vglFGNwWLi7OxentdhvD4RB+t4tRMEYUzUAxnXNNp7fr6Yzvh0JBGIEcQTBBv9+Hks1m4fttHOzvwXFsdDodjMdjzGa3IIqqXsG7gz28ffMK375+wXw+x2pMeM6AgF1eCVVVLBZEydQXx3GEBoOBMJ9+OEYidg+7qcd4/izOe2uJfTqU4PIAuleoGpv30fM80ejRaMTLD0SltKY4y5wivfsUqSdxJLYfcj/7KzCKIigG/4KVSkVACSj7RCGNmcwJ0ukUdhKPsLW5wb2/K1z0Ua5ClbmuK2AEpVOkSSZIYHJnC/HYg/VAtjBX/wKefHyPZHIbsc372Lh7Z6mHfwAlbB2wWjVwdHSI1y9f4PPZp18A2b//Bi5eV2MRthYYhqHMWHolWpMmk3BpRhdDjM0qkOTyD9W88cXkyzHq9Xr8B/DRat2gy9e0R8+kpOcnipa8o3snPaMAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="오토캐드"
+        title="오토캐드"
+        src="/static/ca5cf1b1942340aa842ea144137747f8/a6d36/23.png"
+        srcset="/static/ca5cf1b1942340aa842ea144137747f8/222b7/23.png 163w,
+/static/ca5cf1b1942340aa842ea144137747f8/ff46a/23.png 325w,
+/static/ca5cf1b1942340aa842ea144137747f8/a6d36/23.png 650w,
+/static/ca5cf1b1942340aa842ea144137747f8/e548f/23.png 975w,
+/static/ca5cf1b1942340aa842ea144137747f8/3c492/23.png 1300w,
+/static/ca5cf1b1942340aa842ea144137747f8/a2b91/23.png 3360w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
+<p>도면을 작성하게 되면 아래와 같은 선택창이 나옵니다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 62.576687116564415%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACBElEQVQ4y32SW2/aQBCF/fP7lCpV0/IbkkglUlXeitSHSlGLXAwGmgLG4NvaYJuLbIyxT2eWi4CSjnS09s7up9k5o6jNJl56XbRaGqmFTqcDvdPFYGjAc12Mx2MMDQOTyQTGyITj2CRHyrJtmWsSQ1VV0i8ofKnZM6D/HmA4HMChQ4btoDF0YJgWrLHAYOKibXro2z5syjuuA+HbcIWPFzdA4HsIwwjT6RSKZVlwxBSNxk9Z0Ww2g2maiOcLJOkaeV4AKJFvt9iSUBZy3eY55TbINjk40jTDcrmEUqvVEEUhbt++gS88rFYrjIwR8s0GhxBhgs/fTTzUB/jR8wn/b2TrNVYMnM/nVG6IdluD7/vIsgxrShZFQdpdras2bu41fKzqpDaixVrul2W5U1HIf65c4csuPZVhvOZ5fjxclDvgN83FXbWLypOOSrWFcA/kSJJEGsaFxXEMxSCX+v2+hLFzV4FNF+8J+OFTm6QhWp4D2aggCGT/Fa5MCCFhr1ZIwLunrnxupaqdVZimKTzPkw5Ll+2TuXoNWFcd3DzqePeo4fZBPauQgVEUySfLCg+wa8ByDxRRgi/PE9x//YNn3T3uH03Zi+/+F3i6XsYl7OjyJXBzmD9+8n4cOHZjVFA+P9s/jatAliCjglkkJ59d5D4tFgvqVUyNn2FO37zHuUOeV+7lXxw00YCmt59dAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="오토캐드"
+        title="오토캐드"
+        src="/static/a3fc3bd616d96c351a3c5a85bea3dd76/a6d36/24.png"
+        srcset="/static/a3fc3bd616d96c351a3c5a85bea3dd76/222b7/24.png 163w,
+/static/a3fc3bd616d96c351a3c5a85bea3dd76/ff46a/24.png 325w,
+/static/a3fc3bd616d96c351a3c5a85bea3dd76/a6d36/24.png 650w,
+/static/a3fc3bd616d96c351a3c5a85bea3dd76/e548f/24.png 975w,
+/static/a3fc3bd616d96c351a3c5a85bea3dd76/3c492/24.png 1300w,
+/static/a3fc3bd616d96c351a3c5a85bea3dd76/a2b91/24.png 3360w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
+<p>그럼 여기서 Template를 from Scratch가 아닌 Browse를 통해 지정할 수 있습니다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 62.576687116564415%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACD0lEQVQ4y32Tb2+aUBTG+fh71aXLuvkZ2iazyTbfzWQvtpjNUFHUtioicC+ggKDhjwjPzsXS2c7uJE8OOefcX87lnCv1ej3cjUfo9xVSH8PhEOpwhOlMg805FosFZpoGwzCgzXUwZpFYJdOyqpxgyLJMuoUkDvXGGtS7KWazKRgVaRZDd8ag6SbMhYOpwTHQbUwsFxblGWdwXAvccXHPl1i6Nnw/wGq1gmSaJpizQrf7u+rI8zzouo51GCFOUuR5AaBEvt9jT0JZVH6f55TbIdvlEJYkGTabDaRWq4Ug8HH+9g1cx8Z2u8VcmyPf7VCb48f4/EPHVXuKX2OX8P9alqbYCmAYhtSuj8FAgeu6yLIMKSWLoiAdjrZlC2eXCj42VdIAQZRW8bIsK4laUSluIYnDnK4qYMLnef5UXJQH4HeF46I5QuNGRaPZh/8IFBbHcTWwJFpjGwaQNJrSZDKpYGJyJ4E9jvcE/PBpQFIQbP4Ck4SAjKNjBBhyAorOHMepYK92SMCLm1F13UZTedZhmiQY3U/wpT/HzwcLknW0V68B2zLD2bWKd9cKzq/kFx0msG0bnk2rxExINewUsHwEOkGMrx0Dl98e0FH5U/y4BvVQ/gc89i+thh1D96eAu3r/HtehtsMaFZTPn8WP7SRQyKFBLb2g2nyxFuI/RVFED2BNz8tDSN8iJnJ1XvggCPAHMcXQThT/m1MAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="오토캐드"
+        title="오토캐드"
+        src="/static/63a7f8fde347eb1cae4ca1adeb08a7d3/a6d36/25.png"
+        srcset="/static/63a7f8fde347eb1cae4ca1adeb08a7d3/222b7/25.png 163w,
+/static/63a7f8fde347eb1cae4ca1adeb08a7d3/ff46a/25.png 325w,
+/static/63a7f8fde347eb1cae4ca1adeb08a7d3/a6d36/25.png 650w,
+/static/63a7f8fde347eb1cae4ca1adeb08a7d3/e548f/25.png 975w,
+/static/63a7f8fde347eb1cae4ca1adeb08a7d3/3c492/25.png 1300w,
+/static/63a7f8fde347eb1cae4ca1adeb08a7d3/a2b91/25.png 3360w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
+<p>COM 폴더에 있는 템플릿을 선택합니다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 62.576687116564415%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAACSElEQVQ4y22SWW/TUBCF/bOR+j944oEnBA+tBDSg1HHixI7XeIu3rAVR0bSlVVH2pclh7qRZUGvp6F7N+H535syVlGodddOBqhkkE5rhQDNd2F4TUdKC30zhhQmtGZwgRhhnCJOcFVDM9kKUiVGq6FDUOqSSauDTuYrTQhnnxTLkioYCJT8UdRQUDUXFxHm5jjOxqjZkVYdMAEXTINdMfKZYmYqpGi7JgSQTVdFdfDz9QgmLE4WLCmqWD9OLqaocTphDbyQwSJafUiyD18xZbrOFKOtyzPZjSG/fvYdueXhzcsJA8VPW7uLnr98Y3N7j5u6B1f5xjah1havrPxjc3aOZ9xGmXURCWQ9ukFL7BKw7AWqmh7Ov3xmYtvuYz2ZYLhfAZoPXvvV6Tf9dwo87CJKtBDxMO5AcIis1C2rdJW9MxHkPk+mUD63XGwyHQ4zHE8zoktFohPFkgsfHv0ha2wpFmxfku257MBwf0je5SsOoMFSmAQmggCwWCzwRdMrVrkhLzOZzzOcLjh0DS+KlUKdmI4JU0R1q1aagycCk1cNqtaJuN3uJj/e7njdrxM9AJ0jovEkVBgyVSlWDYUptB+z/59fm2EcCPcyfMJiskHcuyTsBTKFZDa5SgCUB2wPZwy57KNqaTmfblUXtkn/x7RCNwRDtzmEo24F0eb8H7qBelHPCj9svRfE020rsw+Qw5Z1eABsE3D2Bw+29/SVu1IJHlUXPVR3rFaDF0IpuQ6W3abohT1EYb7gBP42q0SDzQ46J3LEMGso/gCOL0CaulN0AAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="오토캐드"
+        title="오토캐드"
+        src="/static/680bcafb38940ac2a84b163d158747b5/a6d36/26.png"
+        srcset="/static/680bcafb38940ac2a84b163d158747b5/222b7/26.png 163w,
+/static/680bcafb38940ac2a84b163d158747b5/ff46a/26.png 325w,
+/static/680bcafb38940ac2a84b163d158747b5/a6d36/26.png 650w,
+/static/680bcafb38940ac2a84b163d158747b5/e548f/26.png 975w,
+/static/680bcafb38940ac2a84b163d158747b5/3c492/26.png 1300w,
+/static/680bcafb38940ac2a84b163d158747b5/a2b91/26.png 3360w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
+<p>이때, 템플릿을 선택하게 되면 단위나 도면 크기 등은 바꿀 수 없기 때문에 템플릿을 상황에 맞게 여러 개 만들어 놓고 사용하셔야 합니다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 62.576687116564415%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB/UlEQVQ4y32S227aQBCG/fi9SpWqaXmGJFKJVJW7IvWiUtQiF4OBpoAx+MAasM1BNmYxf2c2GOGUdKRfK814Ps9J05tNPPW6aLUMUgudTgdmp4vB0MLU9zEejzG0LEwmE1gjG57nkjwlx3VVrEkMXddJv6BxUrNnwfw9wHA4gEcfWa6HxtCDZTtwxgKDiY+2PUXfDeBS3PM9iMCFLwI8+TPMginCMMJ8PofmOA48MUej8VNVtFgsYNs24uUKSbqFlDmAA+R+jz0Jh1y9eykptkO2k2BL0wzr9RparVZDFIW4fvsGgZhis9lgZI0gdzsUJsIEn7/buKsP8KMXEP5fy7ZbbBi4XC6p3BDttoEgCJBlGbYUzPOc9Jxa111c3Rr4WDVJbUSrrfIfDoeT2LhyjZN9apVh/EopTx/nxw+/GT5uql1UHkxUqi2ERyBbkiRqYXEcU6cRNIu21O/3FYw3dxHY9PGegB8+tUkGonUZyHnL1QrcrcaVCSGU89UKCXjz0FXtVqpGqUIeEW93RUBVoXt2V68B67qHq3sT7+4NXN/ppQp5ZFwZw9TZFLBLwGLYIkrw5XGC269/8Gj6J//5Ulic+1/g+fvSzn9Y2vJL4K64P245z0+A5zPKKS5L/nO7CGQJWtRsEanL5y2maXocekxzWqiNso9jRZxfnuNfoirRz+q5i84AAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="오토캐드"
+        title="오토캐드"
+        src="/static/5cb0fab37ca1c16c781ee5ec2892bd34/a6d36/27.png"
+        srcset="/static/5cb0fab37ca1c16c781ee5ec2892bd34/222b7/27.png 163w,
+/static/5cb0fab37ca1c16c781ee5ec2892bd34/ff46a/27.png 325w,
+/static/5cb0fab37ca1c16c781ee5ec2892bd34/a6d36/27.png 650w,
+/static/5cb0fab37ca1c16c781ee5ec2892bd34/e548f/27.png 975w,
+/static/5cb0fab37ca1c16c781ee5ec2892bd34/3c492/27.png 1300w,
+/static/5cb0fab37ca1c16c781ee5ec2892bd34/a2b91/27.png 3360w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
+<p>OK를 누르시면 도면 템플릿이 아름답게 반영되어 있는 걸 확인할 수 있습니다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 62.576687116564415%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAAByklEQVQ4y5WT2W4aQRBF5/fzFvkLkBC8GILf+AQnD7FnwMMsTM/CbCwRwyKWEct1344gBBtbLqnUrV5O36qu0p4NA65todvtSO/ixTRh2TYcx4Fl2TB7Pei6jp7ZU2t5liPPcyRJgizLEIYROvKeoRvynAFtKDcNO4DpCPi+j47rwxYBgjBEEEXw/ACeEHA9B47rKtAgCmGKCHYYIw4C+E4f+XCoHtLUS6M/eHr6jTiO8fj4E4PBAMVshul0CiH+PiSEB8/7527fg9Pvw5OPhHJfl5E2Gw1o7XYbRTHF3fdvSNMErdYDXHmoLLf4ijHSarUKbT6fKyXmSxdDKbvZbCpFZVnicDhgv9/jeDzedJ6hpWmKWq0Gbbvdqtgnk4labEjZnNN2u935wkfQ/4CBTCpzQnXMJ4Gj0UgdIux04XL8UOF4PFYwqjwpPAGvYe/ZG4Vplqp6ugW8hF0ru1RIhgJy8hnwEswPnMmSWi6XyouiwGq1QiRr9l3g/X0DTMMtW6/XZxjhrBJ+HvNfr9ffAh9aP9ScoWw2G3VhsViokUo4MgLmnQ3AkXC2ZaVSuQZm+GWYsmMSVexct899bSkAQ+OcxU/n3mmfPf8K3kXC51gJxZ0AAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="오토캐드"
+        title="오토캐드"
+        src="/static/39ff58c07ef216eea69ecb6c30d1af61/a6d36/28.png"
+        srcset="/static/39ff58c07ef216eea69ecb6c30d1af61/222b7/28.png 163w,
+/static/39ff58c07ef216eea69ecb6c30d1af61/ff46a/28.png 325w,
+/static/39ff58c07ef216eea69ecb6c30d1af61/a6d36/28.png 650w,
+/static/39ff58c07ef216eea69ecb6c30d1af61/e548f/28.png 975w,
+/static/39ff58c07ef216eea69ecb6c30d1af61/3c492/28.png 1300w,
+/static/39ff58c07ef216eea69ecb6c30d1af61/a2b91/28.png 3360w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
+<style class="grvsc-styles">
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line > * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: ' ';
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting > .grvsc-code > .grvsc-line::before {
+    content: ' ';
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+</style></article></div></div></div></article><section class="blogPost__CommentWrap-sc-109dgz0-3 dWmEsY"><div></div></section></main></div><footer class="Footer__Container-sc-1epg5cn-0 lermzt"><div class="Footer__Wrapper-sc-1epg5cn-1 kGGhgJ"><a href="mailto:beskar.son@gmail.com" target="_blank" rel="noopener noreferrer"><div class="Footer__Cta-sc-1epg5cn-2 heTUjG">beskar.son@gmail.com</div></a><div class="Footer__IconWrapper-sc-1epg5cn-3 kvkZMZ"><a href="https://www.behance.net/sonbeomsoo" target="_blank" rel="noopener noreferrer" class="Footer__IconContainer-sc-1epg5cn-5 hFflNT"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="behance" class="svg-inline--fa fa-behance fa-w-18 fa-lg Footer__Icon-sc-1epg5cn-4 cVatt font-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M232 237.2c31.8-15.2 48.4-38.2 48.4-74 0-70.6-52.6-87.8-113.3-87.8H0v354.4h171.8c64.4 0 124.9-30.9 124.9-102.9 0-44.5-21.1-77.4-64.7-89.7zM77.9 135.9H151c28.1 0 53.4 7.9 53.4 40.5 0 30.1-19.7 42.2-47.5 42.2h-79v-82.7zm83.3 233.7H77.9V272h84.9c34.3 0 56 14.3 56 50.6 0 35.8-25.9 47-57.6 47zm358.5-240.7H376V94h143.7v34.9zM576 305.2c0-75.9-44.4-139.2-124.9-139.2-78.2 0-131.3 58.8-131.3 135.8 0 79.9 50.3 134.7 131.3 134.7 61.3 0 101-27.6 120.1-86.3H509c-6.7 21.9-34.3 33.5-55.7 33.5-41.3 0-63-24.2-63-65.3h185.1c.3-4.2.6-8.7.6-13.2zM390.4 274c2.3-33.7 24.7-54.8 58.5-54.8 35.4 0 53.2 20.8 56.2 54.8H390.4z"></path></svg></a><a href="https://www.instagram.com/beomsoo_son/" target="_blank" rel="noopener noreferrer" class="Footer__IconContainer-sc-1epg5cn-5 hFflNT"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram" class="svg-inline--fa fa-instagram fa-w-14 fa-lg Footer__Icon-sc-1epg5cn-4 cVatt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg></a><a href="https://github.com/k1a11220" target="_blank" rel="noopener noreferrer" class="Footer__IconContainer-sc-1epg5cn-5 hFflNT"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" class="svg-inline--fa fa-github fa-w-16 fa-lg Footer__Icon-sc-1epg5cn-4 cVatt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a><a href="https://www.linkedin.com/in/beomsoo-son-65a201178/" target="_blank" rel="noopener noreferrer" class="Footer__IconContainer-sc-1epg5cn-5 hFflNT"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin-in" class="svg-inline--fa fa-linkedin-in fa-w-14 fa-lg Footer__Icon-sc-1epg5cn-4 cVatt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path></svg></a></div></div></footer></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/2020/05/31/fusion360-drawing/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-a0c75589a40cac95b858.js"],"app":["/app-c4339d0f1e891812f46f.js"],"component---cache-caches-gatsby-plugin-offline-app-shell-js":["/component---cache-caches-gatsby-plugin-offline-app-shell-js-ad6431e4664bcf916d19.js"],"component---src-pages-404-js":["/component---src-pages-404-js-370df770f0309030df61.js"],"component---src-pages-about-js":["/component---src-pages-about-js-66c914cc252739af3039.js"],"component---src-pages-index-js":["/component---src-pages-index-js-7310108ffb8e85631ca5.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-19ecd659ca46d44618ec.js"]};/*]]>*/</script><script src="/polyfill-a0c75589a40cac95b858.js" nomodule=""></script><script src="/component---src-templates-blog-post-js-19ecd659ca46d44618ec.js" async=""></script><script src="/e5f5b259f3bc5bd31060582de6626886320e23cc-3305ee4c1e21d53e4b33.js" async=""></script><script src="/133dca110fad53aa1997b630637bbac3134a2d14-87b3f2968e4d84eea06d.js" async=""></script><script src="/a9a7754c-63e6cd1fbd37df71b2d2.js" async=""></script><script src="/app-c4339d0f1e891812f46f.js" async=""></script><script src="/framework-6c3ead24af170cdcb87c.js" async=""></script><script src="/webpack-runtime-1d17d9a2356dfdae6fd6.js" async=""></script></body></html>
