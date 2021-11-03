@@ -4,7 +4,7 @@ const GlobalStyle = createGlobalStyle`
   :root {
     font-size: 100%;
 
-    --width: 1200px;
+    --width: 1100px;
     --min-width: 320px;
     --post-width: 650px;
     --nav-height: 54px;
@@ -18,7 +18,7 @@ const GlobalStyle = createGlobalStyle`
     --padding-lg: 22px;
 
     --border-radius-sm: 6px;
-    --border-radius-base: 8px;
+    --border-radius-base: 16px;
     --border-radius-lg: 28px;
 
     --sizing-xs: 4px;
@@ -61,8 +61,8 @@ const GlobalStyle = createGlobalStyle`
       --color-white: #ffffff;
       --color-nav-bar: rgba(255, 255, 255, 0.7);
       --color-nav-border: rgba(200, 200, 200, 0.7);
-      --color-category-button: #f2f2f2;
-      --color-background: #f2f2f2;
+      --color-category-button: #ffffff;
+      --color-background: #EFF3F5;
       --color-post-background: #ffffff;
       --color-card: #ffffff;
       --color-code: #f2f2f2;

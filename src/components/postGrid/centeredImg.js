@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
-import { graphql, useStaticQuery } from 'gatsby';
-import Img from 'gatsby-image';
+import React from "react";
+import styled from "styled-components";
+import { graphql, useStaticQuery } from "gatsby";
+import Img from "gatsby-image";
 
 const CenteredImg = ({ src, alt }) => {
   const data = useStaticQuery(graphql`
@@ -22,7 +22,7 @@ const CenteredImg = ({ src, alt }) => {
 
   const image = data.allImageSharp.edges.find((edge) => edge.node.id === src);
 
-  if (!alt) alt = 'Thumbnail Image';
+  if (!alt) alt = "Thumbnail Image";
 
   return (
     <ThumbnailWrapper>
@@ -36,8 +36,8 @@ const CenteredImg = ({ src, alt }) => {
 export const ThumbnailWrapper = styled.div`
   position: relative;
   width: 100%;
-  &::after {
-    content: '';
+  /* &::after {
+    content: "";
     display: block;
     position: absolute;
     top: 0;
@@ -47,10 +47,11 @@ export const ThumbnailWrapper = styled.div`
     opacity: 0;
     background-color: var(--color-dimmed);
     transition: 0.3s ease;
-  }
+  } */
 `;
 
 const InnerWrapper = styled.div`
+  border-radius: var(--border-radius-base);
   overflow: hidden;
 `;
 

@@ -57,9 +57,9 @@ const Home = ({ pageContext, data }) => {
       <SEO title="Home" />
       <Main>
         <Content>
-          <HeroText>좋은 제품을 만들기 위한 고민을 적고 있습니다.</HeroText>
+          {/* <HeroText>좋은 제품을 만들기 위한 고민을 적고 있습니다.</HeroText> */}
           <CategoryFilter categoryList={data.allMarkdownRemark.group} />
-          <PostTitle>{postTitle}</PostTitle>
+          {/* <PostTitle>{postTitle}</PostTitle> */}
           <PostGrid posts={posts} />
         </Content>
       </Main>

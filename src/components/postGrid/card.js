@@ -12,9 +12,9 @@ const Card = ({ thumbnail, alt, category, title, desc, date }) => {
         <div>
           <Category>{category}</Category>
           <Title>{title}</Title>
-          {/* <Desc>{desc}</Desc> */}
+          <Desc>{desc}</Desc>
         </div>
-        <DateTime dateTime={date}>{date}</DateTime>
+        {/* <DateTime dateTime={date}>{date}</DateTime> */}
       </Text>
     </Wrapper>
   );
@@ -27,7 +27,7 @@ const Wrapper = styled.div`
   overflow: hidden;
   height: 100%;
   border-radius: var(--border-radius-base);
-  background-color: var(--color-card);
+  /* background-color: var(--color-card); */
 
   /* Fix Safari overflow:hidden with border radius not working error */
   transform: translateZ(0);
@@ -38,7 +38,8 @@ const Text = styled.div`
   flex-direction: column;
   flex: 1 1 auto;
   justify-content: space-between;
-  padding: var(--sizing-md);
+  padding-top: var(--sizing-md);
+  padding-bottom: var(--sizing-md);
   & > * {
     display: block;
   }
@@ -46,8 +47,8 @@ const Text = styled.div`
 
 const Title = styled.h3`
   margin-top: var(--sizing-xs);
-  font-size: var(--text-lg);
-  font-weight: var(--font-weight-bold);
+  font-size: var(--text-md);
+  font-weight: var(--font-weight-medium);
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -68,7 +69,8 @@ const Desc = styled.p`
   line-height: 1.5;
   margin-top: 8px;
   padding-bottom: var(--sizing-sm);
-  color: var(--color-text-2);
+  font-size: 14px;
+  color: var(--color-gray-6);
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;

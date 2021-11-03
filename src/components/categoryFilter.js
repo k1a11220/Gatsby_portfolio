@@ -1,13 +1,13 @@
-import React, { useRef } from 'react';
-import { Link } from 'gatsby';
-import styled from 'styled-components';
-import kebabCase from 'lodash/kebabCase';
-import useScrollCenter from 'hooks/useScrollCenter';
-import { ACTIVE } from 'constants/constants';
+import React, { useRef } from "react";
+import { Link } from "gatsby";
+import styled from "styled-components";
+import kebabCase from "lodash/kebabCase";
+import useScrollCenter from "hooks/useScrollCenter";
+import { ACTIVE } from "constants/constants";
 
 const CategoryFilter = ({ categoryList }) => {
   const categoryRef = useRef(null);
-  const ALL_CATEGORY_NAME = 'All';
+  const ALL_CATEGORY_NAME = "All";
   const isActive = ({ isCurrent }) =>
     isCurrent ? { id: ACTIVE, tabIndex: -1 } : {};
 
@@ -15,7 +15,7 @@ const CategoryFilter = ({ categoryList }) => {
 
   return (
     <Nav aria-label="Category Filter">
-      <CategoryTitle>Category</CategoryTitle>
+      {/* <CategoryTitle>Category</CategoryTitle> */}
       <CategoryButton getProps={isActive} to="/">
         {ALL_CATEGORY_NAME}
       </CategoryButton>
@@ -44,9 +44,9 @@ const CategoryFilter = ({ categoryList }) => {
 const Nav = styled.nav`
   display: flex;
   align-items: center;
-  background-color: var(--color-card);
+  /* background-color: var(--color-card); */
   margin-bottom: 48px;
-  padding: 12px var(--sizing-md);
+  /* padding: 12px var(--sizing-md); */
   border-radius: var(--border-radius-base);
 
   a#active {
