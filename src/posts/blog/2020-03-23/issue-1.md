@@ -1,7 +1,7 @@
 ---
 title: "git fatal: remote origin already exists. 에러 해결법"
 date: "2020-03-23"
-category: "Issue"
+category: "Develop"
 desc: "git fatal: remote origin already exists. 에러 해결법"
 thumbnail: "../images/default.jpg"
 alt: "git fatal: remote origin already exists. 에러 해결법"

@@ -1,7 +1,7 @@
 ---
 title: "react start 시 Using target=_blank without rel=noopener noreferrer is a security risk 이슈"
 date: "2020-03-26"
-category: "Issue"
+category: "Develop"
 desc: "Tabnabbing 피싱 공격이란 target_blank인 태그를 클릭하였을 때 새롭게 열린 탭에서 기존 페이지를 피싱페이지로 바꿔 정보를 탈취하는 피싱공격입니다."
 thumbnail: "./sample.JPG"
 alt: "react start 시 Using target=_blank without rel=noopener noreferrer is a security risk 이슈"

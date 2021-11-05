@@ -1,7 +1,7 @@
 ---
 title: "http -> https 로 변경하기"
 date: "2020-08-18"
-category: "Web"
+category: "Develop"
 desc: "http -> https 로 변경하기"
 thumbnail: "./1.png"
 alt: "http -> https 로 변경하기"

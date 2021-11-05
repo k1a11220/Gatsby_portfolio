@@ -57,7 +57,7 @@ const Home = ({ pageContext, data }) => {
       <SEO title="Home" />
       <Main>
         <Content>
-          {/* <HeroText>좋은 제품을 만들기 위한 고민을 적고 있습니다.</HeroText> */}
+          <HeroText>Build your own things that other people can use.</HeroText>
           <CategoryFilter categoryList={data.allMarkdownRemark.group} />
           {/* <PostTitle>{postTitle}</PostTitle> */}
           <PostGrid posts={posts} />
@@ -89,10 +89,10 @@ const Content = styled.div`
 
 const HeroText = styled.div`
   width: 100%;
-  height: 400px;
+  height: 320px;
   display: flex;
   align-items: center;
-  font-weight: 800;
+  font-weight: 500;
   font-size: 32px;
 
   @media (max-width: ${({ theme }) => theme.device.sm}) {

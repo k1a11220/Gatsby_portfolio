@@ -1,7 +1,7 @@
 ---
 title: "API 불러올 때 CORS 에러 이슈"
 date: "2021-01-30"
-category: "Issue"
+category: "Develop"
 desc: "API 서버에서 헤더에 CORS (Cross-Origin Resource Sharing, 교차 출처 리소스 공유) 설정을 안 해줄 경우 생깁니다."
 thumbnail: "./sample.PNG"
 alt: "API 불러올 때 CORS 에러 이슈"

@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import CenteredImg from "./centeredImg";
 import Category from "styles/category";
-import DateTime from "styles/dateTime";
+// import DateTime from "styles/dateTime";
 
 const Card = ({ thumbnail, alt, category, title, desc, date }) => {
   return (
@@ -31,6 +31,12 @@ const Wrapper = styled.div`
 
   /* Fix Safari overflow:hidden with border radius not working error */
   transform: translateZ(0);
+
+  &:hover {
+    h3 {
+      color: var(--color-blue);
+    }
+  }
 `;
 
 const Text = styled.div`
@@ -68,7 +74,7 @@ const Title = styled.h3`
 const Desc = styled.p`
   line-height: 1.5;
   margin-top: 8px;
-  padding-bottom: var(--sizing-sm);
+  /* padding-bottom: var(--sizing-sm); */
   font-size: 14px;
   color: var(--color-gray-6);
   display: -webkit-box;

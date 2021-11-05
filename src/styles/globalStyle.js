@@ -57,12 +57,12 @@ const GlobalStyle = createGlobalStyle`
     body.light {
       --color-text: #1d1d1d;
       --color-text-2: #1d1d1d;
-      --color-text-3: #086BCE;
+      --color-text-3: #467EFB;
       --color-white: #ffffff;
       --color-nav-bar: rgba(255, 255, 255, 0.7);
       --color-nav-border: rgba(200, 200, 200, 0.7);
       --color-category-button: #ffffff;
-      --color-background: #EFF3F5;
+      --color-background: #ffffff;
       --color-post-background: #ffffff;
       --color-card: #ffffff;
       --color-code: #f2f2f2;
@@ -85,10 +85,10 @@ const GlobalStyle = createGlobalStyle`
       --color-floating-button-text-hover: #f2f2f2;
       --color-floating-button-shadow: rgba(0, 0, 0, 0.2);
       --color-floating-button-shadow-hover: rgba(0, 0, 0, 0.4);
-      --color-blue: #0066cc;
+      --color-blue: #467EFB;
       --color-icon: #2c2c2c;
-      --color-footer-background: #FAFAFA;
-      --color-footer-button-background: #086BCE;
+      --color-footer-background: #EFF3F5;
+      --color-footer-button-background: #467EFB;
       --color-footer-button-color: #F3F3F3;
     }
 

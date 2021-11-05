@@ -1,7 +1,7 @@
 ---
 title: "Mac OS 개발환경 구축하기"
 date: "2020-08-01"
-category: "developing"
+category: "ETC"
 desc: "맥에서 개발환경 구축을 위한 메뉴얼을 작성했습니다."
 thumbnail: "../images/default.jpg"
 alt: "Mac OS 개발환경 구축하기"

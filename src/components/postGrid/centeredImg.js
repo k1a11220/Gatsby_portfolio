@@ -27,7 +27,7 @@ const CenteredImg = ({ src, alt }) => {
   return (
     <ThumbnailWrapper>
       <InnerWrapper>
-        <Img alt={alt} fluid={{ ...image.node.fluid, aspectRatio: 16 / 9 }} />
+        <Img alt={alt} fluid={{ ...image.node.fluid, aspectRatio: 16 / 10 }} />
       </InnerWrapper>
     </ThumbnailWrapper>
   );

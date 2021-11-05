@@ -1,7 +1,7 @@
 ---
 title: "react build시 index.html 빈화면이 나오는 이슈"
 date: "2020-03-26"
-category: "Issue"
+category: "Develop"
 desc: "react build시 index.html 빈화면이 나오는 이슈 해결법"
 thumbnail: "./error-1.png"
 alt: "react build시 index.html 빈화면이 나오는 이슈"

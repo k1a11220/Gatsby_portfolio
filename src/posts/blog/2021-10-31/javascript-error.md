@@ -1,7 +1,7 @@
 ---
 title: "SyntaxError: Cannot use import statement outside a module 에러 해결법"
 date: "2021-10-31"
-category: "Issue"
+category: "Develop"
 desc: ""
 thumbnail: "./thumbnail.png"
 alt: "SyntaxError: Cannot use import statement outside a module 에러 해결법"

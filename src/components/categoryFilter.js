@@ -7,7 +7,7 @@ import { ACTIVE } from "constants/constants";
 
 const CategoryFilter = ({ categoryList }) => {
   const categoryRef = useRef(null);
-  const ALL_CATEGORY_NAME = "All";
+  const ALL_CATEGORY_NAME = "ALL";
   const isActive = ({ isCurrent }) =>
     isCurrent ? { id: ACTIVE, tabIndex: -1 } : {};
 
@@ -50,12 +50,17 @@ const Nav = styled.nav`
   border-radius: var(--border-radius-base);
 
   a#active {
-    color: var(--color-white);
-    background-color: var(--color-blue);
+    color: var(--color-blue);
+    /* background-color: var(--color-blue); */
   }
 
   @media (max-width: ${({ theme }) => theme.device.sm}) {
-    padding: 12px;
+    /* padding: 12px; */
+    margin-bottom: 24px;
+  }
+
+  & > a:first-of-type {
+    padding-left: 0px;
   }
 `;
 
@@ -85,19 +90,19 @@ const CategoryTitle = styled.em`
 const CategoryButton = styled(Link)`
   cursor: pointer;
   display: block;
-  background-color: var(--color-category-button);
-  padding: var(--sizing-sm) var(--sizing-base);
+  /* background-color: var(--color-category-button); */
+  padding: var(--sizing-base) var(--sizing-base);
   border-radius: var(--border-radius-base);
-  font-size: 0.875rem;
-  font-weight: var(--font-weight-semi-bold);
+  font-size: 1rem;
+  font-weight: var(--font-weight-regular);
 
   :focus {
     outline: none;
   }
 
   &:hover {
-    color: var(--color-white);
-    background-color: var(--color-blue);
+    color: var(--color-blue);
+    /* background-color: var(--color-blue); */
   }
 
   &:focus-visible {

@@ -1,7 +1,7 @@
 ---
 title: "압력용기 수입 인증에 관하여"
 date: "2020-04-01"
-category: "Trade"
+category: "ETC"
 desc: "중국에서 60L에 6Bar 짜리 압력탱크를 수입하여 사용하려고 하는데, 이번 기회에 관련 법령과 검사기준을 정리해보았습니다."
 thumbnail: "./document.PNG"
 alt: "압력용기 수입 인증에 관하여"
