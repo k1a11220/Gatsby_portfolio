@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Markdown = styled.article`
   h1,
@@ -81,7 +81,9 @@ const Markdown = styled.article`
   ol {
     margin-top: ${({ rhythm }) => rhythm(1)};
     margin-bottom: ${({ rhythm }) => rhythm(1)};
-    margin-left: ${({ rhythm }) => rhythm(1.25)};
+    margin-left: ${({ rhythm }) => rhythm(0.75)};
+    position: relative;
+    top: -0.75rem;
   }
 
   li > ul,

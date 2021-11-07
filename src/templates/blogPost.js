@@ -8,6 +8,7 @@ import { rhythm } from "styles/typography";
 import Category from "styles/category";
 import DateTime from "styles/dateTime";
 import Markdown from "styles/markdown";
+import Img from "gatsby-image";
 
 const BlogPost = ({ data }) => {
   const {
@@ -17,6 +18,7 @@ const BlogPost = ({ data }) => {
     },
   } = data;
 
+  let featuredImgFluid = thumbnail.childImageSharp.fluid;
   const ogImagePath = thumbnail && thumbnail.childImageSharp.fixed.src;
 
   return (
@@ -33,10 +35,10 @@ const BlogPost = ({ data }) => {
                     <Time dateTime={date}>{date}</Time>
                   </Info>
                   <Title>{title}</Title>
+                  <ThumbnailImg fluid={featuredImgFluid} alt="thumbnail" />
                   {/* <Desc>{desc}</Desc> */}
                 </header>
                 <Divider />
-                <thumbnailImg />
                 <Markdown
                   dangerouslySetInnerHTML={{ __html: html }}
                   rhythm={rhythm}
@@ -53,10 +55,21 @@ const BlogPost = ({ data }) => {
   );
 };
 
-const thumbnailImg = styled.div`
-  width: 100%;
-  height: 400px;
-  background-color: black;
+const ThumbnailImg = styled(Img)`
+  align-self: center;
+  /* aspect-ratio: 16 / 9; */
+  width: 130%;
+  height: 490px;
+  border-radius: var(--border-radius-base);
+
+  @media (max-width: ${({ theme }) => theme.device.md}) {
+    width: 90vw;
+    height: 420px;
+  }
+  @media (max-width: ${({ theme }) => theme.device.sm}) {
+    width: 100%;
+    height: 200px;
+  }
 `;
 
 const OuterWrapper = styled.div`
@@ -71,6 +84,12 @@ const InnerWrapper = styled.div`
   width: var(--post-width);
   margin: 0 auto;
   padding-bottom: var(--sizing-lg);
+
+  & header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
   @media (max-width: ${({ theme }) => theme.device.sm}) {
     width: 87.5%;
@@ -94,6 +113,9 @@ const PostCategory = styled(Category)`
 `;
 
 const Info = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: var(--sizing-md);
 `;
 
@@ -124,8 +146,9 @@ const Divider = styled.div`
 const Title = styled.h1`
   font-weight: var(--font-weight-bold);
   line-height: 1.1875;
-  font-size: var(--text-xl);
-
+  font-size: var(--text-title-lg);
+  text-align: center;
+  margin-bottom: var(--sizing-lg);
   @media (max-width: ${({ theme }) => theme.device.md}) {
     line-height: 1.21875;
     font-size: 2.5rem;
@@ -146,7 +169,10 @@ export const query = graphql`
         desc
         thumbnail {
           childImageSharp {
-            fixed {
+            fluid(quality: 100, sizes: "maxWidth: 3840") {
+              ...GatsbyImageSharpFluid
+            }
+            fixed(quality: 100) {
               src
             }
           }

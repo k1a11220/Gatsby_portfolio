@@ -34,6 +34,7 @@ const GlobalStyle = createGlobalStyle`
     --text-md: 1.125rem;
     --text-title: 1.25rem;
     --text-lg: 1.5rem; 
+    --text-title-lg: 2.5rem;
     --text-xl: 3rem;
 
     --device-xs-max-width: 419px;
