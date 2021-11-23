@@ -125,9 +125,11 @@ const Time = styled(DateTime)`
 `;
 
 const Desc = styled.p`
-  margin-top: var(--sizing-lg);
+  margin-top: var(--sizing-md);
   line-height: 1.5;
-  font-size: var(--text-lg);
+  font-size: var(--text-base);
+  text-align: center;
+  color: var(--color-gray-5);
 
   @media (max-width: ${({ theme }) => theme.device.sm}) {
     line-height: 1.31579;

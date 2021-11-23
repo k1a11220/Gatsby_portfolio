@@ -56,7 +56,7 @@ const GlobalStyle = createGlobalStyle`
     --color-outline: rgba(0,125,250,0.6);
 
     body.light {
-      --color-text: #1d1d1d;
+      --color-text: #3d444b;
       --color-text-2: #1d1d1d;
       --color-text-3: #467EFB;
       --color-white: #ffffff;
