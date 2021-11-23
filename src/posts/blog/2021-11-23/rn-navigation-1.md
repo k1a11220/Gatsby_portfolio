@@ -52,7 +52,7 @@ function App() {
 export default App;
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/57b5f2db-b3eb-47c7-a66c-2642dfe20240/Untitled.png)
+![실행화면](./Screen.png)
 
 iOS 기준으로 기본 스타일이 적용된 네비게이션 바와 콘텐츠 영역을 확인할 수 있습니다. 이때 Screen의 Name은 소문자(home)로 설정해도 문제없지만 공식 문서에서는 대문자(Home)를 사용하길 권장하고 있습니다.
 
