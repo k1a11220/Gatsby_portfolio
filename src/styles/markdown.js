@@ -42,6 +42,7 @@ const Markdown = styled.article`
 
   h1 {
     font-size: 2.5rem;
+    margin: calc(var(--sizing-lg) * 2) 0 var(--sizing-md) 0;
 
     @media (max-width: ${({ theme }) => theme.device.sm}) {
       font-size: 2rem;
@@ -118,7 +119,7 @@ const Markdown = styled.article`
   }
 
   hr {
-    margin: var(--sizing-lg) 0;
+    margin: var(--sizing-sm) 0 var(--sizing-md) 0;
     background: var(--color-gray-3);
   }
 

@@ -1,1 +1,1 @@
-module.exports = require("/Users/beomsoo/Documents/GitHub/blog/src/styles/typography")
+module.exports = require("/Users/son/Documents/GitHub/blog/src/styles/typography")

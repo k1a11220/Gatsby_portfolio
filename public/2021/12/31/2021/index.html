@@ -1,0 +1,413 @@
+<!DOCTYPE html><html lang="ko"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:100%/1.45 'georgia',serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.8);font-family:'georgia',serif;font-weight:normal;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;color:inherit;font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:2rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;color:inherit;font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:1.51572rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;color:inherit;font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:1.31951rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;color:inherit;font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;color:inherit;font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:0.87055rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;color:inherit;font-family:-apple-system,'BlinkMacSystemFont','Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:0.81225rem;line-height:1.1;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}ul{margin-left:1.45rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;list-style-position:outside;list-style-image:none;}ol{margin-left:1.45rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;font-size:0.85rem;line-height:1.45rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;font-size:1rem;line-height:1.45rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}blockquote{margin-left:1.45rem;margin-right:1.45rem;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.45rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.45rem;}b{font-weight:bold;}strong{font-weight:bold;}dt{font-weight:bold;}th{font-weight:bold;}li{margin-bottom:calc(1.45rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.45rem;margin-bottom:calc(1.45rem / 2);margin-top:calc(1.45rem / 2);}li > ul{margin-left:1.45rem;margin-bottom:calc(1.45rem / 2);margin-top:calc(1.45rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.45rem / 2);}code{font-size:0.85rem;line-height:1.45rem;}kbd{font-size:0.85rem;line-height:1.45rem;}samp{font-size:0.85rem;line-height:1.45rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:0.96667rem;padding-right:0.96667rem;padding-top:0.725rem;padding-bottom:calc(0.725rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}</style><meta name="generator" content="Gatsby 2.32.13"/><link rel="icon" href="/favicon-32x32.png?v=abfded2d68398b0949c75a0894fbf871" type="image/png"/><link rel="manifest" href="/manifest.webmanifest" crossorigin="anonymous"/><meta name="theme-color" content="#ffffff"/><link rel="apple-touch-icon" sizes="48x48" href="/icons/icon-48x48.png?v=abfded2d68398b0949c75a0894fbf871"/><link rel="apple-touch-icon" sizes="72x72" href="/icons/icon-72x72.png?v=abfded2d68398b0949c75a0894fbf871"/><link rel="apple-touch-icon" sizes="96x96" href="/icons/icon-96x96.png?v=abfded2d68398b0949c75a0894fbf871"/><link rel="apple-touch-icon" sizes="144x144" href="/icons/icon-144x144.png?v=abfded2d68398b0949c75a0894fbf871"/><link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png?v=abfded2d68398b0949c75a0894fbf871"/><link rel="apple-touch-icon" sizes="256x256" href="/icons/icon-256x256.png?v=abfded2d68398b0949c75a0894fbf871"/><link rel="apple-touch-icon" sizes="384x384" href="/icons/icon-384x384.png?v=abfded2d68398b0949c75a0894fbf871"/><link rel="apple-touch-icon" sizes="512x512" href="/icons/icon-512x512.png?v=abfded2d68398b0949c75a0894fbf871"/><style data-styled="" data-styled-version="5.3.0">.djUCMb{position:absolute;top:0;left:0;width:100%;height:100%;z-index:1;-webkit-backdrop-filter:saturate(180%) blur(20px);backdrop-filter:saturate(180%) blur(20px);background-color:var(--color-nav-bar);border-bottom:1px solid var(--color-nav-border);}/*!sc*/
+data-styled.g1[id="background__Background-sc-1vcxrxq-0"]{content:"djUCMb,"}/*!sc*/
+.jYswdd{width:1.125rem;height:1.125rem;fill:var(--color-icon);-webkit-transform:translateY(-1px);-ms-transform:translateY(-1px);transform:translateY(-1px);}/*!sc*/
+@media (max-width:767px){.jYswdd{width:0;height:1rem;-webkit-transition:width 0.3s ease;transition:width 0.3s ease;}}/*!sc*/
+data-styled.g2[id="themeToggleButton__Icon-k69aai-0"]{content:"jYswdd,"}/*!sc*/
+.hbuOjz{border:none;background-color:var(--color-floating-button);border-radius:var(--border-radius-lg);box-shadow:0 3px 15px var(--color-floating-button-shadow);}/*!sc*/
+@media (max-width:767px){.hbuOjz{visibility:hidden;background-color:transparent;border-radius:0;box-shadow:none;}}/*!sc*/
+data-styled.g3[id="themeToggleButton__ButtonBackground-k69aai-1"]{content:"hbuOjz,"}/*!sc*/
+.fYbUwy{z-index:2;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;background-color:transparent;}/*!sc*/
+data-styled.g4[id="themeToggleButton__Content-k69aai-2"]{content:"fYbUwy,"}/*!sc*/
+.gEfCtU{color:var(--color-floating-button-text);margin-left:6px;}/*!sc*/
+@media (max-width:767px){.gEfCtU{color:var(--color-text);margin-left:0;font-weight:var(--font-weight-medium);border-radius:50%;}}/*!sc*/
+data-styled.g5[id="themeToggleButton__Text-k69aai-3"]{content:"gEfCtU,"}/*!sc*/
+.framaH{cursor:pointer;box-sizing:border-box;position:fixed;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;background-color:transparent;z-index:100;right:var(--sizing-md);bottom:var(--sizing-md);padding:var(--sizing-base);padding-right:20px;border:1px solid var(--color-floating-button-border);border-radius:var(--border-radius-lg);font-weight:var(--font-weight-medium);}/*!sc*/
+@media (min-width:767px){.framaH:hover{outline:none;border:1px solid var(--color-floating-button-border-hover);}.framaH:hover .themeToggleButton__Icon-k69aai-0,.framaH:hover .themeToggleButton__Text-k69aai-3{color:var(--color-floating-button-text-hover);fill:var(--color-floating-button-text-hover);}.framaH:hover .themeToggleButton__ButtonBackground-k69aai-1{background-color:var(--color-floating-button-hover);box-shadow:0 3px 15px var(--color-floating-button-shadow-hover);}}/*!sc*/
+@media (max-width:767px){.framaH{-webkit-box-pack:start;-webkit-justify-content:start;-ms-flex-pack:start;justify-content:start;position:static;border-radius:0;border:none;width:100%;padding:0.5rem 0;}.framaH:hover .themeToggleButton__Icon-k69aai-0,.framaH:hover .themeToggleButton__Text-k69aai-3{fill:var(--color-blue);color:var(--color-blue);}.framaH:hover .themeToggleButton__Icon-k69aai-0{width:1rem;margin-right:4px;}.framaH:focus-visible .themeToggleButton__Icon-k69aai-0,.framaH:focus-visible .themeToggleButton__Text-k69aai-3{fill:var(--color-blue);color:var(--color-blue);}.framaH:focus-visible .themeToggleButton__Icon-k69aai-0{width:1rem;margin-right:4px;}}/*!sc*/
+data-styled.g6[id="themeToggleButton__Button-k69aai-4"]{content:"framaH,"}/*!sc*/
+.hcckrq{top:22px;}/*!sc*/
+data-styled.g7[id="menuIcon__MenuIconBreadTop-gj45br-0"]{content:"hcckrq,"}/*!sc*/
+.iqepKH{bottom:22px;}/*!sc*/
+data-styled.g8[id="menuIcon__MenuIconBreadBottom-gj45br-1"]{content:"iqepKH,"}/*!sc*/
+.eoVYJQ{z-index:9999;display:none;}/*!sc*/
+@media (max-width:767px){.eoVYJQ{position:relative;margin-left:auto;display:block;cursor:pointer;width:var(--nav-height);height:var(--nav-height);border:none;background-color:transparent;}.eoVYJQ > div{position:absolute;width:18px;height:1px;right:var(--padding-sm);opacity:0.8;-webkit-transition:opacity 0.3s ease,-webkit-transform 0.2s ease 0.1s;-webkit-transition:opacity 0.3s ease,transform 0.2s ease 0.1s;transition:opacity 0.3s ease,transform 0.2s ease 0.1s;}.eoVYJQ > div > div{width:100%;height:100%;background-color:var(--color-text);-webkit-transition:-webkit-transform 0.1s ease;-webkit-transition:transform 0.1s ease;transition:transform 0.1s ease;}.eoVYJQ .menuIcon__MenuIconBreadTop-gj45br-0{-webkit-transform:none;-ms-transform:none;transform:none;}.eoVYJQ .menuIcon__MenuIconBreadTop-gj45br-0 div{-webkit-transform:none;-ms-transform:none;transform:none;}.eoVYJQ .menuIcon__MenuIconBreadBottom-gj45br-1{-webkit-transform:none;-ms-transform:none;transform:none;}.eoVYJQ .menuIcon__MenuIconBreadBottom-gj45br-1 div{-webkit-transform:none;-ms-transform:none;transform:none;}.eoVYJQ:hover > div{opacity:1;}}/*!sc*/
+data-styled.g9[id="menuIcon__MenuIconButton-gj45br-2"]{content:"eoVYJQ,"}/*!sc*/
+.bgyUqt{min-width:var(--min-width);position:-webkit-sticky;position:sticky;top:0;left:0;width:100%;height:var(--nav-height);z-index:10;}/*!sc*/
+.bgyUqt a:hover{-webkit-text-decoration:none;text-decoration:none;}/*!sc*/
+data-styled.g10[id="navBar__Nav-sc-89kxxv-0"]{content:"bgyUqt,"}/*!sc*/
+.cjfpX{box-sizing:content-box;position:relative;margin:0 auto;max-width:var(--width);padding:0 var(--padding-lg);height:100%;z-index:2;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}/*!sc*/
+.cjfpX li{margin:0;list-style-type:none;}/*!sc*/
+@media (max-width:767px){.cjfpX{padding:0 var(--padding-sm);}}/*!sc*/
+data-styled.g11[id="navBar__Content-sc-89kxxv-1"]{content:"cjfpX,"}/*!sc*/
+.dZeHhl{z-index:9999;padding:0;border:none;font-size:var(--text-title);font-weight:var(--font-weight-semi-bold);color:var(--color-text);}/*!sc*/
+.dZeHhl a{color:inherit;}/*!sc*/
+@media (max-width:767px){.dZeHhl{font-size:var(--text-md);}}/*!sc*/
+data-styled.g12[id="navBar__Title-sc-89kxxv-2"]{content:"dZeHhl,"}/*!sc*/
+.iSFZXm{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}/*!sc*/
+.iSFZXm a{font-weight:var(--font-weight-regular);}/*!sc*/
+.iSFZXm a:hover,.iSFZXm a:focus{color:var(--color-blue);}/*!sc*/
+.iSFZXm li{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-left:32px;}/*!sc*/
+.iSFZXm li:first-child,.iSFZXm li:last-child{margin-left:0;}/*!sc*/
+@media (max-width:767px){.iSFZXm{pointer-events:none;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;padding:0 var(--sizing-lg);}.iSFZXm li:nth-child(0){-webkit-transition-property:-webkit-transform,opacity;-webkit-transition-property:transform,opacity;transition-property:transform,opacity;-webkit-transition-duration:0.5s,0.3s;transition-duration:0.5s,0.3s;-webkit-transition-delay:0.25s;transition-delay:0.25s;-webkit-transition-timing-function:ease-in,ease-out;transition-timing-function:ease-in,ease-out;}.iSFZXm li:nth-child(1){-webkit-transition-property:-webkit-transform,opacity;-webkit-transition-property:transform,opacity;transition-property:transform,opacity;-webkit-transition-duration:0.5s,0.3s;transition-duration:0.5s,0.3s;-webkit-transition-delay:0.19s;transition-delay:0.19s;-webkit-transition-timing-function:ease-in,ease-out;transition-timing-function:ease-in,ease-out;}.iSFZXm li:nth-child(2){-webkit-transition-property:-webkit-transform,opacity;-webkit-transition-property:transform,opacity;transition-property:transform,opacity;-webkit-transition-duration:0.5s,0.3s;transition-duration:0.5s,0.3s;-webkit-transition-delay:0.13s;transition-delay:0.13s;-webkit-transition-timing-function:ease-in,ease-out;transition-timing-function:ease-in,ease-out;}.iSFZXm li:nth-child(3){-webkit-transition-property:-webkit-transform,opacity;-webkit-transition-property:transform,opacity;transition-property:transform,opacity;-webkit-transition-duration:0.5s,0.3s;transition-duration:0.5s,0.3s;-webkit-transition-delay:0.07s;transition-delay:0.07s;-webkit-transition-timing-function:ease-in,ease-out;transition-timing-function:ease-in,ease-out;}.iSFZXm li:nth-child(4){-webkit-transition-property:-webkit-transform,opacity;-webkit-transition-property:transform,opacity;transition-property:transform,opacity;-webkit-transition-duration:0.5s,0.3s;transition-duration:0.5s,0.3s;-webkit-transition-delay:0.010000000000000009s;transition-delay:0.010000000000000009s;-webkit-transition-timing-function:ease-in,ease-out;transition-timing-function:ease-in,ease-out;}.iSFZXm li:nth-child(5){-webkit-transition-property:-webkit-transform,opacity;-webkit-transition-property:transform,opacity;transition-property:transform,opacity;-webkit-transition-duration:0.5s,0.3s;transition-duration:0.5s,0.3s;-webkit-transition-delay:-0.04999999999999999s;transition-delay:-0.04999999999999999s;-webkit-transition-timing-function:ease-in,ease-out;transition-timing-function:ease-in,ease-out;}.iSFZXm li:nth-child(6){-webkit-transition-property:-webkit-transform,opacity;-webkit-transition-property:transform,opacity;transition-property:transform,opacity;-webkit-transition-duration:0.5s,0.3s;transition-duration:0.5s,0.3s;-webkit-transition-delay:-0.10999999999999999s;transition-delay:-0.10999999999999999s;-webkit-transition-timing-function:ease-in,ease-out;transition-timing-function:ease-in,ease-out;}.iSFZXm li:nth-child(7){-webkit-transition-property:-webkit-transform,opacity;-webkit-transition-property:transform,opacity;transition-property:transform,opacity;-webkit-transition-duration:0.5s,0.3s;transition-duration:0.5s,0.3s;-webkit-transition-delay:-0.16999999999999998s;transition-delay:-0.16999999999999998s;-webkit-transition-timing-function:ease-in,ease-out;transition-timing-function:ease-in,ease-out;}.iSFZXm li:nth-child(8){-webkit-transition-property:-webkit-transform,opacity;-webkit-transition-property:transform,opacity;transition-property:transform,opacity;-webkit-transition-duration:0.5s,0.3s;transition-duration:0.5s,0.3s;-webkit-transition-delay:-0.22999999999999998s;transition-delay:-0.22999999999999998s;-webkit-transition-timing-function:ease-in,ease-out;transition-timing-function:ease-in,ease-out;}.iSFZXm li:nth-child(9){-webkit-transition-property:-webkit-transform,opacity;-webkit-transition-property:transform,opacity;transition-property:transform,opacity;-webkit-transition-duration:0.5s,0.3s;transition-duration:0.5s,0.3s;-webkit-transition-delay:-0.29000000000000004s;transition-delay:-0.29000000000000004s;-webkit-transition-timing-function:ease-in,ease-out;transition-timing-function:ease-in,ease-out;}.iSFZXm li{display:block;margin-left:0;font-size:var(--text-md);-webkit-transform:translateY(0);-ms-transform:translateY(0);transform:translateY(0);opacity:0;}.iSFZXm a{display:block;height:100%;padding:0.5rem 0;font-weight:var(--font-weight-medium);}.iSFZXm li + li::before{content:'';display:block;position:absolute;width:calc(100vw - var(--sizing-lg) * 2);height:1px;-webkit-transform:translateY(-2px);-ms-transform:translateY(-2px);transform:translateY(-2px);background-color:var(--color-divider);}}/*!sc*/
+data-styled.g13[id="navBar__LinkUl-sc-89kxxv-3"]{content:"iSFZXm,"}/*!sc*/
+@media (max-width:767px){.kkTtkb::after{-webkit-transition:opacity 0.4s ease-in-out 0.48s;transition:opacity 0.4s ease-in-out 0.48s;opacity:0;content:'';display:block;position:absolute;top:0;left:0;width:100%;height:100%;background-color:var(--color-post-background);}}/*!sc*/
+data-styled.g14[id="navBar__NavBackground-sc-89kxxv-4"]{content:"kkTtkb,"}/*!sc*/
+.iAqZrY{display:none;}/*!sc*/
+@media (max-width:767px){.iAqZrY{-webkit-transition:-webkit-transform 0.6s cubic-bezier(0.41,0.06,0.05,1) 0.1s;-webkit-transition:transform 0.6s cubic-bezier(0.41,0.06,0.05,1) 0.1s;transition:transform 0.6s cubic-bezier(0.41,0.06,0.05,1) 0.1s;-webkit-transform:scaleY(0);-ms-transform:scaleY(0);transform:scaleY(0);-webkit-transform-origin:top;-ms-transform-origin:top;transform-origin:top;display:block;position:fixed;top:calc(var(--nav-height) - 1px);left:0;width:100%;height:calc(100% - var(--nav-height) + 1px);background-color:var(--color-post-background);}}/*!sc*/
+data-styled.g15[id="navBar__Curtain-sc-89kxxv-5"]{content:"iAqZrY,"}/*!sc*/
+@media (max-width:767px){.gSUYvg{width:100%;z-index:200;}}/*!sc*/
+data-styled.g16[id="navBar__LinkContent-sc-89kxxv-6"]{content:"gSUYvg,"}/*!sc*/
+.dXbPgo{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;}/*!sc*/
+@media (max-width:767px){.dXbPgo{position:absolute;top:0;left:0;width:100%;height:var(--nav-height);}}/*!sc*/
+data-styled.g17[id="navBar__LinkWrap-sc-89kxxv-7"]{content:"dXbPgo,"}/*!sc*/
+:root{font-size:100%;--width:1100px;--min-width:320px;--post-width:650px;--nav-height:54px;--footer-height:60px;--grid-gap-sm:10px;--grid-gap-lg:24px;--grid-gap-xl:36px;--padding-sm:16px;--padding-lg:22px;--border-radius-sm:6px;--border-radius-base:16px;--border-radius-lg:28px;--sizing-xs:4px;--sizing-sm:8px;--sizing-base:16px;--sizing-md:24px;--sizing-lg:40px;--sizing-xl:64px;--text-xs:0.625rem;--text-sm:0.75rem;--text-base:1rem;--text-md:1.125rem;--text-title:1.25rem;--text-lg:1.5rem;--text-title-lg:2.5rem;--text-xl:3rem;--device-xs-max-width:419px;--device-sm-max-width:767px;--device-md-max-width:1023px;--device-lg-max-width:1441px;--device-xs-max-width-query:(max-width:419px);--device-sm-max-width-query:(max-width:767px);--device-md-max-width-query:(max-width:1023px);--device-lg-max-width-query:(max-width:1441px);--font-weight-regular:400;--font-weight-medium:500;--font-weight-semi-bold:600;--font-weight-bold:700;--font-weight-extra-bold:800;--color-outline:rgba(0,125,250,0.6);}/*!sc*/
+:root body.light{--color-text:#3d444b;--color-text-2:#1d1d1d;--color-text-3:#467EFB;--color-white:#ffffff;--color-nav-bar:rgba(255,255,255,0.7);--color-nav-border:rgba(200,200,200,0.7);--color-category-button:#ffffff;--color-background:#ffffff;--color-post-background:#ffffff;--color-card:#ffffff;--color-code:#f2f2f2;--color-code-block:#fafafa;--color-code-highlight:rgba(0,0,0,0.05);--color-code-highlight-border:rgba(0,0,0,0.2);--color-gray-1:#f2f2f2;--color-gray-2:#e0e0e0;--color-gray-3:#d1d1d1;--color-gray-4:#868686;--color-gray-5:#6e6e6e;--color-gray-6:#696969;--color-divider:rgba(0,0,0,0.15);--color-dimmed:rgba(0,0,0,0.15);--color-floating-button:rgba(255,255,255,0.7);--color-floating-button-hover:rgba(50,50,50,0.7);--color-floating-button-border:rgba(230,230,230,0.7);--color-floating-button-border-hover:rgba(255,255,255,0.2);--color-floating-button-text:#202020;--color-floating-button-text-hover:#f2f2f2;--color-floating-button-shadow:rgba(0,0,0,0.2);--color-floating-button-shadow-hover:rgba(0,0,0,0.4);--color-blue:#467EFB;--color-icon:#2c2c2c;--color-footer-background:#EFF3F5;--color-footer-button-background:#467EFB;--color-footer-button-color:#F3F3F3;}/*!sc*/
+:root body.dark{--color-text:#e6e6e6;--color-text-2:#d1d1d1;--color-text-3:#086BCE;--color-white:#e6e6e6;--color-nav-bar:rgba(29,29,29,0.7);--color-nav-border:rgba(255,255,255,0.2);--color-category-button:#484848;--color-background:#1c1c1c;--color-post-background:#1c1c1c;--color-card:#2c2c2c;--color-code:#3a3a3a;--color-code-block:#242424;--color-code-highlight:rgba(255,255,255,0.05);--color-code-highlight-border:rgba(255,255,255,0.2);--color-gray-1:#1c1c1c;--color-gray-2:#2c2c2c;--color-gray-3:#3a3a3a;--color-gray-4:#484848;--color-gray-5:#646464;--color-gray-6:#868686;--color-divider:rgba(255,255,255,0.15);--color-dimmed:rgba(0,0,0,0.15);--color-floating-button:rgba(50,50,50,0.7);--color-floating-button-hover:rgba(255,255,255,0.7);--color-floating-button-border:rgba(255,255,255,0.2);--color-floating-button-border-hover:rgba(230,230,230,0.7);--color-floating-button-text:#d1d1d1;--color-floating-button-text-hover:#202020;--color-floating-button-shadow:rgba(0,0,0,0.4);--color-floating-button-shadow-hover:rgba(0,0,0,0.4);--color-blue:#0a84ff;--color-icon:#d1d1d1;--color-footer-background:#2B2B2B;--color-footer-button-background:#203E5C;--color-footer-button-color:#62B1FF;}/*!sc*/
+html,body,#___gatsby,#gatsby-focus-wrapper{min-height:100%;}/*!sc*/
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';background-color:var(--color-post-background);-webkit-font-smoothing:antialiased;}/*!sc*/
+body *{color:var(--color-text);}/*!sc*/
+:lang(ko){word-break:keep-all;}/*!sc*/
+ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,hgroup,p,blockquote,figure,form,fieldset,input,legend,pre,abbr,button{margin:0;padding:0;}/*!sc*/
+h1 a,li a{-webkit-text-decoration:none;text-decoration:none;}/*!sc*/
+a{-webkit-text-decoration:none;text-decoration:none;}/*!sc*/
+*:focus:not(:focus-visible){outline:none;}/*!sc*/
+:focus-visible{outline:4px solid var(--color-outline);outline-offset:1px;}/*!sc*/
+.js-focus-visible :focus:not(.focus-visible){outline:none;}/*!sc*/
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;-webkit-clip:rect(1px,1px,1px,1px);clip:rect(1px,1px,1px,1px);white-space:no-wrap;}/*!sc*/
+data-styled.g18[id="sc-global-inDQKy1"]{content:"sc-global-inDQKy1,"}/*!sc*/
+.lermzt{min-width:var(--min-width);width:100%;height:148px;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;background-color:var(--color-footer-background);}/*!sc*/
+data-styled.g19[id="Footer__Container-sc-1epg5cn-0"]{content:"lermzt,"}/*!sc*/
+.kGGhgJ{box-sizing:content-box;position:relative;margin:0 auto;max-width:var(--width);width:100%;padding:0 var(--padding-lg);height:100%;z-index:2;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}/*!sc*/
+@media (max-width:1023px){.kGGhgJ{padding:22px;}}/*!sc*/
+@media (max-width:768px){.kGGhgJ{-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}}/*!sc*/
+data-styled.g20[id="Footer__Wrapper-sc-1epg5cn-1"]{content:"kGGhgJ,"}/*!sc*/
+.heTUjG{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;background-color:var(--color-footer-button-background);padding:8px 24px 8px 24px;border-radius:40px;font-size:0.875rem;font-weight:500;color:var(--color-footer-button-color);}/*!sc*/
+.heTUjG:hover{-webkit-transform:scale(1.02);-ms-transform:scale(1.02);transform:scale(1.02);}/*!sc*/
+@media (max-width:768px){.heTUjG{margin-bottom:24px;}}/*!sc*/
+data-styled.g21[id="Footer__Cta-sc-1epg5cn-2"]{content:"heTUjG,"}/*!sc*/
+.kvkZMZ{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}/*!sc*/
+.kvkZMZ svg{margin-left:16px;}/*!sc*/
+data-styled.g22[id="Footer__IconWrapper-sc-1epg5cn-3"]{content:"kvkZMZ,"}/*!sc*/
+.hFflNT:hover > svg{color:green;}/*!sc*/
+data-styled.g24[id="Footer__IconContainer-sc-1epg5cn-5"]{content:"hFflNT,"}/*!sc*/
+.gDzggU{width:100%;height:100%;min-height:calc(100vh - var(--footer-height));background-color:var(--color-post-background);}/*!sc*/
+data-styled.g25[id="layout__Container-sc-1vfwv5p-0"]{content:"gDzggU,"}/*!sc*/
+.cooHjZ h1,.cooHjZ h2,.cooHjZ h3,.cooHjZ h4,.cooHjZ h5,.cooHjZ h6{font-weight:var(--font-weight-bold);}/*!sc*/
+.cooHjZ td,.cooHjZ th{border-bottom:1px solid var(--color-gray-3);}/*!sc*/
+.cooHjZ strong{font-weight:var(--font-weight-semi-bold);}/*!sc*/
+.cooHjZ a,.cooHjZ p{font-weight:var(--font-weight-regular);}/*!sc*/
+.cooHjZ a{-webkit-text-decoration:none;text-decoration:none;color:var(--color-blue) !important;}/*!sc*/
+.cooHjZ a *{color:var(--color-blue) !important;}/*!sc*/
+.cooHjZ a:hover,.cooHjZ a:active{-webkit-text-decoration:underline;text-decoration:underline;}/*!sc*/
+.cooHjZ > *:first-child{margin-top:0;}/*!sc*/
+.cooHjZ h1{font-size:2.5rem;margin:calc(var(--sizing-lg) * 2) 0 var(--sizing-md) 0;}/*!sc*/
+@media (max-width:767px){.cooHjZ h1{font-size:2rem;}}/*!sc*/
+.cooHjZ h2{font-size:1.5rem;line-height:1.3;margin-bottom:1.45rem;margin-top:3.2625rem;}/*!sc*/
+@media (max-width:767px){.cooHjZ h2{font-size:1.3125rem;}}/*!sc*/
+.cooHjZ h3{font-size:1.31951rem;line-height:1.3;margin-bottom:1.45rem;margin-top:2.175rem;}/*!sc*/
+@media (max-width:767px){.cooHjZ h3{font-size:1.1875rem;}}/*!sc*/
+.cooHjZ h4,.cooHjZ h5,.cooHjZ h6{margin-bottom:0.725rem;margin-top:1.45rem;}/*!sc*/
+.cooHjZ ul,.cooHjZ ol{margin-top:1.45rem;margin-bottom:1.45rem;margin-left:1.0875rem;position:relative;top:-0.75rem;}/*!sc*/
+.cooHjZ li > ul,.cooHjZ li > ol{margin-top:0;margin-bottom:0;}/*!sc*/
+.cooHjZ li > p{margin-bottom:0;}/*!sc*/
+.cooHjZ li > ol,.cooHjZ li > ul{margin-left:1.8125rem;}/*!sc*/
+.cooHjZ li{margin-bottom:0.435rem;}/*!sc*/
+.cooHjZ p,.cooHjZ li,.cooHjZ blockquote{font-size:1.0625rem;}/*!sc*/
+.cooHjZ p{line-height:1.68;text-align:left;margin-bottom:var(--sizing-md);}/*!sc*/
+.cooHjZ hr{margin:var(--sizing-sm) 0 var(--sizing-md) 0;background:var(--color-gray-3);}/*!sc*/
+.cooHjZ blockquote{border-left:0.25rem solid var(--color-gray-2);padding-left:var(--sizing-base);margin:var(--sizing-md) 0;}/*!sc*/
+.cooHjZ blockquote *{color:var(--color-gray-6);}/*!sc*/
+.cooHjZ img{display:block;}/*!sc*/
+.cooHjZ pre,.cooHjZ code{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;background-color:var(--color-code-block);}/*!sc*/
+.cooHjZ pre{border:1px solid var(--color-gray-3);}/*!sc*/
+.cooHjZ pre.grvsc-container{margin:var(--sizing-md) 0;}/*!sc*/
+.cooHjZ .grvsc-line-highlighted::before{background-color:var(--color-code-highlight) !important;box-shadow:inset 4px 0 0 0 var(--color-code-highlight-border) !important;}/*!sc*/
+.cooHjZ *:not(pre) > code{background-color:var(--color-code);padding:0.2rem 0.4rem;margin:0;font-size:85%;border-radius:3px;}/*!sc*/
+data-styled.g34[id="markdown__Markdown-sc-1nu2ipt-0"]{content:"cooHjZ,"}/*!sc*/
+.cmznyg{display:block;font-size:0.875rem;font-weight:var(--font-weight-semi-bold);color:var(--color-gray-6);}/*!sc*/
+data-styled.g40[id="category__Category-lbijks-0"]{content:"cmznyg,"}/*!sc*/
+.iCwcLl{margin-top:24px;font-size:0.875rem;font-weight:var(--font-weight-regular);color:var(--color-text-2);}/*!sc*/
+data-styled.g56[id="dateTime__DateTime-sc-19r1ive-0"]{content:"iCwcLl,"}/*!sc*/
+.bQvSTM{-webkit-align-self:center;-ms-flex-item-align:center;align-self:center;width:130%;height:490px;border-radius:var(--border-radius-base);}/*!sc*/
+@media (max-width:1023px){.bQvSTM{width:90vw;height:420px;}}/*!sc*/
+@media (max-width:767px){.bQvSTM{width:100%;height:200px;}}/*!sc*/
+data-styled.g57[id="blogPost__ThumbnailImg-sc-109dgz0-0"]{content:"bQvSTM,"}/*!sc*/
+.bXWGv{margin-top:var(--sizing-xl);}/*!sc*/
+@media (max-width:767px){.bXWGv{margin-top:var(--sizing-lg);}}/*!sc*/
+data-styled.g58[id="blogPost__OuterWrapper-sc-109dgz0-1"]{content:"bXWGv,"}/*!sc*/
+.cyhUqr{width:var(--post-width);margin:0 auto;padding-bottom:var(--sizing-lg);}/*!sc*/
+.cyhUqr header{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;}/*!sc*/
+@media (max-width:767px){.cyhUqr{width:87.5%;}}/*!sc*/
+data-styled.g59[id="blogPost__InnerWrapper-sc-109dgz0-2"]{content:"cyhUqr,"}/*!sc*/
+.dWmEsY{width:100%;padding:0 var(--padding-sm);margin:0 auto;margin-bottom:var(--sizing-xl);}/*!sc*/
+@media (max-width:767px){.dWmEsY{width:auto;}}/*!sc*/
+data-styled.g60[id="blogPost__CommentWrap-sc-109dgz0-3"]{content:"dWmEsY,"}/*!sc*/
+.LrwoL{font-size:0.875rem;font-weight:var(--font-weight-semi-bold);}/*!sc*/
+data-styled.g61[id="blogPost__PostCategory-sc-109dgz0-4"]{content:"LrwoL,"}/*!sc*/
+.ifdEPg{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-bottom:var(--sizing-md);}/*!sc*/
+data-styled.g62[id="blogPost__Info-sc-109dgz0-5"]{content:"ifdEPg,"}/*!sc*/
+.iULTmc{display:block;margin-top:var(--sizing-xs);}/*!sc*/
+data-styled.g63[id="blogPost__Time-sc-109dgz0-6"]{content:"iULTmc,"}/*!sc*/
+.bRZrtm{width:100%;height:1px;background-color:var(--color-gray-3);margin-top:var(--sizing-lg);margin-bottom:var(--sizing-lg);}/*!sc*/
+data-styled.g65[id="blogPost__Divider-sc-109dgz0-8"]{content:"bRZrtm,"}/*!sc*/
+.iTZRa{font-weight:var(--font-weight-bold);line-height:1.1875;font-size:var(--text-title-lg);text-align:center;margin-bottom:var(--sizing-lg);}/*!sc*/
+@media (max-width:1023px){.iTZRa{line-height:1.21875;font-size:2.5rem;}}/*!sc*/
+@media (max-width:767px){.iTZRa{line-height:1.21875;font-size:2rem;}}/*!sc*/
+data-styled.g66[id="blogPost__Title-sc-109dgz0-9"]{content:"iTZRa,"}/*!sc*/
+</style><title data-react-helmet="true">2021년을 돌아보며 | Beomsoo-log</title><meta data-react-helmet="true" name="description" content="큰 변화가 많았던 2021년, 무엇을 했고, 어떤 걸 느꼈는지 공유해 봅니다."/><meta data-react-helmet="true" property="og:title" content="2021년을 돌아보며"/><meta data-react-helmet="true" property="og:description" content="큰 변화가 많았던 2021년, 무엇을 했고, 어떤 걸 느꼈는지 공유해 봅니다."/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" name="twitter:card" content="summary"/><meta data-react-helmet="true" name="twitter:creator" content="Beomsoo"/><meta data-react-helmet="true" name="twitter:title" content="2021년을 돌아보며"/><meta data-react-helmet="true" name="twitter:description" content="큰 변화가 많았던 2021년, 무엇을 했고, 어떤 걸 느꼈는지 공유해 봅니다."/><meta data-react-helmet="true" property="image" content="https://blog.beomsoo.me/static/11d6d041b71555da4eeaef02178c69e7/3891b/thumbnail.png"/><meta data-react-helmet="true" property="og:image" content="https://blog.beomsoo.me/static/11d6d041b71555da4eeaef02178c69e7/3891b/thumbnail.png"/><meta data-react-helmet="true" property="twitter:image" content="https://blog.beomsoo.me/static/11d6d041b71555da4eeaef02178c69e7/3891b/thumbnail.png"/><link as="script" rel="preload" href="/webpack-runtime-b6936b0c76671e369ef8.js"/><link as="script" rel="preload" href="/framework-305b3707783ccc9d7ca6.js"/><link as="script" rel="preload" href="/app-bd538c8932074c58b1b5.js"/><link as="script" rel="preload" href="/a9a7754c-63e6cd1fbd37df71b2d2.js"/><link as="script" rel="preload" href="/133dca110fad53aa1997b630637bbac3134a2d14-ff01f624328a17af8a50.js"/><link as="script" rel="preload" href="/e5f5b259f3bc5bd31060582de6626886320e23cc-76746e539b405b5fa41c.js"/><link as="script" rel="preload" href="/cd7d5f864fc9e15ed8adef086269b0aeff617554-130506ecd3777854004a.js"/><link as="script" rel="preload" href="/component---src-templates-blog-post-js-adc5177b5a82458115e3.js"/><link as="fetch" rel="preload" href="/page-data/2021/12/31/2021/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/1990743003.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><script>
+          (() => {    
+            window.__onThemeChange = function() {};      
+
+            function setTheme(newTheme) {                  
+              window.__theme = newTheme;                  
+              preferredTheme = newTheme;                  
+              document.body.className = newTheme;
+              document.body.dataset.theme = newTheme;                 
+              window.__onThemeChange(newTheme);                
+            }
+
+            let preferredTheme
+
+            try {
+              preferredTheme = localStorage.getItem('theme')
+            } catch (err) {}
+
+            window.__setPreferredTheme = newTheme => {
+              setTheme(newTheme)
+
+              try {
+                localStorage.setItem('theme', newTheme)
+              } catch (err) {}
+            }
+
+            let darkQuery = window.matchMedia('(prefers-color-scheme: dark)')
+
+            darkQuery.addEventListener('change', e => {
+              window.__setPreferredTheme(e.matches ? 'dark' : 'light')
+            })
+
+            setTheme(preferredTheme || (darkQuery.matches ? 'dark' : 'light'))
+          })()
+        </script><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="layout__Container-sc-1vfwv5p-0 gDzggU"><nav aria-label="Global Navigation" class="navBar__Nav-sc-89kxxv-0 bgyUqt"><div class="background__Background-sc-1vcxrxq-0 navBar__NavBackground-sc-89kxxv-4 djUCMb kkTtkb"></div><div class="navBar__Content-sc-89kxxv-1 cjfpX"><h1 class="navBar__Title-sc-89kxxv-2 dZeHhl"><a href="/">Beomsoo-log</a></h1><div class="navBar__LinkWrap-sc-89kxxv-7 dXbPgo"><div class="navBar__Curtain-sc-89kxxv-5 iAqZrY"></div><div class="navBar__LinkContent-sc-89kxxv-6 gSUYvg"><button aria-label="Menu" class="menuIcon__MenuIconButton-gj45br-2 eoVYJQ"><div class="menuIcon__MenuIconBreadTop-gj45br-0 hcckrq"><div></div></div><div class="menuIcon__MenuIconBreadBottom-gj45br-1 iqepKH"><div></div></div></button><ul class="navBar__LinkUl-sc-89kxxv-3 iSFZXm"><li><a href="/about/">About</a></li><li><a target="__blank" rel="noreferrer" href="https://works.beomsoo.me">Works</a></li><li><button class="themeToggleButton__Button-k69aai-4 framaH"><div class="background__Background-sc-1vcxrxq-0 themeToggleButton__ButtonBackground-k69aai-1 djUCMb hbuOjz"></div><div class="themeToggleButton__Content-k69aai-2 fYbUwy"><svg version="1.1" x="0px" y="0px" viewBox="0 0 24 24" class="themeToggleButton__Icon-k69aai-0 jYswdd"><path d="M16.3,15.2c-4.1-1.2-7.2-4.8-7.5-9.1C8.8,4.8,8.9,3.5,9.3,2.4C4.8,3.6,1.5,8,2.1,13.1c0.5,4.6,4.2,8.3,8.7,8.8 c4.9,0.6,9.2-2.4,10.6-6.7C19.9,15.7,18.1,15.8,16.3,15.2z"></path></svg><span class="themeToggleButton__Text-k69aai-3 gEfCtU">Dark theme</span></div></button></li></ul></div></div></div></nav><main><article><div class="blogPost__OuterWrapper-sc-109dgz0-1 bXWGv"><div class="blogPost__InnerWrapper-sc-109dgz0-2 cyhUqr"><div><header><div class="blogPost__Info-sc-109dgz0-5 ifdEPg"><span class="category__Category-lbijks-0 blogPost__PostCategory-sc-109dgz0-4 cmznyg LrwoL">Develop</span><time dateTime="2021-12-31" class="dateTime__DateTime-sc-19r1ive-0 blogPost__Time-sc-109dgz0-6 iCwcLl iULTmc">2021-12-31</time></div><h1 class="blogPost__Title-sc-109dgz0-9 iTZRa">2021년을 돌아보며</h1><div class="blogPost__ThumbnailImg-sc-109dgz0-0 bQvSTM gatsby-image-wrapper" style="position:relative;overflow:hidden"><div aria-hidden="true" style="width:100%;padding-bottom:56.5%"></div><img aria-hidden="true" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAABQklEQVQoz81SzU7CQBjsu/kmxlcwhZZWjx6IqQnExBjFE1E0EjV4Mqli4ORPWkOCYH+2gEcTLVAKOm4r3VKDNw4eJjv9dnc6833LkWEGiwS3cEF7EBAxRMD/hhiCzNkLa9P73KyQMxSY+CwnVKjrS3C8DBMlkRFPjDlFwmHLXYc5kGC4Mtofa+Ffg29ChbQej+abAMenBkbCD2hE+10Oz0XOmWCwmatWUKiVUaqXsHOi4kIt4bx8iZvbPeQ3llBVl6FfHeHh4BSN3TO0j4uwDosgrhRHjgVFVPQCakYOWjeL67t96CSLe30bDWMTlrmCRnMVrWcFL9oWzCcFpJ5H51GB7Ymsl4kevo559PwUHBqnS3nHT6Mzoes4TSPKICPa50kK5JMH+aII6vQMi/y7h9a86faTU2a1fjzhSGzq8J8/7G8ULdYonyVwzAAAAABJRU5ErkJggg==" alt="thumbnail" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:1;transition-delay:500ms"/><noscript><picture><source srcset="/static/11d6d041b71555da4eeaef02178c69e7/8ac63/thumbnail.png 200w,
+/static/11d6d041b71555da4eeaef02178c69e7/3891b/thumbnail.png 400w,
+/static/11d6d041b71555da4eeaef02178c69e7/bc8e0/thumbnail.png 800w,
+/static/11d6d041b71555da4eeaef02178c69e7/6050d/thumbnail.png 1200w,
+/static/11d6d041b71555da4eeaef02178c69e7/00405/thumbnail.png 1600w,
+/static/11d6d041b71555da4eeaef02178c69e7/0e6e2/thumbnail.png 1920w" sizes="maxWidth: 3840" /><img loading="lazy" sizes="maxWidth: 3840" srcset="/static/11d6d041b71555da4eeaef02178c69e7/8ac63/thumbnail.png 200w,
+/static/11d6d041b71555da4eeaef02178c69e7/3891b/thumbnail.png 400w,
+/static/11d6d041b71555da4eeaef02178c69e7/bc8e0/thumbnail.png 800w,
+/static/11d6d041b71555da4eeaef02178c69e7/6050d/thumbnail.png 1200w,
+/static/11d6d041b71555da4eeaef02178c69e7/00405/thumbnail.png 1600w,
+/static/11d6d041b71555da4eeaef02178c69e7/0e6e2/thumbnail.png 1920w" src="/static/11d6d041b71555da4eeaef02178c69e7/bc8e0/thumbnail.png" alt="thumbnail" style="position:absolute;top:0;left:0;opacity:1;width:100%;height:100%;object-fit:cover;object-position:center"/></picture></noscript></div></header><div class="blogPost__Divider-sc-109dgz0-8 bRZrtm"></div><article class="markdown__Markdown-sc-1nu2ipt-0 cooHjZ"><p>어느덧 2021년의 해가 저물어 갑니다. 작년에는 갓 성인이 되어 배우는 시간이었다면 올해는 배움을 바탕으로 진짜 문제를 풀어간 한 해였다고 생각합니다. 특히나 하드웨어 엔지니어로서 성과를 냈을 뿐 아니라 디자이너, 개발자, 엔지니어 등 다양한 포지션에서 프로젝트를 경험해보며 앞으로 어떤 문제를 풀어나가야 할지 고민할 수 있는 시간이 되었습니다.</p>
+<p>게다가 개인적으로는 뮤지컬이라는 새로운 관심사를 찾았고, 군에 입대하는 등 큰 이벤트가 많이 있었습니다. 눈 깜짝할 사이 지나간 것 같은 2021년과 21살. 근무를 마치고 대기 중인 경찰버스 안에서 올 한 해를 되짚어 보았습니다.</p>
+<h1>요약</h1>
+<hr>
+<h2>디자인 엔지니어링</h2>
+<p>새롭게 배운 것: ALD 포함 증착 관련 공정, 볼스크류와 LM을 활용한 설계, 자력 해석을 통해 비접촉식 제품 구현, 사출 공정을 고려한 제품 설계</p>
+<p>회사에서 진행했던 프로젝트와 직접적으로 관련이 있는 주제들에 대해 공부를 많이 했다. 또한 반도체, FA와 관련된 내용 외에도 BE THE LIGHT에서 만들어야 했던 제품 같은 경우 사출 공정으로 생산을 해야 했기에 새로운 설계 방식을 배워야 했다.</p>
+<p>덕분에 하드웨어 프로덕트분야에서 만큼은 문제 정의, 디자인, 설계, 생산까지 모든 과정을 스스로 해낼 수 있게 되었다.</p>
+<h2>프로덕트 디자인</h2>
+<p>새롭게 배운 것: 각종 디자인 방법론, 디자인 시스템,</p>
+<p>2021년은 디지털 프로덕트에 푹 빠져 살았다. 하드웨어와는 다르게 노트북 하나만 있으면 실제 제품까지 만들 수 있다는 매력 때문인 것 같았다. 올해는 단순히 UI/UX를 넘어서 제품이 나아가야 할 방향성과 실제로 문제를 어떻게 푸는지에 대해 고민했다.</p>
+<p>아직까지는 사이드 프로젝트 단위로 제품을 만들고 있지만, 내년에는 더 큰 문제를 해결할 수 있는 제품을 만들어보고 싶다.</p>
+<h2>개발 언어와 프레임워크</h2>
+<p>새롭게 배운 것: Javascript, React, Gatsby, Next js, GraphQL, Apollo, Firebase</p>
+<p>비전공자에, 관련 필드에서 일해본 경험도 없는 사람이 디지털 프로덕트를 만드는 일이란 쉽지 않았다. 디자인을 실제 제품으로 만드는 일이기 때문에 앱이든 웹이든 꼭 할 줄 알아야 한다고 생각해서 틈틈이 배웠다.</p>
+<p>올해는 웹 중에서도 프론트엔드에 집중했는데, 내년에는 React Native를 활용한 앱 개발과 백엔드를 공부해 보고 싶다.</p>
+<h1>2021년에 무엇을 했는가? - 일</h1>
+<hr>
+<h2>ALD 장비 연구 개발</h2>
+<p>ALD 공정 효율 개선을 위해 한국생산기술연구원 나노 공정팀과 진행했던 프로젝트다. 해결해야 했던 문제는 회전상태에서 챔버의 진공을 유지하는 것이었다. 이에 자성유체를 사용해서 마찰 없이 진공을 유지할 수 있는 프로토타입을 개발했다.</p>
+<p>그런데 만들어놓고 보니, 진공도가 안 나오는 것뿐만이 아니라 자성유체로 인해 챔버가 오염되는 문제를 발견했다. 결국 처음으로 돌아갔다. 허무한 기분도 들었고, 문제를 어떻게 해결해야 할지 막막했다.</p>
+<p>하지만 포기할 수는 없는 법! 팀원들과 반년이 넘는 시간 동안 연구한 끝에, 챔버의 내부 공간을 분할해 자석으로 챔버를 띄우는 방식의 메커니즘을 새롭게 설계했다.</p>
+<p>아직 프로토타입 제작을 끝내지는 못했지만, 기술을 인정받아 2건의 특허출원과 1건의 관련 논문을 발표하게 되었다. 실패의 쓴맛과 함께 제대로 된 장비 연구를 해볼 수 있는 소중한 경험이었다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 56.44171779141104%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsTAAALEwEAmpwYAAABTUlEQVQoz3VTu66CQBD1HzV0JH4CpQkNVlaW1/APfoFCJ62FFhhjaCzkoaAYHzzEo7O5kGXBSSZkh9kzZ87MdvC19/uN8lt6URR4vV7M28688xgdPhjHMTzPw+FwwPl8RhiGuFwuLBZFUeWUFwQBXNdFmqZ1QPybWHE6nUJVVYxGI1yvMSzLYmdN07Ber1kOsebBGgwfjzt838PxeMRyucR8PodhGF82PmzbhmmamM1mcByHdUDM8zxvMhQ14Sv+Mj6nwVA00iXLMtYSuViIYkmSVP9aGRLA/U4t+9jv96wdipVGl5/PJ06nE3a7HbbbLW63W03/CpBWgTQZDofodruQJAmDwYDFywuk1Wq1Qq/XgyzLUBQFm82mNpwaIA1iPB6j3+9jMvnDYrGoAEsZiJmu62woIrNGy+W0fokvat0G1hgK/0raBG/bBnErPihEQjIgSnT+AAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Untitled"
+        title="Untitled"
+        src="/static/ffa013b2a61758d85ed644a902c823be/a6d36/1.png"
+        srcset="/static/ffa013b2a61758d85ed644a902c823be/222b7/1.png 163w,
+/static/ffa013b2a61758d85ed644a902c823be/ff46a/1.png 325w,
+/static/ffa013b2a61758d85ed644a902c823be/a6d36/1.png 650w,
+/static/ffa013b2a61758d85ed644a902c823be/e548f/1.png 975w,
+/static/ffa013b2a61758d85ed644a902c823be/3c492/1.png 1300w,
+/static/ffa013b2a61758d85ed644a902c823be/29114/1.png 1920w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
+<p><a href="https://works.beomsoo.me/ALD/">ALD equipments</a></p>
+<h2>수소압축기 개발</h2>
+<p>현 회사에서 초기창업패키지, 기술닥터를 통해 시작한 사업. 발전하고 있는 수소 경제에 비해 고압의 수소를 만드는 기술이 부족하다는 문제를 해결하고자 했다. 수소라는 기체 특성을 고려했을 때 기존 압축기보다 전력 효율 및 단가를 획기적으로 낮추는 솔루션이 필요했다.</p>
+<p>다이어프레임, 유압식 등 기존 압축기는 수소가 아닌 다른 기체에 초점이 맞춰져 있었기에 고압의 수소를 압축하기 위해선 장비의 크기, 소음, 비용 등을 감수해야 했었다. 이에 지난번 ALD 프로젝트에서 아이디어를 착안. 자석을 이용한 비 접촉식 메커니즘을 구현했다.</p>
+<p>단순히 설계에만 참여한 것이 아니라 제품 디자인부터 상세 설계, 제작까지, 모든 디자인 엔지니어링 프로세스를 직접 경험할 수 있었다.</p>
+<p><a href="https://works.beomsoo.me/Hydrogen/">Hydrogen Compressor</a></p>
+<h2>Teenit Proteen 촬영</h2>
+<p>고등학교 3학년 때 진행한 May KING 프로젝트(학생들을 위한 디자인, 설계 교육 프로젝트) 이후로 지식, 경험을 나누지 못하고 있었다. 워낙 배우기에 급급했기도 했고, 스스로 부족함을 많이 느껴 내가 누군가에게 알려줄 수준이 되지 못한다고 생각했었다.</p>
+<p>그러다 LOE라는 교육 스타트업에서 '경험'을 공유하는 서비스를 만든다는 사실을 알게 되었다. 내가 무엇인가를 알려준다는 게 아니라 내가 경험하고 느꼈던 것을 공유한다고 생각하니 그렇게 무겁게 느껴지지 않았다. 그래서 한번 해보자는 생각으로 프로젝트에 지원했고, 연락이 닿게 되어 감사하게도 콘텐츠를 찍을 기회가 생겼다.</p>
+<p>지금 생각해 보면 ‘아 이런 이야기를 했으면 더 좋았을 텐데’와 ‘굳이 안 해도 되는 말을 했구나’하는 생각이 많이 든다. 아쉬운 점이 많이 남아있는 첫 콘텐츠였지만 이번 경험을 발판으로 다음에는 더 나은 이야기를 말해줄 수 있겠다는 생각이 들었다.</p>
+<h2>수분무 클린룸 연구</h2>
+<p>한국생산기술연구원과 진행했던 연구 프로젝트다. 잠깐잠깐 도와주는 느낌으로 했었는데 연구결과가 빠르게 나와 재미있었다. 가장 빠르게 풀어야 했던 문제는 기존 노즐보다 더욱 작은 분무를 만드는 것이었다.</p>
+<p>이후 여러 산업 노즐을 구매, 분해 후 역설계하는 과정에서 해답을 찾았다. 성공적으로 연구에 성공했고, 학회에 관련 논문을 발표하는 성과까지 이뤄냈다.</p>
+<p>워낙 바빴던 시기에 해서 그런지 깊게 몰입하지는 못했다. 지금 생각해 보면 좀 더 잘해볼 걸 하는 아쉬움이 조금 남는다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 650px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 50.306748466257666%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABXElEQVQoz22S6Y7CMAyE8/5P1n8IVCrKWWhLuc8eQIFZfZaCdtFWGtkJk/HYxu33e81mM3W7XU0mE8t7vZ7m87lhvV5rOBxqu90qSRJNp1NDlmX673Or1UpRFCkIAvX7fY1Go08+GAxMrNPpmDiFwjBUHMcaj8fiLQWv16sVLMtS7nw+K89zHY9Hi6fTySo9Hg89n0+1bWvw59frpff7bXld14b7/a6maYznvDo4HA7a7XZWkcgdkaJUpxiczWajy+ViJrhnbHCrqpLjQDtFUWixWHxa8GQE4SAEEPUCgPPtdjMu0UFiTizED5zhM3ScUIwcl7QHHyecAfmfpUDA2XK5tIdsmYhD7w7gwM+P+PvjzsNhGTEepWlqbeCMDSLMPS7g4ZBxAJb0LWaC/Mh2mR3AMaIIApzSGjzfNlslfrdrLUNiZojSLhGnRD8/OvBz9f89ilKMQrhHh1H8AFdz8vBSGHlAAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="Untitled"
+        title="Untitled"
+        src="/static/f934e5eeaa27af571d6294d06f879025/a6d36/2.png"
+        srcset="/static/f934e5eeaa27af571d6294d06f879025/222b7/2.png 163w,
+/static/f934e5eeaa27af571d6294d06f879025/ff46a/2.png 325w,
+/static/f934e5eeaa27af571d6294d06f879025/a6d36/2.png 650w,
+/static/f934e5eeaa27af571d6294d06f879025/e548f/2.png 975w,
+/static/f934e5eeaa27af571d6294d06f879025/3c492/2.png 1300w,
+/static/f934e5eeaa27af571d6294d06f879025/dcb79/2.png 1700w"
+        sizes="(max-width: 650px) 100vw, 650px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
+<h1>2021년에 무엇을 했는가? - 사이드 프로젝트</h1>
+<hr>
+<h2>볶다. 쉬운 복지검색</h2>
+<p>올해 초에 친구들과 함께 진행했던 사이드 프로젝트다. 한창 재난지원금이 주목받을 때 생각보다 우리(대학생, 청년)들이 받을 수 있는 복지가 많다는 사실을 깨닫고 팀원 한 명이 아이디어를 냈다. ‘개인이 받을 수 있는 복지 서비스를 편하고 정확하게 알려주자’라는 솔루션이었고, 간단한 개인 정보를 입력하면 추천 복지를 알려주는 제품을 만들기로 했다.</p>
+<p>문제는 팀원 중에 개발과 디자인을 할 수 있는 사람이 나 혼자였단 점 이었다. 게다가 팀원들은 프로덕트 경험이 전혀 없는 학생이어서 굉장히 애를 먹었다. 그런데 오히려 이런 환경이 나에게 빠르게 성장할 수 있는 새로운 기회가 되었다.</p>
+<p>개발이라고는 계산기 만들어본 게 전부인 사람이 기획한 MVP를 최대한 비슷하게 만들어야 했으니 정말 힘들었다. 디자인은 해본 게 있어서 만들 수 있었다. 하지만 실제로 디자인을 웹에 구현하려니 온갖 삽질이 나를 기다렸다. 각종 개발 커뮤니티에 들러 이것저것 찾아본 것부터, 오타 하나 때문에 밤새 오류를 찾아 헤맸던 경험까지. 당시에는. 막막했지만, 그때의 절박함 덕분에 혼자서 공부하는 법을 배웠다.</p>
+<p>이처럼 새로운 디자인, 개발 경험도 짜릿했지만, 프로덕트 경험이 전혀 없는 사람들에게서 나오는 신선한 아이디어 역시 내게 영감을 많이 주었다. 기존 디자이너, 개발자와 이야기해보면 기술적, 자본적 한계라는 필터를 거쳐서 생각할 때가 많은데, 이번에는 아무것도 모르는 상태에서 자유롭게 생각하다 보니 볶다 외에도 꽤나 멋진 이야기를 나눌 수 있었다.</p>
+<p>지금은 그때보다 한 단계 더 성장했기에, 앞으로 이런 프로젝트에 참여하게 된다면 훨씬 더 완성도 있고 단단한 제품을 만들 수 있을 것 같다.</p>
+<p><a href="https://works.beomsoo.me/Bokdda/">Bokdda</a></p>
+<h2>Junction X Seoul 해커톤 참가</h2>
+<p>처음 참가해 보는 해커톤이었다. 작년부터 디지털 프로덕트에 관심이 많이 있었던 터라 디자이너 포지션으로 지원했다. 지원서도 영어로 써야 했고, 관련 경험도 없어서 참가할 수 있을까 했는데 다행스럽게도 참가 자격이 되었다.</p>
+<p>결론부터 말하자면, 시각장애인들을 위한 횡단보도 보조 서비스를 만들었다. 기존 도로에는 황색등만 점멸되는 횡단보도, 신호가 제대로 있지 않는 횡단보도 등 시각장애인에게 벽(Barrier)이라고 느껴질만한 요소들이 정말 많았다. 그래서 이 벽을 허물 수 있는 제품을 만들기로 했다.</p>
+<p>여러 우여곡절 끝에 시각장애인 방향으로 지나가는 차량에게 미리 경고할 수 있는 서비스를 만들었다. 비록 수상에는 실패했지만, 2박 3일 이라는 짧은 시간 동안 제품을 처음부터 끝까지 만들어보는 경험을 했다. 그리고 해커톤이 끝난 다음 우연히 SK에서 비슷한 프로덕트를 만들었다는 걸 알게 되어 팀원들과 신기해했던 기억이 난다.</p>
+<p>혼자가 아닌 여러 팀원들과 날밤을 새면서까지 몰입하는 경험을 오랜만에 해서 즐거웠다. 마지막으로 나중에 기회가 된다면 그때 BlueCamel 팀원들과 같이 만나서 차 한잔 마시고 싶다.</p>
+<p><a href="https://blog.beomsoo.me/2021/07/17/junction/">Junction X Seoul 2021 후기</a></p>
+<h2>BE THE LIGHT</h2>
+<p>올해 6월, 한창 바쁘게 회사를 다니던 도중 처음 보는 사람에게 페이스북으로 연락이 왔다. 내가 예전에 네트워킹 플랫폼에 올려놓았던 프로필을 보고 연락을 준 것 같았다. 사이드 프로젝트에 디자이너로서 참여해달라는 내용이었다. 처음에는 곧 입대하기 때문에 프로젝트에 같이 참여하는 게 오히여 민폐가 될 것 같아 거절하려고 했었다.</p>
+<p>그런데 메신저로 몇 번 이야기를 해보니 사는 지역도 같고, ‘아프리카에 빛을 선물한다.’라는 비전에 흥미가 생겼다. 그래서 그날 저녁, 팀원들과 줌 미팅을 하게 되었다. 만난 지 불과 1시간도 채 되지 않았던 것 같은데 금세 제품에 대한 아이디어와 비전에 대해 의견을 나누고 있었고, 그렇게 BE THE LIGHT라는 팀에 자연스레 합류하게 되었다.</p>
+<p>아프리카의 에너지 부족 문제를 해결하는 것이 팀의 궁극적인 목표였다. 그 첫 번째 단계가 바로 태양광으로 충전하는 휴대용 조명을 저렴하게 양산해 아프리카에 공급하는 것이었다. 나는 전공이었던 하드웨어 설계와 디자인을 맡았다. 3D 프린터도 원하는 대로 사용 가능했고, 회로 개발과 S/W 역시 전담하고 있는 팀원이 따로 있었기에 빠른 속도로 시제품을 만들어 볼 수 있었다.</p>
+<p>사실 대형 장비 위주로 설계, 디자인을 했었기에 사출 공정으로 제작되는 소형 제품 개발 경험은 거의 없었다. 그래서 걱정이 되게 많았는데, 다행스럽게도 관련 멘토링 지원 사업에 선정되어 사출 전문가의 도움을 받을 수 있었다.</p>
+<p>그렇게 양산까지 고려된, 실제로 작동하는 프로토타입을 만들었다. 이제 제품을 양산해서 아프리카로 보내는 일만 남았는데, 최종 제품의 양산 비용을 계산해 보니 그냥 팀으로서는 부담스러운 금액이었다. 디자인과 설계 단계에서 비용계산을 놓친 게 문제였다.</p>
+<p>이후 마무리를 하지 못한 채 입대를 해버리는 바람에 소식을 통 듣지 못하고 있다가 자대에서 프로젝트가 멈췄다는 이야기를 들었다. 아무래도 소셜 스타트업에 도전하기에는 팀원들의 경험과 역량이 부족하다고 판단. 각자의 위치에서 실력을 먼저 쌓아서 다시 만나기로 한 것 같았다. 프로젝트는 흐지부지 멈춰버렸지만, 훗날 다시 뭉쳐서 BE THE LIGHT로 재결합할 거라 믿는다.</p>
+<p><a href="https://works.beomsoo.me/JavaraLight/">Javara-light</a></p>
+<h2>군복무 가이드 개발</h2>
+<p>입대 일주일 전, 뭔가 의미 있는 프로덕트를 만들어보고 싶었다. 시간은 촉박했고, 아이디어는 없었다. 그런데 마침 군 적금을 찾아보던 중 군인 혜택에 관한 정보가 파편화되어 있어 일일이 찾아다니기 불편하다고 느껴졌다. 그래서 이 문제를 한번 해결해 보기로 했다. 단순하게 여러 정보를 하나의 제품에 담는 솔루션이었지만 생각보다 풀어야 할 문제가 많았다.</p>
+<p>그중에서도 집중해야 했던 문제는 많은 정보를 한눈에 확인할 수 있는 쾌적한 UX를 제공하는 것이었다. 남겨야 할 내용과 빼야 할 내용을 결정해야 했다. 이뿐만 아니라 실제 제품까지 혼자 만들어야 했기에 개발 난이도까지 고려해서 화면을 구성해 나갔다.</p>
+<p>그렇게 디자인을 빠르게 끝낸 뒤 개발을 시작했다. API 서버 없이 json 파일을 만들어 데이터를 구성했고, 디자인 역시 코드단에서 계속 수정하며 하나하나 제품을 만들어갔다.</p>
+<p>시간이 부족했기에 혜택 정보 수집과 완성도 있는 프로덕트 구현 사이에서 결정을 했어야 했다. 결국 많은 혜택 정보 수집보다는 프로덕트 구현에 집중했다. 지금 생각해 보면 오히려 많은 정보를 수집하는 게 우선시되어야 하지 않았나 하는 생각도 든다. 짧은 시간 동안 만드느라 부족한 부분이 많아서 아쉬웠지만 입대 전까지 재미있는 프로젝트를 하게 되어 즐거웠다.</p>
+<p><a href="https://works.beomsoo.me/goonin/">군복무 가이드</a></p>
+<h2>Padintosh 제작</h2>
+<p>작년 요맘때쯤 컨셉으로 디자인했던 아이패드 매킨토시 스탠드를 만들었다. 크기가 워낙 커서 웬만한 3D프린터로는 한 번에 출력하는 게 어림도 없었는데, 마침 아는 형이 도와주어 X-Garage에서 1:1 사이즈로 출력했다.</p>
+<p>하지만 아쉽게도 출력이 끝나는 날이 입대 당일이라 제품을 제대로 보지도 못하고 훈련소에 들어갔다. 그러다 3달쯤 지난 뒤 첫 외박 날 제품을 보았다. 깔끔하게 원하던 모습 그대로라 정말 기뻤고, 앞으로도 이런 소소한 사이드 프로젝트를 진행해 봐야겠다는 생각을 했다.</p>
+<p><a href="https://works.beomsoo.me/Padintosh/">Padintosh</a></p>
+<h1>배움</h1>
+<hr>
+<h2>Fast Ventures Textbook 수강</h2>
+<p>상반기 패스트벤처스에서 진행하는 텍스트북 프로그램을 수강했다. 유명 스타트업 창업가부터 갓 창업한지 얼마 안된 대표까지 다양한 스타트업 씬 경험자들이 실패를 줄일 수 있는 방법에 대한 이야기를 하는 프로그램이다.</p>
+<p>6주간의 긴 시간 동안 꾸준히 공부했었고, 실제로 어떻게 프로덕트를 만들고 운영해야 할지 도움이 많이 되었다. 디자이너의 마음가짐이 창업가와 비슷하지 않나 하는 생각도 들었다.</p>
+<h2>독서</h2>
+<p>입대하고 나서 책을 많이 읽었다. 사회에 있을 때는 스타트업이나 디자인, 엔지니어링 분야에 한정된 책을 읽었었는데, 논산 훈련소와 벽제 경찰학교에 다양한 책이 많이 있어서 취향껏 읽어볼 수 있었다. 앞으로도 꾸준히 독서를 할 수 있으면 좋겠다.</p>
+<h1>기타</h1>
+<hr>
+<h2>뮤지컬</h2>
+<p>올해 3월, 뮤지컬 위키드를 통해 처음으로 뮤지컬에 입문했다. 고등학생 때 위키드의 Defying Gravity에 빠졌었는데 지금까지 잊고 있다가 서울 출장가는 길에 걸려있는 현수막을 보고 불현듯 떠올라 바로 예매해버렸다.</p>
+<p>실제로 대극장 뮤지컬을 보니 온몸에 전율이 쫙 돋았다. 웅장한 넘버와 배우들의 연기는 한번 보기엔 너무 아쉬웠다. 그렇게 부산까지 따라가 총 4번을 보았다. 위키드 이후 뮤지컬 관람을 본격적으로 시작했는데, 여러 작품을 보는 것보단 맘에 드는 작품 하나를 여러 번 관람하는걸 즐기고 있다. 내년에는 보고 싶은 작품이 많이 올라와서 올해보다 더 많이 보지 않을까 싶다.</p>
+<h2>입대. 새로운 시작</h2>
+<p>의무경찰로 1년 6개월의 군 생활을 시작하게 되었다. 한창 열심히 도전 중이던 21살이라는 어린 나이에 1년 6개월이라는 시간은 뭐든 할 수 있는 가능성의 시간이라 생각한다. 그래서 걱정이 많았고, 내 경험과 도전이 멈추는 게 아닐까?하는 고민도 많이 했었다. 하지만 감사하게도 새로운 기회가 되었다.</p>
+<p>시 공간적 제약이 많지만, 군이라는 조직에선 다양한 사람들과 24시간 함께해야 한다. 덕분에 그동안 해보고 싶었던 디자인 방법론을 실행하기 적합한 환경이 되었다. 이제 자대에서 적응도 다 했고, 23년부터는 본격적으로 이것저것 만들면서 진짜 문제를 해결해 볼 수 있을 것 같다.</p>
+<style class="grvsc-styles">
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line > * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: ' ';
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting > .grvsc-code > .grvsc-line::before {
+    content: ' ';
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+</style></article></div></div></div></article><section class="blogPost__CommentWrap-sc-109dgz0-3 dWmEsY"><div></div></section></main></div><footer class="Footer__Container-sc-1epg5cn-0 lermzt"><div class="Footer__Wrapper-sc-1epg5cn-1 kGGhgJ"><a href="mailto:beskar.son@gmail.com" target="_blank" rel="noopener noreferrer"><div class="Footer__Cta-sc-1epg5cn-2 heTUjG">beskar.son@gmail.com</div></a><div class="Footer__IconWrapper-sc-1epg5cn-3 kvkZMZ"><a href="https://www.behance.net/sonbeomsoo" target="_blank" rel="noopener noreferrer" class="Footer__IconContainer-sc-1epg5cn-5 hFflNT"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="behance" class="svg-inline--fa fa-behance fa-w-18 fa-lg Footer__Icon-sc-1epg5cn-4 cVatt font-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M232 237.2c31.8-15.2 48.4-38.2 48.4-74 0-70.6-52.6-87.8-113.3-87.8H0v354.4h171.8c64.4 0 124.9-30.9 124.9-102.9 0-44.5-21.1-77.4-64.7-89.7zM77.9 135.9H151c28.1 0 53.4 7.9 53.4 40.5 0 30.1-19.7 42.2-47.5 42.2h-79v-82.7zm83.3 233.7H77.9V272h84.9c34.3 0 56 14.3 56 50.6 0 35.8-25.9 47-57.6 47zm358.5-240.7H376V94h143.7v34.9zM576 305.2c0-75.9-44.4-139.2-124.9-139.2-78.2 0-131.3 58.8-131.3 135.8 0 79.9 50.3 134.7 131.3 134.7 61.3 0 101-27.6 120.1-86.3H509c-6.7 21.9-34.3 33.5-55.7 33.5-41.3 0-63-24.2-63-65.3h185.1c.3-4.2.6-8.7.6-13.2zM390.4 274c2.3-33.7 24.7-54.8 58.5-54.8 35.4 0 53.2 20.8 56.2 54.8H390.4z"></path></svg></a><a href="https://www.instagram.com/beomsoo_son/" target="_blank" rel="noopener noreferrer" class="Footer__IconContainer-sc-1epg5cn-5 hFflNT"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram" class="svg-inline--fa fa-instagram fa-w-14 fa-lg Footer__Icon-sc-1epg5cn-4 cVatt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg></a><a href="https://github.com/k1a11220" target="_blank" rel="noopener noreferrer" class="Footer__IconContainer-sc-1epg5cn-5 hFflNT"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" class="svg-inline--fa fa-github fa-w-16 fa-lg Footer__Icon-sc-1epg5cn-4 cVatt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg></a><a href="https://www.linkedin.com/in/beomsoo-son-65a201178/" target="_blank" rel="noopener noreferrer" class="Footer__IconContainer-sc-1epg5cn-5 hFflNT"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin-in" class="svg-inline--fa fa-linkedin-in fa-w-14 fa-lg Footer__Icon-sc-1epg5cn-4 cVatt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path></svg></a></div></div></footer></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/2021/12/31/2021/";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-c5f50f2ad13861331c8a.js"],"app":["/app-bd538c8932074c58b1b5.js"],"component---cache-caches-gatsby-plugin-offline-app-shell-js":["/component---cache-caches-gatsby-plugin-offline-app-shell-js-241020a1cf7d0f317bbe.js"],"component---src-pages-404-js":["/component---src-pages-404-js-bf91efdbe44ef3233b9e.js"],"component---src-pages-about-js":["/component---src-pages-about-js-2c42ee873c8eb9f87477.js"],"component---src-pages-index-js":["/component---src-pages-index-js-066fffbaa9670cb3f233.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-adc5177b5a82458115e3.js"]};/*]]>*/</script><script src="/polyfill-c5f50f2ad13861331c8a.js" nomodule=""></script><script src="/component---src-templates-blog-post-js-adc5177b5a82458115e3.js" async=""></script><script src="/cd7d5f864fc9e15ed8adef086269b0aeff617554-130506ecd3777854004a.js" async=""></script><script src="/e5f5b259f3bc5bd31060582de6626886320e23cc-76746e539b405b5fa41c.js" async=""></script><script src="/133dca110fad53aa1997b630637bbac3134a2d14-ff01f624328a17af8a50.js" async=""></script><script src="/a9a7754c-63e6cd1fbd37df71b2d2.js" async=""></script><script src="/app-bd538c8932074c58b1b5.js" async=""></script><script src="/framework-305b3707783ccc9d7ca6.js" async=""></script><script src="/webpack-runtime-b6936b0c76671e369ef8.js" async=""></script></body></html>
