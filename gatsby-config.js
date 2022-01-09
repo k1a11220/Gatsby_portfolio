@@ -29,6 +29,14 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-gtag`,
+      options: {
+        trackingId: `G-4DWMXJBX6X`, // 측정 ID
+        head: true, // head에 tracking script를 넣고 싶다면 true로 변경
+        anonymize: true,
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `src`,

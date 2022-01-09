@@ -6615,6 +6615,11 @@
     "lodash.merge" "^4.6.2"
     "rss" "^1.2.2"
 
+"gatsby-plugin-gtag@^1.0.13":
+  "integrity" "sha512-Oul6O67klajrEjkkF1diD228SmyUWsAwTq/1tYq41vBwmyNiPk4dhk8K93rrNQ5d5zesSv+awBeGBa503tQqGw=="
+  "resolved" "https://registry.npmjs.org/gatsby-plugin-gtag/-/gatsby-plugin-gtag-1.0.13.tgz"
+  "version" "1.0.13"
+
 "gatsby-plugin-manifest@^2.4.34":
   "integrity" "sha512-Kiom3IHQ+hsRA/yt+XcBdOn1q+Rqbso5Iw0mXQQg+F+8U23sU66NaJY67ZXUkW8iwU25SOrwZaSw49C8BV0EGw=="
   "resolved" "https://registry.npmjs.org/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.12.1.tgz"
@@ -6933,7 +6938,7 @@
     "semver" "^7.3.4"
     "sharp" "^0.27.0"
 
-"gatsby@^2.0.0", "gatsby@^2.0.32", "gatsby@^2.12.0", "gatsby@^2.12.1", "gatsby@^2.12.1 || ^3.1.1", "gatsby@^2.2.0", "gatsby@^2.24.79", "gatsby@^2.24.81", "gatsby@^2.25.0", "gatsby@^2.4.0", "gatsby@^3.0.0 || ^2.0.0", "gatsby@>2.0.0", "gatsby@>2.0.15":
+"gatsby@^2.0.0", "gatsby@^2.0.32", "gatsby@^2.12.0", "gatsby@^2.12.1", "gatsby@^2.12.1 || ^3.1.1", "gatsby@^2.2.0", "gatsby@^2.24.79", "gatsby@^2.24.81", "gatsby@^2.25.0", "gatsby@^2.4.0", "gatsby@^3.0.0 || ^2.0.0", "gatsby@>2.0.0", "gatsby@>2.0.0-alpha", "gatsby@>2.0.15":
   "integrity" "sha512-BYfiI/k+t8m/IzSkWZH8Cc0v7rJw6giSjG5sX25LWdfkQMqUvg/Gn6OC8BWwRPXnEwe7x0n5jbH+peO0p34ZHQ=="
   "resolved" "https://registry.npmjs.org/gatsby/-/gatsby-2.32.13.tgz"
   "version" "2.32.13"
