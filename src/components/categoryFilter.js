@@ -64,28 +64,28 @@ const Nav = styled.nav`
   }
 `;
 
-const CategoryTitle = styled.em`
-  position: static;
-  width: auto;
-  height: auto;
-  clip: auto;
-  white-space: auto;
+// const CategoryTitle = styled.em`
+//   position: static;
+//   width: auto;
+//   height: auto;
+//   clip: auto;
+//   white-space: auto;
 
-  flex-shrink: 0;
-  font-size: var(--text-base);
-  font-weight: var(--font-weight-semi-bold);
-  font-style: initial;
-  margin-right: var(--sizing-lg);
+//   flex-shrink: 0;
+//   font-size: var(--text-base);
+//   font-weight: var(--font-weight-semi-bold);
+//   font-style: initial;
+//   margin-right: var(--sizing-lg);
 
-  @media (max-width: ${({ theme }) => theme.device.sm}) {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(1px, 1px, 1px, 1px);
-    white-space: no-wrap;
-  }
-`;
+//   @media (max-width: ${({ theme }) => theme.device.sm}) {
+//     position: absolute;
+//     width: 1px;
+//     height: 1px;
+//     overflow: hidden;
+//     clip: rect(1px, 1px, 1px, 1px);
+//     white-space: no-wrap;
+//   }
+// `;
 
 const CategoryButton = styled(Link)`
   cursor: pointer;
